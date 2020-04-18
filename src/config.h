@@ -6,25 +6,25 @@
  */
 
 /*===== Debugging Options =====*/
-//#define DEBUG_MEGA //Mega Evolution can always be used
-//#define DEBUG_HMS //HMs can always be used from the party screen, Surf, Waterfall, and Rock Climb can always be used
+#define DEBUG_MEGA //Mega Evolution can always be used
+#define DEBUG_HMS //HMs can always be used from the party screen, Surf, Waterfall, and Rock Climb can always be used
 //#define DEBUG_OBEDIENCE //Traded Pokemon never have obedience issues
 //#define DEBUG_DYNAMAX //Dynamax can be used in Dynamax battles without a Dynamax Band
 
 /*===== General Vars =====*/
-#define VAR_TERRAIN 0x5000 //Set to a terrain type for a battle to begin with the given terrain
-#define VAR_TOTEM 0x5001 //to var + 3 (0x5004)
-#define VAR_BACKSPRITE_SWITCH 0x5006 //This var can be set to a number to change the Player's backsprite
-//#define VAR_BATTLE_BG 0x5007 //Set this var to a custom background id
-#define VAR_SWARM_INDEX 0x5008 //Set by the engine
-#define VAR_SWARM_DAILY_EVENT 0x5009 //Set by the engine. Used to tell the game if a swarm has already been generated for the day. (Uses + 1 var also)
-#define VAR_DEFAULT_WALKING_SCRIPT 0x500B  //Walking scripts from JPAN's engine. His engine used 0x407E.
-#define VAR_DEXNAV 0x500C //Set by the engine indicating which Pokemon has been registered to find in the OW
-#define VAR_STATUS_INDUCER 0x500D //Causes wild Pokemon to be spawned with the given status condition. Status + 0x100 clears var after battle.
+#define VAR_TERRAIN 0x5100 //Set to a terrain type for a battle to begin with the given terrain
+#define VAR_TOTEM 0x5101 //to var + 3 (0x5004)
+#define VAR_BACKSPRITE_SWITCH 0x5106 //This var can be set to a number to change the Player's backsprite
+#define VAR_BATTLE_BG 0x5107 //Set this var to a custom background id
+#define VAR_SWARM_INDEX 0x5108 //Set by the engine
+#define VAR_SWARM_DAILY_EVENT 0x5109 //Set by the engine. Used to tell the game if a swarm has already been generated for the day. (Uses + 1 var also)
+#define VAR_DEFAULT_WALKING_SCRIPT 0x510B  //Walking scripts from JPAN's engine. His engine used 0x407E.
+#define VAR_DEXNAV 0x510C //Set by the engine indicating which Pokemon has been registered to find in the OW
+#define VAR_STATUS_INDUCER 0x510D //Causes wild Pokemon to be spawned with the given status condition. Status + 0x100 clears var after battle.
 
-#define VAR_SECOND_OPPONENT 0x5010 //Set this to the var used to store the Trainer Id of the second opponent in Multi Battles (can be any free var)
-#define VAR_PARTNER 0x5011 //Set this to the var used to store the Trainer Id of your partner in Multi Battles (can be any free var)
-#define VAR_PARTNER_BACKSPRITE 0x5012 //Set this to the var used to store the backsprite number of your partner in Multi Battles (can be any free var)
+#define VAR_SECOND_OPPONENT 0x5110 //Set this to the var used to store the Trainer Id of the second opponent in Multi Battles (can be any free var)
+#define VAR_PARTNER 0x5111 //Set this to the var used to store the Trainer Id of your partner in Multi Battles (can be any free var)
+#define VAR_PARTNER_BACKSPRITE 0x5112 //Set this to the var used to store the backsprite number of your partner in Multi Battles (can be any free var)
 
 /*===== General Flags =====*/
 #define FLAG_INVERSE 0x900 //Set this flag for all battles to become Inverse Battles
@@ -76,45 +76,45 @@
 
 /*===== Battle Tower Options =====*/
 #define FLAG_BATTLE_FACILITY 0x930
-#define VAR_BATTLE_FACILITY_POKE_NUM 0x5015 //Var
-#define VAR_BATTLE_FACILITY_POKE_LEVEL 0x5016 //Var
-#define VAR_BATTLE_FACILITY_BATTLE_TYPE 0x5017 //Var
-#define VAR_BATTLE_FACILITY_TIER 0x5018 //Var
-#define VAR_BATTLE_FACILITY_TRAINER1_NAME 0x5019 //Empty var. Will be set to 0xFFFF after every battle.
-#define VAR_BATTLE_FACILITY_TRAINER2_NAME 0x501A //Empty var. Will be set to 0xFFFF after every battle.
-#define VAR_BATTLE_FACILITY_SONG_OVERRIDE 0x501B //Set this var to the song id to be played during Link Battles and in the Battle Tower.
+#define VAR_BATTLE_FACILITY_POKE_NUM 0x5115 //Var
+#define VAR_BATTLE_FACILITY_POKE_LEVEL 0x5116 //Var
+#define VAR_BATTLE_FACILITY_BATTLE_TYPE 0x5117 //Var
+#define VAR_BATTLE_FACILITY_TIER 0x5118 //Var
+#define VAR_BATTLE_FACILITY_TRAINER1_NAME 0x5119 //Empty var. Will be set to 0xFFFF after every battle.
+#define VAR_BATTLE_FACILITY_TRAINER2_NAME 0x511A //Empty var. Will be set to 0xFFFF after every battle.
+#define VAR_BATTLE_FACILITY_SONG_OVERRIDE 0x511B //Set this var to the song id to be played during Link Battles and in the Battle Tower.
 
 enum //These vars need to be one after the other (hence the enum)
 {
-	VAR_FACILITY_TRAINER_ID = 0x501C, 			//An index in the gTowerTrainers table, not Trainer ID
-	VAR_FACILITY_TRAINER_ID_2,	//0x501D		//Index of the second trainer for Multi Battlers in the gTowerTrainers table, the var should be 1 after the first one
-	VAR_FACILITY_TRAINER_ID_PARTNER, //0x501E	//If your partner is randomized, its Id would be found in this var
+	VAR_FACILITY_TRAINER_ID = 0x511C, 			//An index in the gTowerTrainers table, not Trainer ID
+	VAR_FACILITY_TRAINER_ID_2,	//0x511D		//Index of the second trainer for Multi Battlers in the gTowerTrainers table, the var should be 1 after the first one
+	VAR_FACILITY_TRAINER_ID_PARTNER, //0x511E	//If your partner is randomized, its Id would be found in this var
 };
 
 /*===== Character Customization Vars =====*/
-#define VAR_PLAYER_WALKRUN 0x501F			//Change walking, running player sprite. 0x4054 in JPAN engine.
-#define VAR_PLAYER_BIKING 0x5020			//Change biking player sprite. 0x4055 in JPAN engine.
-#define VAR_PLAYER_SURFING 0x5021			//Change player surfing sprite. 0x4056 in JPAN engine.
-#define VAR_PLAYER_HM_USE 0x5022			//Change field move usage sprite. 0x4057 in JPAN engine.
-#define VAR_PLAYER_FISHING 0x5023			//Change fishing sprite. 0x4058 in JPAN engine.
-#define VAR_PLAYER_VS_SEEKER 0x503D         //Change vs seeker usage sprite. NOT in JPAN's engine
-#define VAR_PLAYER_VS_SEEKER_ON_BIKE 0x5024	//Change vs seeker on bike sprite. 0x4059 in JPAN engine.
-#define VAR_PLAYER_UNDERWATER 0x5025		//Change underwater sprite.
-#define VAR_TRAINERCARD_MALE 0x5026			//Change trainer card image (male). 0x4060 in JPAN engine.
-#define VAR_TRAINERCARD_FEMALE 0x5027		//Change trainer card image (female). 0x4061 in JPAN engine.
+#define VAR_PLAYER_WALKRUN 0x511F			//Change walking, running player sprite. 0x4054 in JPAN engine.
+#define VAR_PLAYER_BIKING 0x5120			//Change biking player sprite. 0x4055 in JPAN engine.
+#define VAR_PLAYER_SURFING 0x5121			//Change player surfing sprite. 0x4056 in JPAN engine.
+#define VAR_PLAYER_VS_SEEKER 0x5122			//Change vs seeker usage sprite. 0x4057 in JPAN engine.
+#define VAR_PLAYER_FISHING 0x5123			//Change fishing sprite. 0x4058 in JPAN engine.
+#define VAR_PLAYER_VS_SEEKER_ON_BIKE 0x5124	//Change vs seeker on bike sprite. 0x4059 in JPAN engine.
+#define VAR_PLAYER_UNDERWATER 0x5125		//Change underwater sprite.
+#define VAR_TRAINERCARD_MALE 0x5126			//Change trainer card image (male). 0x4060 in JPAN engine.
+#define VAR_TRAINERCARD_FEMALE 0x5127		//Change trainer card image (female). 0x4061 in JPAN engine.
 
-#define VAR_RUNTIME_CHANGEABLE 0x5028	//'Secret Base' variables, save 15 consecutive variables for this. 0x4080 in JPAN engine.
+#define VAR_RUNTIME_CHANGEABLE 0x5128	//'Secret Base' variables, save 15 consecutive variables for this. 0x4080 in JPAN engine.
 
 /*===== Healing Place as in JPAN's Engine =====*/
-#define VAR_HEALINGMAP 0x5037 //0x405A in JPAN's Engine
-#define VAR_HEALING_XPOS 0x5038 //0x405B in JPAN's Engine
-#define VAR_HEALING_YPOS 0x5039 //0x405C in JPAN's Engine
+#define VAR_HEALINGMAP 0x5137 //0x405A in JPAN's Engine
+#define VAR_HEALING_XPOS 0x5138 //0x405B in JPAN's Engine
+#define VAR_HEALING_YPOS 0x5139 //0x405C in JPAN's Engine
 
 /*===== TM/HM/Tutor Options (Vastly improved from other versions!) =====*/
-//#define EXPANDED_TMSHMS  //Comment this out if you want to keep 50 tms/8 hms
-//#define EXPANDED_MOVE_TUTORS //Comment this out if you want to keep 16 move tutors and the ultimate elemental moves being exclusive to Kantonian starters
-#define NUM_TMS 50	//keep this defined even if EXPANDED_TMSHMS is not!!
+#define EXPANDED_TMSHMS  //Comment this out if you want to keep 50 tms/8 hms
+#define EXPANDED_MOVE_TUTORS //Comment this out if you want to keep 16 move tutors and the ultimate elemental moves being exclusive to Kantonian starters
+#define NUM_TMS 120	//keep this defined even if EXPANDED_TMSHMS is not!!
 #define NUM_HMS 8	//keep this defined even if EXPANDED_TMSHMS is not!!
+
 #define NUM_MOVE_TUTORS 16 //keep this defined even if EXPANDED_MOVE_TUTORS is not!! If using DPE, set to 128.
 #define LAST_TOTAL_TUTOR_NUM 24 //Should be equal to (NUM_MOVE_TUTORS - 1) + 9. Must be set to an actual integer or the compilation will not work.
 //#define TMS_BEFORE_HMS  //Uncomment this if you want the HMs to appear after the TMs in your bag
@@ -129,11 +129,11 @@ enum //These vars need to be one after the other (hence the enum)
 
 /*===== General Number Options =====*/
 #define KANTO_DEX_COUNT 151
-#define NATIONAL_DEX_COUNT 386
+#define NATIONAL_DEX_COUNT 809
 
 #define MAX_LEVEL 100 //Also change this in the file "asm_defines.asm" found in the root
 #define NUM_TRAINER_CLASSES 107 //Vanilla FR has 107
-#define EVOS_PER_MON 5 //The number of maximum evolutions per Pokemon. Vanilla FR has 5. DPE has 16!!!
+#define EVOS_PER_MON 16 //The number of maximum evolutions per Pokemon. Vanilla FR has 5. DPE has 16
 #define EV_CAP 252 //Also change this in the file "asm_defines.s" found in the root
 #define POWER_ITEM_EV_YIELD 8 //Set to 4 for older mechanic
 
@@ -142,7 +142,7 @@ enum //These vars need to be one after the other (hence the enum)
 #define SWARM_CHANCE 50 //Change this to the percentage that swarming Pokemon will appear if they can be found on the current route.
 #define WILD_DOUBLE_RANDOM_CHANCE 50 //Change this to the percentage that a wild double battle will be initiated if the player is in special grass.
 #define CREATE_WITH_X_PERFECT_IVS 3 //Change this to the number of set 31 IVs you'd like Pokemon defined in gSetPerfectXIvList to have.
-#define CREATE_ROAMER_WITH_X_PERFECT_IVS 3 //Change this to the number of set 31 IVs you'd like roaming pokemon to have.
+#define CREATE_ROAMER_WITH_X_PERFECT_IVS 5 //Change this to the number of set 31 IVs you'd like roaming pokemon to have.
 #define EGG_HATCH_LEVEL 1 //The level eggs hatch at
 #define AI_TRY_TO_KILL_RATE 50 //In battles against a trainer with AI flags of 1, the AI will try to use a move to knock out the opponents XX percent of the time
 
@@ -174,9 +174,9 @@ enum //These vars need to be one after the other (hence the enum)
 
 /*===== Pre-Battle Mugshot Options ====*/
 #define FR_PRE_BATTLE_MUGSHOT_STYLE //The FR Elite Four and Champion use their GF defined mugshots
-#define VAR_PRE_BATTLE_MUGSHOT_STYLE 0x503A //Used for changing between big, two bars, etc.
-#define VAR_PRE_BATTLE_MUGSHOT_SPRITE 0x503B //Used for determining if the Vs. sprite should show
-#define VAR_MUGSHOT_PLAYER_PAL 0x503C //Used to change the player's tilemap palette in the Two Bar mugshot style
+#define VAR_PRE_BATTLE_MUGSHOT_STYLE 0x513A //Used for changing between big, two bars, etc.
+#define VAR_PRE_BATTLE_MUGSHOT_SPRITE 0x513B //Used for determining if the Vs. sprite should show
+#define VAR_MUGSHOT_PLAYER_PAL 0x513C //Used to change the player's tilemap palette in the Two Bar mugshot style
 #define FLAG_LOAD_MUGSHOT_SPRITE_FROM_TABLE 0x924 //Load custom mugshot for pre-battle transition
 
 /*=====Safari Zone Options=====*/
@@ -197,11 +197,11 @@ enum //These vars need to be one after the other (hence the enum)
 
 /*===== Other General Options =====*/
 #define TIME_ENABLED //Comment this line to disable time based features. All time dependent features will default in Daytime.
-#define DNS_IN_BATTLE //Comment this line to disable the Day/Night system from working in battle
+//#define DNS_IN_BATTLE //Comment this line to disable the Day/Night system from working in battle
 #define OVERWRITE_RIVAL //Comment this line to disable to loading of your rival's name into trainer classes 0x51, 0x59, and 0x5A
 #define TRAINER_CLASS_POKE_BALLS //Comment this line to disable creating Trainer's pokemon with Poke Balls specific to their trainer class
-//#define TRAINERS_WITH_EVS //Uncomment this line to enable the Trainers with EVs hack, (only avaible with custom moveset and held item)
-//#define CONTINUE_LOST_BATTLES //Uncommenting this line will allow using trainerbattle 0x9 to continue lost battles if var 0x8000 is set to 0xFEFE
+//#define TRAINERS_WITH_EVS //Comment this line to disbale the Trainers with EVs hack, (only avaible with custom moveset)
+#define CONTINUE_LOST_BATTLES //Commenting this line will remove the feature of using trainerbattle 0x9 to continue lost battles if var 0x8000 is set to 0xFEFE
 #define DISPLAY_REAL_MOVE_TYPE_ON_MENU //If this line remains uncommented, the "true" move type will be displayed (such as Hidden Power, Weather Ball in Weather, etc.)
 #define DISPLAY_REAL_ACCURACY_ON_MENU //If this line remains uncommented, the "true" move accuracy will be displayed (Eg. The move Psychic on a Pokemon with Compound Eyes will have its accuracy appear as 130)
 #define DISPLAY_REAL_POWER_ON_MENU //If this line remains uncommented, the "true" move power will be displayed (Eg. Moves like Fury Cutter will show their correct power)
@@ -221,12 +221,12 @@ enum //These vars need to be one after the other (hence the enum)
 //#define SET_HEALING_PLACE_HACK  //Uncomment this if you want custom map/bank whiteout respawn locations
 //#define FOSSIL_IMAGE_HACK   //Uncommenting includes JPANs fossil image hack (see EXISTING_FOSSIL_IMAGE_TABLE_ADDRESS)
 #define EVO_HOLD_ITEM_REMOVAL //Comment this out if you want leveling up/hold item evolution (eg. sneasel) to remove the item (like normal)
-#define EXPAND_MOVESETS //Comment this out if you're using the Dynamic Pokemon Expansion repo to expand the movesets
-//#define FATHER_PASSES_TMS //Uncomment this out if you want TMs the father knows to be passed through breeding
+//#define EXPAND_MOVESETS //Comment this out if you're using the Dynamic Pokemon Expansion repo to expand the movesets
+#define FATHER_PASSES_TMS //Comment this out if you don't want TMs the father knows to be passed through breeding
 //#define INHERIT_MASTER_CHERISH_BALL  //Uncomment this if you want Master and Cherish balls to be inherited by daycare offspring
-//#define GIVEPOKEMON_CUSTOM_HACK //Alows custom Pokemon to be given by setting the second last byte of the givepokemon scripting command
-//#define GIVEPOKEMON_BALL_HACK //Allows Pokemon to be given with a custom ball by setting the last byte of the givepokemon scripting command
-#define FRLG_ROAMING //When a roaming Pokemon is created, it will either be a Entei, Raikou, or Suicune, depending on the player's starter choice
+#define GIVEPOKEMON_CUSTOM_HACK //Alows custom Pokemon to be given by setting the second last byte of the givepokemon scripting command
+#define GIVEPOKEMON_BALL_HACK //Allows Pokemon to be given with a custom ball by setting the last byte of the givepokemon scripting command
+//#define FRLG_ROAMING //When a roaming Pokemon is created, it will either be a Entei, Raikou, or Suicune, depending on the player's starter choice
 #define CAN_RUN_IN_BUILDINGS //Comment this line out to prevent the player from running indoors.
 //#define NO_POISON_IN_OW //Uncommenting this line will stop Pokemon from taking Poison damage in the overworld.
 #define POISON_1_HP_SURVIVAL //Comment this line to allow Pokemon to faint from Poison in the overworld.
@@ -260,7 +260,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define NO_SHEER_COLD_NERF //Uncomment this line to remove all Gen 7 Sheer Cold nerfs
 //#define OLD_MOVE_SPLIT //Uncomment this line to use the Physical/Special split based on move types. Status moves are still set with the split byte.
 //#define OLD_CONFUSION_HEAL_BERRIES //Uncomment this line for berries like Figy and Wiki Berry to restore only 1/8 max HP when HP is below 1/2
-//#define GEN_7_CONFUSION_HEAL_BERRIES //Uncomment this line for berries like Figy and Wiki Berry to restore 1/2 max HP (Gen 8 is 1/3) when HP is below 1/4
+#define GEN_7_CONFUSION_HEAL_BERRIES //Uncomment this line for berries like Figy and Wiki Berry to restore 1/2 max HP (Gen 8 is 1/3) when HP is below 1/4
 
 /*===== Ability Options =====*/
 //#define OLD_GALE_WINGS //Uncomment this line if you want Gale Wings to activate regardless of the user's HP
@@ -303,13 +303,13 @@ enum //These vars need to be one after the other (hence the enum)
 //#define GEN4_PLUS_SELECTION_SCREEN //Uncommenting this line does not give you the Gen 4+ selection screen, it only adds features that supports it
 //#define OBEDIENCE_CHECK_FOR_PLAYER_ORIGINAL_POKEMON //Uncommenting line line will open up the possibility that the Player's Pokemon can disobey them (not just traded mons)
 //#define WILD_ALWAYS_SMART //Uncomment this line if you want all Wild Pokemon to act smartly
-//#define HAIL_IN_BATTLE //Uncommenting this line enables the Hail weather effect in battle when the OW weather is set to WEATHER_STEADY_SNOW (0x7)
-//#define FOG_IN_BATTLE //Uncommenting this line enables the Fog weather effect in battle. Don't uncomment this line without uncommenting one of the lines below!
-//#define FOG_IN_BATTLE_1 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_1 (0x6)
-//#define FOG_IN_BATTLE_2 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_2 (0x9)
-//#define FOG_IN_BATTLE_3 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_3 (0xA)
-#define HIDE_HEALTHBOXES_DURING_ANIMS //Commenting this line prevents the health boxes from being hidden during move animations and some special animations.
-//#define DONT_HIDE_HEALTHBOXES_ATTACKER_STATUS_MOVES //Uncommenting this line doesn't hide the healthboxes when the attacker is using a status move that targets itself (Gen 4).
+#define HAIL_IN_BATTLE //Uncommenting this line enables the Hail weather effect in battle when the OW weather is set to WEATHER_STEADY_SNOW (0x7)
+#define FOG_IN_BATTLE //Uncommenting this line enables the Fog weather effect in battle. Don't uncomment this line without uncommenting one of the lines below!
+#define FOG_IN_BATTLE_1 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_1 (0x6)
+#define FOG_IN_BATTLE_2 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_2 (0x9)
+#define FOG_IN_BATTLE_3 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_3 (0xA)
+#define HIDE_HEALTHBOXES_DURING_ANIMS //Uncommenting this line hides the health boxes during move animations and some special animations.
+//#define DONT_HIDE_HEALTHBOXES_ATTACKER_STATUS_MOVES //Uncommenting this line doesn't hide the healthboxes when the attacker is using a status move that targets itself.
 //#define ENCOUNTER_MUSIC_BY_CLASS //Plays music when a trainer spots the player based on the trainer class rather than the value set in the trainer data.
 #define OKAY_WITH_AI_SUICIDE //The AI is allowed to use self-destructing moves
 //#define HEALTHBAR_TYPE_ICONS //Pokemon types will always be shown next to the healthbar
