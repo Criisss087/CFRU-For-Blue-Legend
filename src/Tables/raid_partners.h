@@ -1287,10 +1287,320 @@ const struct MultiRaidTrainer gRaidPartners[] =
 
 #else
 
+static const struct BattleTowerSpread sRaidPartnerSpread_Liam_Rank12[] =
+{
+	{
+		.species = SPECIES_BULBASAUR,
+		.nature = NATURE_BOLD,
+		.hpIv = 31,
+		.atkIv = 0,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.defEv = 252,
+		.spdEv = 4,
+		.ability = FRONTIER_ABILITY_1, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_RAZORLEAF,
+			MOVE_POISONPOWDER,
+			MOVE_SLEEPPOWDER,
+			MOVE_PETALDANCE,
+		},
+		.ball = BALL_TYPE_POKE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_CHARMANDER,
+		.nature = NATURE_ADAMANT,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.ability = FRONTIER_ABILITY_1, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_FIREPUNCH,
+			MOVE_BITE,
+			MOVE_FLAMETHROWER,
+			MOVE_SECRETPOWER,
+		},
+		.ball = BALL_TYPE_DIVE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_SQUIRTLE,
+		.nature = NATURE_ADAMANT,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.ability = FRONTIER_ABILITY_HIDDEN, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_AQUATAIL,
+			MOVE_ICEPUNCH,
+			MOVE_POWERUPPUNCH,
+			MOVE_RAINDANCE,
+		},
+		.ball = BALL_TYPE_DIVE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Liam_Rank34[] =
+{
+	{
+		.species = SPECIES_IVYSAUR,
+		.nature = NATURE_BOLD,
+		.hpIv = 31,
+		.atkIv = 0,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.defEv = 252,
+		.spdEv = 4,
+		.ability = FRONTIER_ABILITY_1, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_RAZORLEAF,
+			MOVE_POISONPOWDER,
+			MOVE_SLEEPPOWDER,
+			MOVE_PETALDANCE,
+		},
+		.ball = BALL_TYPE_POKE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_CHARMELEON,
+		.nature = NATURE_ADAMANT,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.ability = FRONTIER_ABILITY_1, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_FIREPUNCH,
+			MOVE_BITE,
+			MOVE_FLAMETHROWER,
+			MOVE_SECRETPOWER,
+		},
+		.ball = BALL_TYPE_DIVE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_WARTORTLE,
+		.nature = NATURE_ADAMANT,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.ability = FRONTIER_ABILITY_HIDDEN, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_AQUATAIL,
+			MOVE_ICEPUNCH,
+			MOVE_POWERUPPUNCH,
+			MOVE_RAINDANCE,
+		},
+		.ball = BALL_TYPE_DIVE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+};
+
+static const struct BattleTowerSpread sRaidPartnerSpread_Liam_Rank56[] =
+{
+	{
+		.species = SPECIES_VENUSAUR,
+		.nature = NATURE_BOLD,
+		.hpIv = 31,
+		.atkIv = 0,
+		.defIv = 31,
+		.spAtkIv = 31,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.defEv = 252,
+		.spdEv = 4,
+		.ability = FRONTIER_ABILITY_1, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_RAZORLEAF,
+			MOVE_POISONPOWDER,
+			MOVE_SLEEPPOWDER,
+			MOVE_PETALDANCE,
+		},
+		.ball = BALL_TYPE_POKE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_CHARIZARD,
+		.nature = NATURE_ADAMANT,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.ability = FRONTIER_ABILITY_1, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_FIREPUNCH,
+			MOVE_BITE,
+			MOVE_FLAMETHROWER,
+			MOVE_SECRETPOWER,
+		},
+		.ball = BALL_TYPE_DIVE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+	{
+		.species = SPECIES_BLASTOISE,
+		.nature = NATURE_ADAMANT,
+		.hpIv = 31,
+		.atkIv = 31,
+		.defIv = 31,
+		.spAtkIv = 0,
+		.spDefIv = 31,
+		.spdIv = 31,
+		.hpEv = 252,
+		.atkEv = 252,
+		.spDefEv = 4,
+		.ability = FRONTIER_ABILITY_HIDDEN, 
+		.item = ITEM_LEFTOVERS,
+		.moves =
+		{
+			MOVE_AQUATAIL,
+			MOVE_ICEPUNCH,
+			MOVE_POWERUPPUNCH,
+			MOVE_RAINDANCE,
+		},
+		.ball = BALL_TYPE_DIVE_BALL,
+		.forSingles = TRUE,
+		.forDoubles = TRUE,
+		.modifyMovesDoubles = FALSE,
+	},
+};
+
+extern const u8 sTrainerName_Liam[];
+
 const struct MultiRaidTrainer gRaidPartners[] =
 {
 	{
+		.owNum = EVENT_OBJ_GFX_YOUNGSTER,
+		.trainerClass = CLASS_YOUNGSTER,
+		.backSpriteId = TRAINER_BACK_PIC_POKE_DUDE,
+		.gender = MALE,
+		.otId = 0xCD2F27AB,
+		.name = sTrainerName_Liam,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... TWO_STAR_RAID] =	 sRaidPartnerSpread_Liam_Rank12,
+			[THREE_STAR_RAID] =				 	 sRaidPartnerSpread_Liam_Rank34,
+			[FOUR_STAR_RAID ... SIX_STAR_RAID] =	 sRaidPartnerSpread_Liam_Rank56,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... TWO_STAR_RAID] =   NELEMS(sRaidPartnerSpread_Liam_Rank12),
+			[THREE_STAR_RAID] = 				 NELEMS(sRaidPartnerSpread_Liam_Rank34),
+			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  NELEMS(sRaidPartnerSpread_Liam_Rank56),
+		},
 	},
+
+	{
+		.owNum = EVENT_OBJ_GFX_RANDOM_GIRL,
+		.trainerClass = CLASS_SAILOR,
+		.backSpriteId = TRAINER_BACK_PIC_POKE_DUDE,
+		.gender = FEMALE,
+		.otId = 0xCD2F27AB,
+		.name = sTrainerName_Liam,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... TWO_STAR_RAID] =	 sRaidPartnerSpread_Liam_Rank12,
+			[THREE_STAR_RAID] =				 	 sRaidPartnerSpread_Liam_Rank34,
+			[FOUR_STAR_RAID ... SIX_STAR_RAID] =	 sRaidPartnerSpread_Liam_Rank56,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... TWO_STAR_RAID] =   NELEMS(sRaidPartnerSpread_Liam_Rank12),
+			[THREE_STAR_RAID] = 				 NELEMS(sRaidPartnerSpread_Liam_Rank34),
+			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  NELEMS(sRaidPartnerSpread_Liam_Rank56),
+		},
+	},
+
+	{
+		.owNum = EVENT_OBJ_GFX_BUG_CATCHER,
+		.trainerClass = CLASS_BUG_MANIAC,
+		.backSpriteId = TRAINER_BACK_PIC_POKE_DUDE,
+		.gender = MALE,
+		.otId = 0xCD2F27AB,
+		.name = sTrainerName_Liam,
+		.spreads =
+		{
+			[ONE_STAR_RAID ... TWO_STAR_RAID] =	 sRaidPartnerSpread_Liam_Rank12,
+			[THREE_STAR_RAID] =				 	 sRaidPartnerSpread_Liam_Rank34,
+			[FOUR_STAR_RAID ... SIX_STAR_RAID] =	 sRaidPartnerSpread_Liam_Rank56,
+		},
+		.spreadSizes =
+		{
+			[ONE_STAR_RAID ... TWO_STAR_RAID] =   NELEMS(sRaidPartnerSpread_Liam_Rank12),
+			[THREE_STAR_RAID] = 				 NELEMS(sRaidPartnerSpread_Liam_Rank34),
+			[FOUR_STAR_RAID ... SIX_STAR_RAID] =  NELEMS(sRaidPartnerSpread_Liam_Rank56),
+		},
+	},
+
+
 };
 
 #endif

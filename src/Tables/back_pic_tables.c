@@ -13,7 +13,7 @@ tables to edit:
 	sTrainerBackPicTable_[backsprite]
 	gSpriteTemplateTable_TrainerBackSprites
 */
-
+ 
 #define gTrainerBackPicPalette_Red (const u8*) 0x8E76EBC
 #define gTrainerBackPicPalette_Leaf (const u8*) 0x8E76EE4
 //#define gTrainerPalette_Brendan (const u8*) 0x8E550A4
