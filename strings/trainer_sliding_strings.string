@@ -97,3 +97,6 @@ This is it! This is where the real\nbattle begins, [PLAYER_NAME]!
 Not yet! It's time I showed you what\nwe're really made of!
 
 #endif
+
+#org @sText_Ash1LastLowHP
+Vamos Pikachu[.]\p No te rindas!\p

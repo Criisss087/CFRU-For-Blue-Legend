@@ -38,10 +38,7 @@ extern const u8 sText_Aklove1LowHP[];
 extern const u8 sText_Aklove2LowHP[];
 extern const u8 sText_Aklove3LowHP[];
 extern const u8 sText_MaximaLastSwitchIn[];
-extern const u8 sText_RivalLeagueLastSwitchIn[];
-extern const u8 sText_MarlonLeagueLastSwitchIn[];
-extern const u8 sText_IvoryLeagueLastSwitchIn[];
-extern const u8 sText_JaxPostGameLastLowHP[];
-extern const u8 sText_MiloLeagueLastLowHP[];
-extern const u8 sText_YoungsterLeagueLastSwitchIn[];
-extern const u8 sText_RogueElectivire_DynamaxMsg[];
+
+// End Unbound
+
+extern const u8 sText_Ash1LastLowHP[]; 
