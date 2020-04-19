@@ -25,3 +25,7 @@ extern const u8 sText_TessyLastSwitchIn[];
 extern const u8 sText_Zeph1LowHP[];
 extern const u8 sText_Zeph2LowHP[];
 extern const u8 sText_MaximaLastSwitchIn[];
+
+// End Unbound
+
+extern const u8 sText_Ash1LastLowHP[]; 

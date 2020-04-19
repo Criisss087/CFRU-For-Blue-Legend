@@ -13,6 +13,10 @@ build/*
 *.ss1
 *.ss2
 *.ss3
+*.png
+*.gif
+*.jpg
+*.jpeg
 Multi Target Moves Plan.txt
 generatedrepoints
 *__pycache__
