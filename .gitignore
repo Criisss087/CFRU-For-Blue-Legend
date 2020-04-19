@@ -35,3 +35,5 @@ Cover Art.png
 
 # pycache files
 *.pyc
+.vs/CFRU-For-Blue-Legend/v15/.suo
+*.sqlite
