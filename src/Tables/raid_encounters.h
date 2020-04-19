@@ -19662,8 +19662,133 @@ const struct RaidData gRaidsByMapSection[KANTO_MAPSEC_COUNT][RAID_STAR_COUNT] =
 
 #else
 
+static struct Raid sRoute1Raids1Star[] =
+{
+	{
+		.species = SPECIES_METAPOD,
+		.ability = RAID_ABILITY_HIDDEN,
+		.drops =
+		{
+			/*100 %*/ ITEM_POTION,
+			/* 80 %*/ ITEM_ANTIDOTE,
+			/* 80 %*/ ITEM_POKE_BALL,
+			/* 50 %*/ ITEM_FRESH_WATER,
+			/* 50 %*/ ITEM_BIG_MUSHROOM,
+			/* 30 %*/ ITEM_SITRUS_BERRY,
+			/* 30 %*/ ITEM_ETHER,
+			/* 25 %*/ ITEM_RARE_CANDY,
+			/* 25 %*/ ITEM_NONE,
+			/*  5 %*/ ITEM_NONE,
+			/*  4 %*/ ITEM_LUCKY_EGG,
+			/*  1 %*/ ITEM_LUCKY_EGG,
+		},
+	},
+};
+
+static struct Raid sRoute1Raids2Star[] =
+{
+	{
+		.species = SPECIES_BEEDRILL,
+		.ability = RAID_ABILITY_HIDDEN,
+		.drops =
+		{
+			/*100 %*/ ITEM_POTION,
+			/* 80 %*/ ITEM_ANTIDOTE,
+			/* 80 %*/ ITEM_POKE_BALL,
+			/* 50 %*/ ITEM_FRESH_WATER,
+			/* 50 %*/ ITEM_BIG_MUSHROOM,
+			/* 30 %*/ ITEM_SITRUS_BERRY,
+			/* 30 %*/ ITEM_ETHER,
+			/* 25 %*/ ITEM_RARE_CANDY,
+			/* 25 %*/ ITEM_NONE,
+			/*  5 %*/ ITEM_NONE,
+			/*  4 %*/ ITEM_LUCKY_EGG,
+			/*  1 %*/ ITEM_LUCKY_EGG,
+		},
+	},
+};
+
+static struct Raid sRoute1Raids3Star[] =
+{
+	{
+		.species = SPECIES_NOCTOWL,
+		.ability = RAID_ABILITY_HIDDEN,
+		.drops =
+		{
+			/*100 %*/ ITEM_POTION,
+			/* 80 %*/ ITEM_ANTIDOTE,
+			/* 80 %*/ ITEM_POKE_BALL,
+			/* 50 %*/ ITEM_FRESH_WATER,
+			/* 50 %*/ ITEM_BIG_MUSHROOM,
+			/* 30 %*/ ITEM_SITRUS_BERRY,
+			/* 30 %*/ ITEM_ETHER,
+			/* 25 %*/ ITEM_RARE_CANDY,
+			/* 25 %*/ ITEM_NONE,
+			/*  5 %*/ ITEM_NONE,
+			/*  4 %*/ ITEM_LUCKY_EGG,
+			/*  1 %*/ ITEM_LUCKY_EGG,
+		},
+	},
+};
+
+static struct Raid sRoute1Raids4Star[] =
+{
+	{
+		.species = SPECIES_KADABRA,
+		.ability = RAID_ABILITY_HIDDEN,
+		.drops =
+		{
+			/*100 %*/ ITEM_POTION,
+			/* 80 %*/ ITEM_ANTIDOTE,
+			/* 80 %*/ ITEM_POKE_BALL,
+			/* 50 %*/ ITEM_FRESH_WATER,
+			/* 50 %*/ ITEM_BIG_MUSHROOM,
+			/* 30 %*/ ITEM_SITRUS_BERRY,
+			/* 30 %*/ ITEM_ETHER,
+			/* 25 %*/ ITEM_RARE_CANDY,
+			/* 25 %*/ ITEM_NONE,
+			/*  5 %*/ ITEM_NONE,
+			/*  4 %*/ ITEM_LUCKY_EGG,
+			/*  1 %*/ ITEM_LUCKY_EGG,
+		},
+	},
+};
+
+static struct Raid sRoute1Raids5Star[] =
+{
+	{
+		.species = SPECIES_PIDGEOT,
+		.ability = RAID_ABILITY_HIDDEN,
+		.drops =
+		{
+			/*100 %*/ ITEM_POTION,
+			/* 80 %*/ ITEM_ANTIDOTE,
+			/* 80 %*/ ITEM_POKE_BALL,
+			/* 50 %*/ ITEM_FRESH_WATER,
+			/* 50 %*/ ITEM_BIG_MUSHROOM,
+			/* 30 %*/ ITEM_SITRUS_BERRY,
+			/* 30 %*/ ITEM_ETHER,
+			/* 25 %*/ ITEM_RARE_CANDY,
+			/* 25 %*/ ITEM_NONE,
+			/*  5 %*/ ITEM_NONE,
+			/*  4 %*/ ITEM_LUCKY_EGG,
+			/*  1 %*/ ITEM_LUCKY_EGG,
+		},
+	},
+};
+
 const struct RaidData gRaidsByMapSection[KANTO_MAPSEC_COUNT][RAID_STAR_COUNT] =
 {
+	[MAPSEC_ROUTE_1 - MAPSEC_DYNAMIC] =
+	{
+		[ONE_STAR_RAID] = {sRoute1Raids1Star, NELEMS(sRoute1Raids1Star)},
+		[TWO_STAR_RAID] = {sRoute1Raids2Star, NELEMS(sRoute1Raids2Star)},
+		[THREE_STAR_RAID] = {sRoute1Raids3Star, NELEMS(sRoute1Raids3Star)},
+		[FOUR_STAR_RAID] = {sRoute1Raids4Star, NELEMS(sRoute1Raids4Star)},
+		[FIVE_STAR_RAID] = {sRoute1Raids5Star, NELEMS(sRoute1Raids5Star)},
+		[SIX_STAR_RAID] = {sRoute1Raids5Star, NELEMS(sRoute1Raids5Star)},
+	},
+
 };
 
 #endif
