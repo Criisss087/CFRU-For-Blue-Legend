@@ -18,7 +18,7 @@ dns.c
 
 typedef bool8 IgnoredPalT[16];
 #define gIgnoredDNSPalIndices ((IgnoredPalT*) 0x203B830)
-
+  
 //This file's functions:
 #ifdef TIME_ENABLED
 static void FadeDayNightPalettes();

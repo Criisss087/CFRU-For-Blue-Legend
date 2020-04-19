@@ -20,7 +20,7 @@
 #define OW_BG_PAL_7 TRUE
 #define OW_BG_PAL_8 TRUE
 #define OW_BG_PAL_9 TRUE
-#define OW_BG_PAL_10 TRUE
+#define OW_BG_PAL_10 FALSE
 #define OW_BG_PAL_11 TRUE
 #define OW_BG_PAL_12 TRUE
 #define OW_BG_PAL_13 FALSE
@@ -37,7 +37,7 @@
 #define OW_SPRITE_PAL_7 TRUE
 #define OW_SPRITE_PAL_8 TRUE
 #define OW_SPRITE_PAL_9 TRUE
-#define OW_SPRITE_PAL_10 FALSE
+#define OW_SPRITE_PAL_10 TRUE
 #define OW_SPRITE_PAL_11 TRUE
 #define OW_SPRITE_PAL_12 TRUE
 #define OW_SPRITE_PAL_13 TRUE
@@ -245,12 +245,12 @@ const struct DNSPalFade gDNSNightFadingByTime[24][6] =
 };
 
 #define TILESET_PAL_FADE_END {0xFF, 0x0}
-
+ 
 const struct SpecificTilesetFade gSpecificTilesetFades[] =
 {	
-	{	//Pal 3 (CP)
+	{	//Pal 2 (CP)
 		.tilesetPointer = 0x82D4A94, //Tileset 0
-		.paletteNumToFade = 3,
+		.paletteNumToFade = 2,
 		.paletteIndicesToFade =
 		{
 			{1, RGB(30, 30, 17)},
@@ -302,7 +302,7 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 		.paletteIndicesToFade =
 		{
 			{14, RGB(30, 30, 17)},
-			{14, RGB(28, 27, 14)},
+			{13, RGB(28, 27, 14)},
 			{12, RGB(25, 24, 11)},
 			TILESET_PAL_FADE_END
 		},
@@ -338,7 +338,7 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 		.paletteNumToFade = 8,
 		.paletteIndicesToFade =
 		{
-			{1, RGB(30, 30, 17)},
+			{1, RGB(10, 18, 23)},
 			{3, RGB(28, 27, 14)},
 			{3, RGB(25, 24, 11)},
 			{2, RGB(23, 22, 9)},
