@@ -34,6 +34,23 @@ static const struct WildPokemon sRoute1_LandMonsMorning[] =
 };
 static const struct WildPokemonInfo sRoute1_LandMonsInfoMorning = {20, sRoute1_LandMonsMorning};
 
+static const struct WildPokemon sRoute1_LandMonsEvening[] =
+{
+    {2, 3, SPECIES_STARLY},
+    {2, 3, SPECIES_RATTATA},
+    {2, 3, SPECIES_RATTATA},
+    {2, 3, SPECIES_STARLY},
+    {2, 4, SPECIES_RATTATA},
+    {2, 4, SPECIES_STARLY},
+    {2, 2, SPECIES_STARLY},
+    {2, 2, SPECIES_RATTATA},
+    {3, 3, SPECIES_STARLY},
+    {4, 4, SPECIES_STARLY},
+    {5, 5, SPECIES_RATTATA},
+    {5, 5, SPECIES_PIDGEY},
+};
+static const struct WildPokemonInfo sRoute1_LandMonsInfoEvening = {20, sRoute1_LandMonsEvening};
+
 static const struct WildPokemon sRoute1_LandMonsNight[] =
 {
     {2, 3, SPECIES_HOOTHOOT},
@@ -110,6 +127,14 @@ const struct WildPokemonHeader gWildMonMorningHeaders[] =
 
 const struct WildPokemonHeader gWildMonEveningHeaders[] =
 {
+    {
+        .mapGroup = MAP_GROUP(ROUTE_1),
+        .mapNum = MAP_NUM(ROUTE_1),
+        .landMonsInfo = &sRoute1_LandMonsInfoEvening,
+        .waterMonsInfo = NULL,
+        .rockSmashMonsInfo = NULL,
+        .fishingMonsInfo = NULL,
+    },
 	{
         .mapGroup = 0xFF,
         .mapNum = 0xFF,
