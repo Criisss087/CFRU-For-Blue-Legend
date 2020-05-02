@@ -31,6 +31,8 @@
 #include "../include/constants/pokedex.h"
 #include "../include/constants/songs.h"
 
+#include "../include/gpu_regs.h"
+
 #include "../include/new/battle_strings.h"
 #include "../include/new/catching.h"
 #include "../include/new/dns.h"
@@ -233,6 +235,34 @@ u8 sp008_PokemonIVChecker(void) {
 			return 0;
 	}
 }
+
+
+void sp121_blendSprite(void){
+
+	u16 localId = Var8004;
+	u16 blendPar1 = Var8005;
+	u16 blendPar2 = Var8006;
+
+	u16 spriteId;
+
+	for (u8 eventObjId = 0; eventObjId < MAP_OBJECTS_COUNT; ++eventObjId) //For each NPC on the map
+	{
+		if (!gEventObjects[eventObjId].active || gEventObjects[eventObjId].isPlayer)
+			continue;
+
+		if (gEventObjects[eventObjId].localId == localId)
+		{
+			struct EventObject* event = &gEventObjects[eventObjId];
+			spriteId = event->spriteId;
+
+			struct Sprite* sprite = &gSprites[spriteId];
+			sprite->oam.objMode = ST_OAM_OBJ_BLEND;
+		}
+	}
+
+	SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(blendPar1, blendPar2));
+
+} 
 
 
 bool8 sp009_PokemonRibbonChecker(void) {
