@@ -17,6 +17,7 @@ build/*
 *.gif
 *.jpg
 *.jpeg
+grit/*
 Multi Target Moves Plan.txt
 generatedrepoints
 *__pycache__
