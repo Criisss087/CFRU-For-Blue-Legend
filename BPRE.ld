@@ -1165,7 +1165,13 @@ DisplayItemMessageOnField = 0x80F7808 | 1;
 GetPlayerTextSpeedDelay = 0x80F78A8 | 1;
 ChoiceSetupSimple = 0x810F7D8 | 1;
 AddTextPrinterParameterized4 = 0x812E5A4 | 1;
-
+CreateYesNoMenu = 0x810FF60 | 1;
+Menu_ProcessInputNoWrapClearOnChoose = 0x81100C8 | 1;
+TextWindow_LoadResourcesStdFrame0 = 0x814FD04 | 1;
+InitStandardTextBoxWindows = 0x80F6C6C | 1;
+ShowFieldMessage = 0x806943C | 1;
+ResetBg0 = 0x80F6C98 | 1;
+LoadStdWindowFrameGfx = 0x80F6E9C | 1;
 
 /* Task Functions */
 nullsub_8 = 0x802E310 | 1;
@@ -1618,7 +1624,7 @@ LoadSpriteSheetsForSummaryScreen = 0x8050DE0 | 1;
 PatchObjectPalette = 0x805F538 | 1;
 SetAffineData = 0x8075858 | 1;
 SpawnPokeOrTrainerPic = 0x810BDAC | 1;
-
+FreeAndDestroyMonPicSprite = 0x810C214 | 1; 
 
 /* Palette Functions */
 BlendPalette = 0x8045274 | 1;
@@ -1705,7 +1711,6 @@ ResetBgPositions = 0x80F6C14 | 1;
 free_temp_tile_data_buffers_if_possible = 0x80F682C | 1;
 decompress_and_copy_tile_data_to_vram = 0x80F6878 | 1;
 ResetBGs = 0x812D594 | 1;
-
 
 /* Scanline Effect Functions */
 ScanlineEffect_Stop = 0x8087E64 | 1;

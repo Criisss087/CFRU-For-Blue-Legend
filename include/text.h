@@ -285,6 +285,7 @@ u16 __attribute__((long_call)) AddTextPrinterParameterized(u8 windowId, u8 fontI
 s32 __attribute__((long_call)) GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing);
 u8 __attribute__((long_call)) GetFontAttribute(u8 fontId, u8 attributeId);
 void __attribute__((long_call)) RunTextPrinters(void);
+bool16 __attribute__((long_call)) IsTextPrinterActive(u8 id);
 
 /*
 extern u8 gStringVar1[];

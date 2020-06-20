@@ -1,0 +1,44 @@
+#org @gText_StartersPokemon
+POKÉMON BLUE LEGEND
+
+#org @gText_StartersButtons
+[DPAD_UP_DOWN]Mover [A_BUTTON]Elegir [START_BUTTON]Random
+
+#org @gText_StartersEasy
+Nivel: Fácil
+
+#org @gText_StartersMedium
+Nivel: Medio
+
+#org @gText_StartersHard
+Nivel: Difícil
+
+#org @gText_StartersConfirm
+¿Estas seguro?
+
+#org @gText_YesNo
+Si\nNo
+
+#org @gText_Nro
+ Nro: 
+#org @gText_Atk
+Atk: 
+#org @gText_Def
+Def: 
+#org @gText_SpAtk
+SAtk:
+#org @gText_SpDef
+SDef:
+#org @gText_Spe 
+Spe: 
+#org @gText_Hp
+Hp:  
+
+#org @gText_Style
+Estilo: 
+#org @gText_Ataque
+Ataque
+#org @gText_Defensa
+Defensa
+#org @gText_Equilibrado
+Equilibrado
