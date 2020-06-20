@@ -12,6 +12,7 @@
 #define DEBUG_OBEDIENCE //Traded Pokemon never have obedience issues
 #define DEBUG_DYNAMAX //Dynamax can be used in Dynamax battles without a Dynamax Band
 //#define DEBUG_AI_CHOICES //Removes the frame-based randomness of the AI's decisions
+#define LANGU_ESP // Para poder traducir textos en los .string al español sin perder el fuente original en ingles
 
 /*===== General Vars =====*/
 #define VAR_TERRAIN 0x5100 //Set to a terrain type for a battle to begin with the given terrain

@@ -5,6 +5,11 @@
 
 #define PIXEL_FILL(num) ((num) | ((num) << 4))
 
+// Mode parameter for funcs below
+#define COPYWIN_MAP  1
+#define COPYWIN_GFX  2
+#define COPYWIN_BOTH 3
+
 enum
 {
     WINDOW_BG,
@@ -76,6 +81,8 @@ void __attribute__((long_call)) ChoiceSetupSimple(u8 rid, u8 fboxid, u8 x, u8 y,
 s8 __attribute__((long_call)) RboxChoiceUpdate(void);
 u8 __attribute__((long_call)) ClearStdWindowAndFrameToTransparent(u8 id, bool8 update);
 void __attribute__((long_call)) ClearDialogWindowAndFrame(u8 windowId, bool8 copyToVram);
+void __attribute__((long_call)) DeleteWindow(u8 windowId, bool8 copyToVram);
+void __attribute__((long_call)) CreateYesNoMenu(const struct WindowTemplate *window, u8 fontId, u8 left, u8 top, u16 baseTileNum, u8 paletteNum, u8 initialCursorPos);
 
 /*
 int AddWindowWithoutTileMap(const struct WindowTemplate *template);

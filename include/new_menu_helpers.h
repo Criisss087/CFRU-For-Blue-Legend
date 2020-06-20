@@ -16,7 +16,10 @@ u16 __attribute__((long_call)) AddTextPrinterParameterized2(u8 windowId, u8 font
 void __attribute__((long_call)) DrawHelpMessageWindowWithText(const u8 * text);
 u8 __attribute__((long_call)) GetTextSpeedSetting(void);
 void __attribute__((long_call)) DrawDialogueFrame(u8 windowId, bool8 transfer);
-void __attribute__((long_call)) LoadStdWindowFrameGfx(void);
 u16 __attribute__((long_call)) GetStdWindowBaseTileNum(void);
+void __attribute__((long_call)) TextWindow_LoadResourcesStdFrame0(u8 windowId, u16 destOffset, u8 palIdx);
+void __attribute__((long_call)) InitStandardTextBoxWindows(void);
+void __attribute__((long_call)) ResetBg0(void);		
+void __attribute__((long_call)) LoadStdWindowFrameGfx(void);
 
 #endif // GUARD_NEW_MENU_HELPERS_H

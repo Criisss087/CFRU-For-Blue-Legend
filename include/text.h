@@ -288,6 +288,8 @@ u8 __attribute__((long_call)) GetMenuCursorDimensionByFont(u8 fontId, u8 whichDi
 void __attribute__((long_call)) TextPrinterDrawDownArrow(struct TextPrinter *textPrinter);
 bool8 __attribute__((long_call)) TextPrinterWaitAutoMode(struct TextPrinter *textPrinter);
 bool16 __attribute__((long_call)) TextPrinterWaitWithDownArrow(struct TextPrinter *textPrinter);
+void __attribute__((long_call)) RunTextPrinters(void);
+bool16 __attribute__((long_call)) IsTextPrinterActive(u8 id);
 
 /*
 extern u8 gStringVar1[];

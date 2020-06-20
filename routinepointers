@@ -185,6 +185,7 @@ sp11B_AllRaidBattlesCompleted 081601CC
 sp11C_GiveRaidBattleRewards 081601D0
 
 sp121_blendSprite 081601E4
+sp122_StartersInterface 081601E8
 
 sp12C_DoEnterPhraseScreen 08160210
 sp12D_CompareEnteredPhrase 08160214

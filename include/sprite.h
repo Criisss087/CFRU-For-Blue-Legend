@@ -336,6 +336,7 @@ void __attribute__((long_call)) ResetSpriteData(void);
 u16 __attribute__((long_call)) CreateMonPicSprite_HandleDeoxys(u16 species, u32 otId, u32 personality, u8 flags, s16 x, s16 y, u8 paletteSlot, u16 paletteTag);
 void __attribute__((long_call)) SpriteCbAnimateOnScreen(struct Sprite *sprite);
 void __attribute__((long_call)) SetSpriteOamFlipBits(struct Sprite *sprite, u8 hFlip, u8 vFlip);
+u16 __attribute__((long_call)) FreeAndDestroyMonPicSprite(u16 spriteId);
 
 /*
 u16 AllocTilesForSpriteSheet(struct SpriteSheet *sheet);
