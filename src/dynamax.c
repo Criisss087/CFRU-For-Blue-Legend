@@ -28,7 +28,7 @@
 
 /*
 dynamax.c
-	Functions that support Dynamax logic and execution,
+	Functions that support Dynamax logic and execution,-
 	as well as raid battles.
 */
 
