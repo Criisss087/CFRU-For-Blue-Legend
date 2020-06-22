@@ -1,4 +1,5 @@
 Grit_Flags.docx
+.vscode/*
 *.ini
 *.gba
 build/*
@@ -9,6 +10,7 @@ build/*
 *.lnk
 *.sav
 *.sa1
+*.sa2
 *.sg1
 *.ss1
 *.ss2
