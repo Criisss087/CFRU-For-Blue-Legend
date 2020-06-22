@@ -8,13 +8,11 @@
 /*
 wild_encounter_tables.c
 	day/night and/or regular map wild encounter species
-
 tables to edit:
 	gWildMonMorningHeaders
 	gWildMonEveningHeaders
 	gWildMonNightHeaders
 	gSwarmTable
-
 */
 
 static const struct WildPokemon sRoute1_LandMonsMorning[] =
@@ -68,24 +66,6 @@ static const struct WildPokemon sRoute1_LandMonsNight[] =
 };
 static const struct WildPokemonInfo sRoute1_LandMonsInfoNight = {20, sRoute1_LandMonsNight};
 
-
-static const struct WildPokemon sRoute18_LandMonsNight[] =
-{
-	{53, 57, SPECIES_NOCTOWL},
-	{53, 57, SPECIES_SKUNTANK},
-	{53, 57, SPECIES_NOCTOWL},
-	{53, 57, SPECIES_SKUNTANK},
-	{53, 57, SPECIES_BOUFFALANT},
-	{53, 57, SPECIES_BOUFFALANT},
-	{53, 57, SPECIES_NOCTOWL},
-	{53, 57, SPECIES_SKUNTANK},
-	{53, 57, SPECIES_SUDOWOODO},
-	{53, 57, SPECIES_AUDINO},
-	{53, 57, SPECIES_SUDOWOODO},
-	{53, 57, SPECIES_AUDINO},
-};
-
-static const struct WildPokemonInfo sRoute18_LandMonsInfoNight = {20, sRoute18_LandMonsNight};
 
 const struct WildPokemonHeader gWildMonMorningHeaders[] =
 {
