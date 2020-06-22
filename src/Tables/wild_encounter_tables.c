@@ -8,13 +8,11 @@
 /*
 wild_encounter_tables.c
 	day/night and/or regular map wild encounter species
-
 tables to edit:
 	gWildMonMorningHeaders
 	gWildMonEveningHeaders
 	gWildMonNightHeaders
 	gSwarmTable
-
 */
 
 static const struct WildPokemon sRoute1_LandMonsMorning[] =
@@ -67,43 +65,6 @@ static const struct WildPokemon sRoute1_LandMonsNight[] =
     {5, 5, SPECIES_HOOTHOOT},
 };
 static const struct WildPokemonInfo sRoute1_LandMonsInfoNight = {20, sRoute1_LandMonsNight};
-
-
-static const struct WildPokemon sRoute18_LandMonsNight[] =
-{
-	{53, 57, SPECIES_NOCTOWL},
-	{53, 57, SPECIES_SKUNTANK},
-	{53, 57, SPECIES_NOCTOWL},
-	{53, 57, SPECIES_SKUNTANK},
-	{53, 57, SPECIES_BOUFFALANT},
-	{53, 57, SPECIES_BOUFFALANT},
-	{53, 57, SPECIES_NOCTOWL},
-	{53, 57, SPECIES_SKUNTANK},
-	{53, 57, SPECIES_SUDOWOODO},
-	{53, 57, SPECIES_SUDOWOODO},
-	{53, 57, SPECIES_SUDOWOODO},
-	{53, 57, SPECIES_HAPPINY},
-};
-
-static const struct WildPokemonInfo sRoute18_LandMonsInfoNight = {15, sRoute18_LandMonsNight};
-
-static const struct WildPokemon sRedwoodForest_LandMonsNight[] =
-{
-	{55, 65, SPECIES_ARIADOS},
-	{55, 65, SPECIES_VIGOROTH},
-	{55, 65, SPECIES_ARIADOS},
-	{55, 65, SPECIES_VIGOROTH},
-	{55, 65, SPECIES_URSARING},
-	{55, 65, SPECIES_URSARING},
-	{60, 65, SPECIES_HERACROSS},
-	{60, 65, SPECIES_KOMALA},
-	{60, 65, SPECIES_KOMALA},
-	{60, 65, SPECIES_KOMALA},
-	{60, 65, SPECIES_PASSIMIAN},
-	{60, 65, SPECIES_ORANGURU},
-};
-
-static const struct WildPokemonInfo sRedwoodForest_LandMonsInfoNight = {15, sRedwoodForest_LandMonsNight};
 
 const struct WildPokemonHeader gWildMonMorningHeaders[] =
 {
