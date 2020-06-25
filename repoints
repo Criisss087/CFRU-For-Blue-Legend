@@ -263,3 +263,9 @@ DESC_NATURALGIFT 0887abfc
 DESC_QUASH 0887ac28
 DESC_ROCKCLIMB 0887ae64
 #endif
+
+##Minisprites nuevos
+gEventObjectGraphicsInfo_Gastly 839FFC4
+gEventObjectGraphicsInfo_Gengar 839FFC8
+##gEventObjectPic_GengarPal 8BCC9E8     no hace falta repuntear!
+gEventObjectPic_GastlyPal 8BCCA48
