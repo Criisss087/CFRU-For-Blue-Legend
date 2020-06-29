@@ -32,7 +32,7 @@ static void ClearVramOamPlttRegs(void);
 static void ClearTasksAndGraphicalStructs(void);
 static void VBlankCB_StartersIntro(void);
 static void MainCB2_StartersIntro(void);
-static void SpriteCB_PointerSelection(struct Sprite* sprite);
+static void SpriteCB_StartersCursor(struct Sprite* sprite);
 static void LoadStartersIntroGfx(void);
 static void InitStartersIntro(void);
 static void CleanWindows(void);
@@ -53,12 +53,15 @@ void sp122_StartersInterface(void);
 extern const u8 StartersIntroBGTiles[];
 extern const u8 StartersIntroBGPal[];
 extern const u8 StartersIntroBGMap[];
-extern const u8 StartersPointerTiles[];
-extern const u8 StartersPointerPal[];
+extern const u8 StartersCursorTiles[];
+extern const u8 StartersCursorPal[];
 
+extern const u8 StartersBox1Tiles[];
+extern const u8 StartersBox1Pal[];
+extern const u8 StartersBox2Tiles[];
+extern const u8 StartersBox2Pal[];
 
 // Textos
-extern const u8 gText_StartersPokemon[];
 extern const u8 gText_StartersButtons[];
 extern const u8 gText_StartersEasy[];
 extern const u8 gText_StartersMedium[];
@@ -92,22 +95,23 @@ struct StartersIntro
 enum
 {
 	STARTERS_CURSOR_TAG = 0x2710,
+	STARTERS_BOX1_TAG,
+	STARTERS_BOX2_TAG,
 };
 
 enum Windows
 {
 	WIN_DIALOG,
 	WIN_YESNO_BOX,
-	WIN_TITLE,
 	WIN_TYPE_1,
 	WIN_TYPE_2,
 	WIN_NAME,
 	WIN_HP,
-	WIN_SPE,
 	WIN_ATK,
 	WIN_DEF,
 	WIN_SPATK,
 	WIN_SPDEF,
+	WIN_SPE,
 	WIN_INSTRUCTIONS,
 	WINDOW_COUNT,
 };
@@ -117,8 +121,8 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_DIALOG] =
 	{
         .bg = 0,
-        .tilemapLeft = 14,
-        .tilemapTop = 13,
+        .tilemapLeft = 11,
+        .tilemapTop = 11,
         .width = 14,
         .height = 4,
         .paletteNum = 15,
@@ -127,27 +131,17 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_YESNO_BOX] =
 	{
         .bg = 0,
-        .tilemapLeft = 26,
-        .tilemapTop = 13,
+        .tilemapLeft = 24,
+        .tilemapTop = 11,
         .width = 6,
         .height = 4,
         .paletteNum = 15,
         .baseBlock = 0x0180
     },
-	[WIN_TITLE] =
-	{
-		.bg = 1,
-		.tilemapLeft = 17,
-		.tilemapTop = 0,
-		.width = 14,
-		.height = 2,
-		.paletteNum = 15,
-		.baseBlock = 1,
-	},
 	[WIN_TYPE_1] =
 	{
 		.bg = 1,
-		.tilemapLeft = 4,
+		.tilemapLeft = 21,
 		.tilemapTop = 0,
 		.width = 4,
 		.height = 2,
@@ -157,7 +151,7 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_TYPE_2] =
 	{
 		.bg = 1,
-		.tilemapLeft = 8,
+		.tilemapLeft = 25,
 		.tilemapTop = 0,
 		.width = 4,
 		.height = 2,
@@ -167,9 +161,9 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_NAME] =
 	{
 		.bg = 1,
-		.tilemapLeft = 15,
-		.tilemapTop = 3,
-		.width = 14,
+		.tilemapLeft = 8,
+		.tilemapTop = 0,
+		.width = 12,
 		.height = 2,
 		.paletteNum = 15,
 		.baseBlock = 28,
@@ -177,28 +171,18 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_HP] =
 	{
 		.bg = 1,
-		.tilemapLeft = 15,
-		.tilemapTop = 5,
+		.tilemapLeft = 7,
+		.tilemapTop = 3,
 		.width = 6,
 		.height = 2,
 		.paletteNum = 15,
 		.baseBlock = 56,
 	},
-	[WIN_SPE] =
-	{
-		.bg = 1,
-		.tilemapLeft = 22,
-		.tilemapTop = 5,
-		.width = 6,
-		.height = 2,
-		.paletteNum = 15,
-		.baseBlock = 70,
-	},
 	[WIN_ATK] =
 	{
 		.bg = 1,
-		.tilemapLeft = 15,
-		.tilemapTop = 7,
+		.tilemapLeft = 7,
+		.tilemapTop = 5,
 		.width = 6,
 		.height = 2,
 		.paletteNum = 15,
@@ -207,7 +191,7 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_DEF] =
 	{
 		.bg = 1,
-		.tilemapLeft = 22,
+		.tilemapLeft = 7,
 		.tilemapTop = 7,
 		.width = 6,
 		.height = 2,
@@ -217,7 +201,7 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_SPATK] =
 	{
 		.bg = 1,
-		.tilemapLeft = 15,
+		.tilemapLeft = 7,
 		.tilemapTop = 9,
 		.width = 6,
 		.height = 2,
@@ -227,13 +211,23 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_SPDEF] =
 	{
 		.bg = 1,
-		.tilemapLeft = 22,
-		.tilemapTop = 9,
+		.tilemapLeft = 7,
+		.tilemapTop = 11,
 		.width = 6,
 		.height = 2,
 		.paletteNum = 15,
 		.baseBlock = 126,
 	},			
+	[WIN_SPE] =
+	{
+		.bg = 1,
+		.tilemapLeft = 7,
+		.tilemapTop = 13,
+		.width = 6,
+		.height = 2,
+		.paletteNum = 15,
+		.baseBlock = 70,
+	},
 	[WIN_INSTRUCTIONS] =
 	{
 		.bg = 1,
@@ -277,45 +271,102 @@ static const struct BgTemplate sStartersIntroBgTemplates[] =
 	}
 };
 
-static const struct OamData sOamData_Pointer =
+static const struct OamData sOamData_Cursor =
 {
 	.affineMode = ST_OAM_AFFINE_OFF,
 	.objMode = ST_OAM_OBJ_NORMAL,
-	.shape = SPRITE_SHAPE(32x32),
-	.size = SPRITE_SIZE(32x32),
+	.shape = SPRITE_SHAPE(16x16),
+	.size = SPRITE_SIZE(16x16),
 	.priority = 0, 
-};
-static const union AnimCmd sPointerAnim[] = {
-    ANIMCMD_FRAME( 0, 30),
-    ANIMCMD_FRAME( 16, 30),
-	ANIMCMD_JUMP(0)
-};
-static const union AnimCmd *const sPointerAnims[] = {
-    sPointerAnim
 };
 
 static const struct SpriteTemplate sStartersCursorSpriteTemplate =
 {
 	.tileTag = STARTERS_CURSOR_TAG,
 	.paletteTag = STARTERS_CURSOR_TAG,
-	.oam = &sOamData_Pointer,
-	.anims = sPointerAnims,
+	.oam = &sOamData_Cursor,
+	.anims = gDummySpriteAnimTable,
 	.images = NULL,
 	.affineAnims = gDummySpriteAffineAnimTable,
-	.callback = SpriteCB_PointerSelection,
+	.callback = SpriteCB_StartersCursor,
+};
+static const struct CompressedSpriteSheet sStartersCursorSpriteSheet = 
+{
+	StartersCursorTiles, 
+	(16 * 16) / 2, 
+	STARTERS_CURSOR_TAG
+};
+static const struct CompressedSpritePalette sStartersCursorSpritePalette = 
+{
+	StartersCursorPal, 
+	STARTERS_CURSOR_TAG
 };
 
-static const struct CompressedSpriteSheet sStartersPointerSpriteSheet = 
+
+
+
+static const struct OamData sOamData_Box1 =
 {
-	StartersPointerTiles, 
-	(32 * 32), 
-	STARTERS_CURSOR_TAG
+	.affineMode = ST_OAM_AFFINE_OFF,
+	.objMode = ST_OAM_OBJ_NORMAL,
+	.shape = SPRITE_SHAPE(64x64),
+	.size = SPRITE_SIZE(64x64),
+	.priority = 1, 
 };
-static const struct CompressedSpritePalette sStartersPointerSpritePalette = 
+
+static const struct SpriteTemplate sStartersBox1SpriteTemplate =
 {
-	StartersPointerPal, 
-	STARTERS_CURSOR_TAG
+	.tileTag = STARTERS_BOX1_TAG,
+	.paletteTag = STARTERS_BOX1_TAG,
+	.oam = &sOamData_Box1,
+	.anims = gDummySpriteAnimTable,
+	.images = NULL,
+	.affineAnims = gDummySpriteAffineAnimTable,
+	.callback = SpriteCallbackDummy,
 };
+static const struct CompressedSpriteSheet sStartersBox1SpriteSheet = 
+{
+	StartersBox1Tiles, 
+	(64 * 64) / 2, 
+	STARTERS_BOX1_TAG
+};
+static const struct CompressedSpritePalette sStartersBox1SpritePalette = 
+{
+	StartersBox1Pal, 
+	STARTERS_BOX1_TAG
+};
+static const struct OamData sOamData_Box2 =
+{
+	.affineMode = ST_OAM_AFFINE_OFF,
+	.objMode = ST_OAM_OBJ_NORMAL,
+	.shape = SPRITE_SHAPE(64x64),
+	.size = SPRITE_SIZE(64x64),
+	.priority = 1, 
+};
+
+static const struct SpriteTemplate sStartersBox2SpriteTemplate =
+{
+	.tileTag = STARTERS_BOX2_TAG,
+	.paletteTag = STARTERS_BOX2_TAG,
+	.oam = &sOamData_Box2,
+	.anims = gDummySpriteAnimTable,
+	.images = NULL,
+	.affineAnims = gDummySpriteAffineAnimTable,
+	.callback = SpriteCallbackDummy,
+};
+static const struct CompressedSpriteSheet sStartersBox2SpriteSheet = 
+{
+	StartersBox2Tiles, 
+	(64 * 64) / 2, 
+	STARTERS_BOX2_TAG
+};
+static const struct CompressedSpritePalette sStartersBox2SpritePalette = 
+{
+	StartersBox2Pal, 
+	STARTERS_BOX2_TAG
+};
+
+
 static void CB2_StartersIntro(void)
 {
 	if (gMain.state <= 7)
@@ -414,10 +465,24 @@ static void MainCB2_StartersIntro(void)
 	BuildOamBuffer();
 	UpdatePaletteFade();
 }
-
-static void SpriteCB_PointerSelection(struct Sprite* sprite)
+static void SpriteCB_StartersCursor(struct Sprite* sprite)
 {
-	sprite->pos1.x = 30 + ((sStartersIntroPtr->monId-1) * 30);
+	sprite->pos1.y = 31 + ((sStartersIntroPtr->monId-1) * 20);
+
+	if (sprite->data[1])
+	{
+		sprite->data[0] -= 1;
+		if (sprite->data[0] == 0)
+			sprite->data[1] = FALSE;
+	}
+	else
+	{
+		sprite->data[0] += 1;
+		if (sprite->data[0] == 20)
+			sprite->data[1] = TRUE;
+	}
+
+	sprite->pos2.x = 170 - ((sStartersIntroPtr->monId%2)*25) - sprite->data[0] / 4;
 }
 
 static void LoadStartersIntroGfx(void)
@@ -492,8 +557,6 @@ static void PrintStaticTexts(void)
 		}
 	}
 
-	StringCopy(gStringVar1, gText_StartersPokemon);
-	WindowPrint(WIN_TITLE, 0, 2, 0, &white, 0, gStringVar1);
 	WindowPrint(WIN_INSTRUCTIONS, 0, 2, 4, &white, 0, gText_StartersButtons);
 
 	ClearStdWindowAndFrameToTransparent(WIN_NAME, 1);
@@ -508,36 +571,30 @@ static void PrintStaticTexts(void)
 	StringAppend(gStringVar1, gText_Nro);
 	ConvertIntToDecimalStringN(gStringVar2, sStartersIntroPtr->species, STR_CONV_MODE_LEADING_ZEROS, 3);
 	StringAppend(gStringVar1, gStringVar2);	
-	WindowPrint(WIN_NAME, 0, 0, 0, &black, 0, gStringVar1);
+	WindowPrint(WIN_NAME, 0, 0, 0, &white, 0, gStringVar1);
 
-	StringExpandPlaceholders(gStringVar1, gText_Hp);
 	ConvertIntToDecimalStringN(gStringVar2, gBaseStats[sStartersIntroPtr->species].baseHP, STR_CONV_MODE_LEADING_ZEROS, 3);
-	StringAppend(gStringVar1, gStringVar2);	
+	StringExpandPlaceholders(gStringVar1, gStringVar2);	
 	WindowPrint(WIN_HP, 0, 0, 0, &black, 0, gStringVar1);
 
-	StringExpandPlaceholders(gStringVar1, gText_Spe);
 	ConvertIntToDecimalStringN(gStringVar2, gBaseStats[sStartersIntroPtr->species].baseSpeed, STR_CONV_MODE_LEADING_ZEROS, 3);
-	StringAppend(gStringVar1, gStringVar2);	
+	StringExpandPlaceholders(gStringVar1, gStringVar2);	
 	WindowPrint(WIN_SPE, 0, 0, 0, &black, 0, gStringVar1);
 
-	StringExpandPlaceholders(gStringVar1, gText_Atk);
 	ConvertIntToDecimalStringN(gStringVar2, gBaseStats[sStartersIntroPtr->species].baseAttack, STR_CONV_MODE_LEADING_ZEROS, 3);
-	StringAppend(gStringVar1, gStringVar2);	
+	StringExpandPlaceholders(gStringVar1, gStringVar2);	
 	WindowPrint(WIN_ATK, 0, 0, 0, &black, 0, gStringVar1);
 
-	StringExpandPlaceholders(gStringVar1, gText_Def);
 	ConvertIntToDecimalStringN(gStringVar2, gBaseStats[sStartersIntroPtr->species].baseDefense, STR_CONV_MODE_LEADING_ZEROS, 3);
-	StringAppend(gStringVar1, gStringVar2);	
+	StringExpandPlaceholders(gStringVar1, gStringVar2);	
 	WindowPrint(WIN_DEF, 0, 0, 0, &black, 0, gStringVar1);
 
-	StringExpandPlaceholders(gStringVar1, gText_SpAtk);
 	ConvertIntToDecimalStringN(gStringVar2, gBaseStats[sStartersIntroPtr->species].baseSpAttack, STR_CONV_MODE_LEADING_ZEROS, 3);
-	StringAppend(gStringVar1, gStringVar2);	
+	StringExpandPlaceholders(gStringVar1, gStringVar2);	
 	WindowPrint(WIN_SPATK, 0, 0, 0, &black, 0, gStringVar1);
 
-	StringExpandPlaceholders(gStringVar1, gText_SpDef);
 	ConvertIntToDecimalStringN(gStringVar2, gBaseStats[sStartersIntroPtr->species].baseSpDefense, STR_CONV_MODE_LEADING_ZEROS, 3);
-	StringAppend(gStringVar1, gStringVar2);	
+	StringExpandPlaceholders(gStringVar1, gStringVar2);	
 	WindowPrint(WIN_SPDEF, 0, 0, 0, &black, 0, gStringVar1);
 
 }
@@ -558,7 +615,7 @@ static void ShowStarter1PokemonSprite(void)
 	}
 	
 	const struct CompressedSpritePalette* pal = GetMonSpritePalStructFromOtIdPersonality(sStartersIntroPtr->species, otid, personality);
-	sStartersIntroPtr->monSpriteId = CreateMonPicSprite_HandleDeoxys(sStartersIntroPtr->species, otid, personality, 1, 60, 57, 0, pal->tag);
+	sStartersIntroPtr->monSpriteId = CreateMonPicSprite_HandleDeoxys(sStartersIntroPtr->species, otid, personality, 1, 133, 54, 0, pal->tag);
 		
 }
 static void ShowPokemonTypes(void)
@@ -578,19 +635,19 @@ static void ShowStartersIcons(void)
 {
 
 	LoadMonIconPalette(SPECIES_BULBASAUR);
-	CreateMonIcon(SPECIES_BULBASAUR, SpriteCB_PokeIcon, 30, 120, 0, 0xFFFFFFFF, FALSE);
+	CreateMonIcon(SPECIES_BULBASAUR, SpriteCB_PokeIcon, 195, 26, 0, 0xFFFFFFFF, FALSE);
 
 	LoadMonIconPalette(SPECIES_CHARMANDER);
-	CreateMonIcon(SPECIES_CHARMANDER, SpriteCB_PokeIcon, 60, 120, 0, 0xFFFFFFFF, FALSE);
+	CreateMonIcon(SPECIES_CHARMANDER, SpriteCB_PokeIcon, 220, 46, 0, 0xFFFFFFFF, FALSE);
 
 	LoadMonIconPalette(SPECIES_SQUIRTLE);
-	CreateMonIcon(SPECIES_SQUIRTLE, SpriteCB_PokeIcon, 90, 120, 0, 0xFFFFFFFF, FALSE);
+	CreateMonIcon(SPECIES_SQUIRTLE, SpriteCB_PokeIcon, 195, 66, 0, 0xFFFFFFFF, FALSE);
 	
 }
 static void ShowSelectionPointer(void)
 {
-	LoadCompressedSpriteSheetUsingHeap(&sStartersPointerSpriteSheet);
-	LoadCompressedSpritePaletteUsingHeap(&sStartersPointerSpritePalette);
+	LoadCompressedSpriteSheetUsingHeap(&sStartersCursorSpriteSheet);
+	LoadCompressedSpritePaletteUsingHeap(&sStartersCursorSpritePalette);		
 	CreateSprite(&sStartersCursorSpriteTemplate, 30, 105, 0);
 }
 
@@ -628,6 +685,14 @@ static void Task_StartersConfirm(u8 taskId)
 	{
 		PlaySE(SE_CORRECT);
 
+		LoadCompressedSpriteSheetUsingHeap(&sStartersBox1SpriteSheet);
+		LoadCompressedSpritePaletteUsingHeap(&sStartersBox1SpritePalette);
+		CreateSprite(&sStartersBox1SpriteTemplate, 122, 104, 0);
+
+		LoadCompressedSpriteSheetUsingHeap(&sStartersBox2SpriteSheet);
+		LoadCompressedSpritePaletteUsingHeap(&sStartersBox2SpritePalette);
+		CreateSprite(&sStartersBox2SpriteTemplate, 186, 104, 0);
+
 		WindowPrint(WIN_DIALOG, 1, 8, 2, &MenuTextBlack, 0, gText_StartersConfirm);
 		CopyWindowToVram(WIN_DIALOG, 3);
 		PutWindowTilemap(WIN_DIALOG);
@@ -658,6 +723,20 @@ static void Task_StartersYes(u8 taskId)
     case 1:
     case -1:
         PlaySE(SE_SELECT);
+
+		FreeSpritePaletteByTag(STARTERS_BOX1_TAG);
+		FreeSpriteTilesByTag(STARTERS_BOX1_TAG);
+		FreeSpritePaletteByTag(STARTERS_BOX2_TAG);
+		FreeSpriteTilesByTag(STARTERS_BOX2_TAG);
+
+		for (int i = 0; i < MAX_SPRITES; ++i)
+		{
+			if (gSprites[i].template->tileTag == STARTERS_BOX1_TAG
+			||  gSprites[i].template->tileTag == STARTERS_BOX2_TAG)
+			{
+				DestroySprite(&gSprites[i]);
+			}
+		}
 
 		ClearStdWindowAndFrameToTransparent(WIN_DIALOG, 1);
 		ClearStdWindowAndFrameToTransparent(WIN_YESNO_BOX, 1);
@@ -697,7 +776,7 @@ static void Task_StartersWaitForKeyPress(u8 taskId)
 		ShowStarter1PokemonSprite();
 		goto PRESSED_A;
 	}
-	else if (gMain.newAndRepeatedKeys & DPAD_LEFT)
+	else if (gMain.newAndRepeatedKeys & DPAD_UP)
 	{
 		PlaySE(SE_SELECT);
 		if (sStartersIntroPtr->monId == 1)
@@ -710,7 +789,7 @@ static void Task_StartersWaitForKeyPress(u8 taskId)
 		CommitWindows();
 		ShowStarter1PokemonSprite();
 	}
-	else if (gMain.newAndRepeatedKeys & DPAD_RIGHT)
+	else if (gMain.newAndRepeatedKeys & DPAD_DOWN)
 	{
 		PlaySE(SE_SELECT);
 		if (sStartersIntroPtr->monId == 3)
@@ -722,8 +801,6 @@ static void Task_StartersWaitForKeyPress(u8 taskId)
 		ShowPokemonTypes();
 		CommitWindows();
 		ShowStarter1PokemonSprite();
-		
-		
 	}
 }
 
