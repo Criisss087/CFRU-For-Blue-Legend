@@ -308,6 +308,11 @@ gText_TextSpeedInstant 083cc338
 #endif
 
 ##Minisprites nuevos
+gEventObjectGraphicsInfo_19 839FDFC
+gEventObjectGraphicsInfo_21 839FE04
+gEventObjectGraphicsInfo_29 839FE24
+gEventObjectGraphicsInfo_34 839FE38
+
 gEventObjectGraphicsInfo_Gastly 839FFC4
 gEventObjectGraphicsInfo_Gengar 839FFC8
 ##gEventObjectPic_GengarPal 8BCC9E8     no hace falta repuntear!
