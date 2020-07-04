@@ -42,10 +42,13 @@ static void ShowStarter1PokemonSprite(void);
 static void ShowPokemonTypes(void);
 static void ShowStartersIcons(void);
 static void ShowSelectionPointer(void);
+static void CreateYesNoButtons(void);
+static void DeleteYesNoButtons(void);
 static void Task_StartersIntroFadeIn(u8 taskId);
 static void Task_StartersIntroFadeOut(u8 taskId);
 static void Task_StartersWaitForKeyPress(u8 taskId);
 static void Task_StartersConfirm(u8 taskId);
+static void Task_StartersQuestion(u8 taskId);
 static void Task_StartersYes(u8 taskId);
 void sp122_StartersInterface(void);
 
@@ -55,11 +58,15 @@ extern const u8 StartersIntroBGPal[];
 extern const u8 StartersIntroBGMap[];
 extern const u8 StartersCursorTiles[];
 extern const u8 StartersCursorPal[];
+extern const u8 Si1Tiles[];
+extern const u8 Si1Pal[];
+extern const u8 Si2Tiles[];
+extern const u8 Si2Pal[];
+extern const u8 No1Tiles[];
+extern const u8 No1Pal[];
+extern const u8 No2Tiles[];
+extern const u8 No2Pal[];
 
-extern const u8 StartersBox1Tiles[];
-extern const u8 StartersBox1Pal[];
-extern const u8 StartersBox2Tiles[];
-extern const u8 StartersBox2Pal[];
 
 // Textos
 extern const u8 gText_StartersButtons[];
@@ -89,14 +96,18 @@ struct StartersIntro
 	u8 species;
 	u8 textConfirm;
 	u8 textTime;
+	u8 respSel;
+	u8 resp;
 };
 #define sStartersIntroPtr (*((struct StartersIntro**) 0x203E038))
 
 enum
 {
 	STARTERS_CURSOR_TAG = 0x2710,
-	STARTERS_BOX1_TAG,
-	STARTERS_BOX2_TAG,
+	SI1_TAG,
+	SI2_TAG,
+	NO1_TAG,
+	NO2_TAG,
 };
 
 enum Windows
@@ -121,8 +132,8 @@ static const struct WindowTemplate sStartersIntroWinTemplates[WINDOW_COUNT + 1] 
 	[WIN_DIALOG] =
 	{
         .bg = 0,
-        .tilemapLeft = 11,
-        .tilemapTop = 11,
+        .tilemapLeft = 9,
+        .tilemapTop = 16,
         .width = 14,
         .height = 4,
         .paletteNum = 15,
@@ -301,71 +312,126 @@ static const struct CompressedSpritePalette sStartersCursorSpritePalette =
 	StartersCursorPal, 
 	STARTERS_CURSOR_TAG
 };
-
-
-
-
-static const struct OamData sOamData_Box1 =
+static const struct OamData sOamData_Si1 =
 {
 	.affineMode = ST_OAM_AFFINE_OFF,
 	.objMode = ST_OAM_OBJ_NORMAL,
-	.shape = SPRITE_SHAPE(64x64),
-	.size = SPRITE_SIZE(64x64),
+	.shape = SPRITE_SHAPE(64x32),
+	.size = SPRITE_SIZE(64x32),
 	.priority = 1, 
 };
 
-static const struct SpriteTemplate sStartersBox1SpriteTemplate =
+static const struct SpriteTemplate sSi1SpriteTemplate =
 {
-	.tileTag = STARTERS_BOX1_TAG,
-	.paletteTag = STARTERS_BOX1_TAG,
-	.oam = &sOamData_Box1,
+	.tileTag = SI1_TAG,
+	.paletteTag = SI1_TAG,
+	.oam = &sOamData_Si1,
 	.anims = gDummySpriteAnimTable,
 	.images = NULL,
 	.affineAnims = gDummySpriteAffineAnimTable,
 	.callback = SpriteCallbackDummy,
 };
-static const struct CompressedSpriteSheet sStartersBox1SpriteSheet = 
+static const struct CompressedSpriteSheet sSi1SpriteSheet = 
 {
-	StartersBox1Tiles, 
-	(64 * 64) / 2, 
-	STARTERS_BOX1_TAG
+	Si1Tiles, 
+	(64 * 32) / 2, 
+	SI1_TAG
 };
-static const struct CompressedSpritePalette sStartersBox1SpritePalette = 
+static const struct CompressedSpritePalette sSi1SpritePalette = 
 {
-	StartersBox1Pal, 
-	STARTERS_BOX1_TAG
+	Si1Pal, 
+	SI1_TAG
 };
-static const struct OamData sOamData_Box2 =
+static const struct OamData sOamData_Si2 =
 {
 	.affineMode = ST_OAM_AFFINE_OFF,
 	.objMode = ST_OAM_OBJ_NORMAL,
-	.shape = SPRITE_SHAPE(64x64),
-	.size = SPRITE_SIZE(64x64),
+	.shape = SPRITE_SHAPE(64x32),
+	.size = SPRITE_SIZE(64x32),
 	.priority = 1, 
 };
 
-static const struct SpriteTemplate sStartersBox2SpriteTemplate =
+static const struct SpriteTemplate sSi2SpriteTemplate =
 {
-	.tileTag = STARTERS_BOX2_TAG,
-	.paletteTag = STARTERS_BOX2_TAG,
-	.oam = &sOamData_Box2,
+	.tileTag = SI2_TAG,
+	.paletteTag = SI2_TAG,
+	.oam = &sOamData_Si2,
 	.anims = gDummySpriteAnimTable,
 	.images = NULL,
 	.affineAnims = gDummySpriteAffineAnimTable,
 	.callback = SpriteCallbackDummy,
 };
-static const struct CompressedSpriteSheet sStartersBox2SpriteSheet = 
+static const struct CompressedSpriteSheet sSi2SpriteSheet = 
 {
-	StartersBox2Tiles, 
-	(64 * 64) / 2, 
-	STARTERS_BOX2_TAG
+	Si2Tiles, 
+	(64 * 32) / 2, 
+	SI2_TAG
 };
-static const struct CompressedSpritePalette sStartersBox2SpritePalette = 
+static const struct CompressedSpritePalette sSi2SpritePalette = 
 {
-	StartersBox2Pal, 
-	STARTERS_BOX2_TAG
+	Si2Pal, 
+	SI2_TAG
+};
+static const struct OamData sOamData_No1 =
+{
+	.affineMode = ST_OAM_AFFINE_OFF,
+	.objMode = ST_OAM_OBJ_NORMAL,
+	.shape = SPRITE_SHAPE(64x32),
+	.size = SPRITE_SIZE(64x32),
+	.priority = 1, 
 };
 
+static const struct SpriteTemplate sNo1SpriteTemplate =
+{
+	.tileTag = NO1_TAG,
+	.paletteTag = NO1_TAG,
+	.oam = &sOamData_No1,
+	.anims = gDummySpriteAnimTable,
+	.images = NULL,
+	.affineAnims = gDummySpriteAffineAnimTable,
+	.callback = SpriteCallbackDummy,
+};
+static const struct CompressedSpriteSheet sNo1SpriteSheet = 
+{
+	No1Tiles, 
+	(64 * 32) / 2, 
+	NO1_TAG
+};
+static const struct CompressedSpritePalette sNo1SpritePalette = 
+{
+	No1Pal, 
+	NO1_TAG
+};
+static const struct OamData sOamData_No2 =
+{
+	.affineMode = ST_OAM_AFFINE_OFF,
+	.objMode = ST_OAM_OBJ_NORMAL,
+	.shape = SPRITE_SHAPE(64x32),
+	.size = SPRITE_SIZE(64x32),
+	.priority = 1, 
+};
+
+static const struct SpriteTemplate sNo2SpriteTemplate =
+{
+	.tileTag = NO2_TAG,
+	.paletteTag = NO2_TAG,
+	.oam = &sOamData_No2,
+	.anims = gDummySpriteAnimTable,
+	.images = NULL,
+	.affineAnims = gDummySpriteAffineAnimTable,
+	.callback = SpriteCallbackDummy,
+};
+static const struct CompressedSpriteSheet sNo2SpriteSheet = 
+{
+	No2Tiles, 
+	(64 * 32) / 2, 
+	NO2_TAG
+};
+static const struct CompressedSpritePalette sNo2SpritePalette = 
+{
+	No2Pal, 
+	NO2_TAG
+};
 
 static void CB2_StartersIntro(void)
 {
@@ -651,6 +717,65 @@ static void ShowSelectionPointer(void)
 	CreateSprite(&sStartersCursorSpriteTemplate, 30, 105, 0);
 }
 
+static void CreateYesNoButtons()
+{
+	if(sStartersIntroPtr->respSel == 1)
+	{
+		LoadCompressedSpriteSheetUsingHeap(&sSi2SpriteSheet);
+		LoadCompressedSpritePaletteUsingHeap(&sSi2SpritePalette);
+		CreateSprite(&sSi2SpriteTemplate, 32, 145, 0);
+
+		LoadCompressedSpriteSheetUsingHeap(&sNo1SpriteSheet);
+		LoadCompressedSpritePaletteUsingHeap(&sNo1SpritePalette);
+		CreateSprite(&sNo1SpriteTemplate, 208, 145, 0);	
+	}
+	else
+	{
+		LoadCompressedSpriteSheetUsingHeap(&sSi1SpriteSheet);
+		LoadCompressedSpritePaletteUsingHeap(&sSi1SpritePalette);
+		CreateSprite(&sSi1SpriteTemplate, 32, 145, 0);
+
+		LoadCompressedSpriteSheetUsingHeap(&sNo2SpriteSheet);
+		LoadCompressedSpritePaletteUsingHeap(&sNo2SpritePalette);
+		CreateSprite(&sNo2SpriteTemplate, 208, 145, 0);	
+	}
+}
+
+static void DeleteYesNoButtons()
+{
+	if(sStartersIntroPtr->respSel == 0)
+	{
+		FreeSpritePaletteByTag(SI1_TAG);
+		FreeSpriteTilesByTag(SI1_TAG);
+		FreeSpritePaletteByTag(NO2_TAG);
+		FreeSpriteTilesByTag(NO2_TAG);
+
+		for (int i = 0; i < MAX_SPRITES; ++i)
+		{
+			if (gSprites[i].template->tileTag == SI1_TAG
+			||  gSprites[i].template->tileTag == NO2_TAG)
+			{
+				DestroySprite(&gSprites[i]);
+			}
+		}		
+	}
+	else
+	{
+		FreeSpritePaletteByTag(SI2_TAG);
+		FreeSpriteTilesByTag(SI2_TAG);
+		FreeSpritePaletteByTag(NO1_TAG);
+		FreeSpriteTilesByTag(NO1_TAG);
+
+		for (int i = 0; i < MAX_SPRITES; ++i)
+		{
+			if (gSprites[i].template->tileTag == SI2_TAG
+			||  gSprites[i].template->tileTag == NO1_TAG)
+			{
+				DestroySprite(&gSprites[i]);
+			}
+		}		
+	}
+}
 static void Task_StartersIntroFadeIn(u8 taskId)
 {
 	if (!gPaletteFade->active)
@@ -674,76 +799,88 @@ static void Task_StartersIntroFadeOut(u8 taskId)
 static void Task_StartersConfirm(u8 taskId)
 {
 
-	struct TextColor MenuTextBlack =
+	struct TextColor MenuTextWhite =
 	{
-		.bgColor = 0, //Transparent
-		.fgColor = 15, //White
-		.shadowColor = 3,
+		.bgColor = 0, 
+		.fgColor = 1, 
+		.shadowColor = 2,
 	};	
 
 	if (sStartersIntroPtr->textConfirm == 1)
 	{
 		PlaySE(SE_CORRECT);
+		sStartersIntroPtr->respSel = 1;	
+		CreateYesNoButtons();
+		sStartersIntroPtr->resp = 0;
 
-		LoadCompressedSpriteSheetUsingHeap(&sStartersBox1SpriteSheet);
-		LoadCompressedSpritePaletteUsingHeap(&sStartersBox1SpritePalette);
-		CreateSprite(&sStartersBox1SpriteTemplate, 122, 104, 0);
-
-		LoadCompressedSpriteSheetUsingHeap(&sStartersBox2SpriteSheet);
-		LoadCompressedSpritePaletteUsingHeap(&sStartersBox2SpritePalette);
-		CreateSprite(&sStartersBox2SpriteTemplate, 186, 104, 0);
-
-		WindowPrint(WIN_DIALOG, 1, 8, 2, &MenuTextBlack, 0, gText_StartersConfirm);
+		WindowPrint(WIN_DIALOG, 1, 8, 2, &MenuTextWhite, 0, gText_StartersConfirm);
 		CopyWindowToVram(WIN_DIALOG, 3);
 		PutWindowTilemap(WIN_DIALOG);
 
 		sStartersIntroPtr->textConfirm = 0;
 		sStartersIntroPtr->textTime = 10;
-	}
-	else if(!IsTextPrinterActive(0))
-	{	
-		WindowPrint(WIN_YESNO_BOX, 1, 8, 2, &MenuTextBlack, 0, gText_YesNo);
-		ChoiceSetupSimple(WIN_YESNO_BOX, 2, 0, 1, 16, 2, 0);
-		CopyWindowToVram(WIN_YESNO_BOX, 3);
-		PutWindowTilemap(WIN_YESNO_BOX);
 
-		gTasks[taskId].func = Task_StartersYes;
+		gTasks[taskId].func = Task_StartersQuestion;
 	}
 }
+static void Task_StartersQuestion(u8 taskId)
+{
+
+	if (gMain.newKeys & A_BUTTON)
+	{
+		PlaySE(SE_SELECT);
+		if(sStartersIntroPtr->respSel == 1)
+			sStartersIntroPtr->resp = 1;
+		else
+			sStartersIntroPtr->resp = 0;
+		
+		gTasks[taskId].func = Task_StartersYes;
+
+	}
+	else if (gMain.newKeys & B_BUTTON)
+	{
+		PlaySE(SE_SELECT);
+		sStartersIntroPtr->resp = 0;
+		DeleteYesNoButtons();
+		ClearStdWindowAndFrameToTransparent(WIN_DIALOG, 1);
+		gTasks[taskId].func = Task_StartersWaitForKeyPress;
+	}
+	else if (gMain.newAndRepeatedKeys & DPAD_RIGHT)
+	{
+		PlaySE(SE_SELECT);
+		if (sStartersIntroPtr->respSel == 1)
+		{
+			DeleteYesNoButtons();
+			sStartersIntroPtr->respSel = 0;
+			CreateYesNoButtons();
+		}			
+	}
+	else if (gMain.newAndRepeatedKeys & DPAD_LEFT)
+	{
+		PlaySE(SE_SELECT);
+		if (sStartersIntroPtr->respSel == 0)
+		{
+			DeleteYesNoButtons();
+			sStartersIntroPtr->respSel = 1;
+			CreateYesNoButtons();
+		}	
+	}
+}
+
 static void Task_StartersYes(u8 taskId)
 {	
-	s8 choice = RboxChoiceUpdate();
-    switch (choice)
-    {
-    case 0:
-        PlaySE(SE_SELECT);
+	switch (sStartersIntroPtr->resp)
+	{
+	case 0:	
+		DeleteYesNoButtons();
+		ClearStdWindowAndFrameToTransparent(WIN_DIALOG, 1);
+		gTasks[taskId].func = Task_StartersWaitForKeyPress;
+		break;
+	case 1:	
 		BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB_BLACK);
         gTasks[taskId].func = Task_StartersIntroFadeOut;        
         break;
-    case 1:
-    case -1:
-        PlaySE(SE_SELECT);
-
-		FreeSpritePaletteByTag(STARTERS_BOX1_TAG);
-		FreeSpriteTilesByTag(STARTERS_BOX1_TAG);
-		FreeSpritePaletteByTag(STARTERS_BOX2_TAG);
-		FreeSpriteTilesByTag(STARTERS_BOX2_TAG);
-
-		for (int i = 0; i < MAX_SPRITES; ++i)
-		{
-			if (gSprites[i].template->tileTag == STARTERS_BOX1_TAG
-			||  gSprites[i].template->tileTag == STARTERS_BOX2_TAG)
-			{
-				DestroySprite(&gSprites[i]);
-			}
-		}
-
-		ClearStdWindowAndFrameToTransparent(WIN_DIALOG, 1);
-		ClearStdWindowAndFrameToTransparent(WIN_YESNO_BOX, 1);
-
-		gTasks[taskId].func = Task_StartersWaitForKeyPress;
-        break;
-    }
+	}
 	 
 }
 static void Task_StartersWaitForKeyPress(u8 taskId)
