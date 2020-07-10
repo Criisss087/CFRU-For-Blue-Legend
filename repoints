@@ -264,7 +264,7 @@ DESC_QUASH 0887ac28
 DESC_ROCKCLIMB 0887ae64
 #endif
 
-##Minisprites nuevos
+## Minisprites nuevos
 gEventObjectGraphicsInfo_19 839FDFC
 gEventObjectGraphicsInfo_21 839FE04
 gEventObjectGraphicsInfo_29 839FE24
@@ -274,3 +274,90 @@ gEventObjectGraphicsInfo_Gastly 839FFC4
 gEventObjectGraphicsInfo_Gengar 839FFC8
 ##gEventObjectPic_GengarPal 8BCC9E8     no hace falta repuntear!
 gEventObjectPic_GastlyPal 8BCCA48
+
+## Sprites
+##6
+NenaNadadora2Tiles  82395AC
+NenaNadadora2Pal    8239A4C
+##7
+NeneNadador2Tiles  82395B4
+NeneNadador2Pal    8239A54
+##15
+NeneNadadorTiles    82395F4
+NeneNadadorPal      8239A94
+##24
+Brendan5Tiles       823963C
+Brendan5Pal         8239ADC
+##37
+StevenTiles         82396A4
+StevenPal           8239B44
+##55
+WallyTiles          8239734
+WallyPal            8239BD4
+##70
+NenesNadadoresTiles 82397AC
+NenesNadadoresPal   8239C4C
+##71
+Admin1Tiles         82397B4
+Admin1Pal           8239C54
+##72
+Admin2Tiles         82397BC
+Admin2Pal           8239C5C
+##73
+Admin3Tiles         82397C4
+Admin3Pal           8239C64
+##74
+Admin4Tiles         82397CC
+Admin4Pal           8239C6C
+##82
+GorraTiles          823980C
+GorraPal            8239CAC
+##83
+CazabichosTiles     8239814
+CazabichosPal       8239CB4
+##84
+ChicaLazoTiles      823981C
+ChicaLazoPal        8239CBC
+##85
+MarineroTiles       8239824
+MarineroPal         8239CC4
+##86
+Camper1Tiles       823982C
+Camper1Pal         8239CCC
+##87
+Camper2Tiles       8239834
+Camper2Pal         8239CD4
+##91
+MotoTiles          8239854
+MotoPal            8239CF4
+##96
+Pelado2Tiles       823987C
+Pelado2Pal         8239D1C
+##97
+Pelado1Tiles       8239884
+Pelado1Pal         8239D24
+##104
+OrnitologoTiles    82398BC
+OrnitologoPal      8239D5C
+#106
+GaryTiles          82398CC
+GaryPal            8239D6C
+#109
+Grunt1Tiles          82398E4
+Grunt1Pal            8239D84
+#115
+LanceTiles          8239914
+LancePal            8239DB4
+#131
+NenesNadadoresTiles  8239994
+NenesNadadoresPal    8239E34
+#137
+Grunt2Tiles     82399C4
+Grunt2Pal       8239E64
+#139
+LuchadoraTiles     82399D4
+LuchadoraPal       8239E74
+#140
+NenaNadadoraTiles     82399DC
+NenaNadadoraPal       8239E7C
+
