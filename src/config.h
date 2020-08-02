@@ -216,7 +216,7 @@ enum //These vars need to be one after the other (hence the enum)
 #define BRIDGE_FIX //If this remains uncommented, the water battle background will only be loaded if the player's surfing sprite is shown
 #define MEGA_EVOLUTION_FEATURE //Comment this line to remove Mega Evolutions
 #define DYNAMAX_FEATURE //Comment this line to remove Dynamax and Raid Battles
-#define TUTORIAL_BATTLES //Comment this line to remove Oak's Tutorial
+//#define TUTORIAL_BATTLES //Comment this line to remove Oak's Tutorial
 #define TANOBY_RUINS_ENABLED //The Tanoby Ruins will be the only location Unown can be encountered
 #define ALTERING_CAVE_ENABLED //The Altering Cave from FR will work as intended provided the proper var is set
 #define SWEET_SCENT_ONLY_IN_CLEAR_WEATHER //Sweet Scent won't attract any wild Pokemon if the weather is not clear
@@ -253,16 +253,16 @@ enum //These vars need to be one after the other (hence the enum)
 #define SHAYMIN_CHANGE_IN_PC //Shaymin-Sky will revert to sky from when placed in or withdrawn from a box
 #define HIGH_PITCH_MEGA_PRIMAL_CRY //Mega Pokemon cries will be higher pitched. This is useful if you're using the base form cries for Mega Evolutions
 //#define CUSTOM_MULTICHOICE //Adds JPAN's custom multichoice menus (see documentation)
-//#define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158.
-//#define REPLACE_SOME_VANILLA_SPECIALS //Replaces the sp07C, sp07D, sp09E, sp156, sp18B, & the Coins scripting commands with modified versions. Breaks vanilla FR compatability.
-#define REPLACE_ASH_WEATHER_WITH_WHITE_SANDSTORM //Replaces the falling ash weather effect with a white version of the sandstorm weather effect
-//#define ONLY_CHECK_ITEM_FOR_HM_USAGE //Allows HMs to be used if the HM is the Bag, and as long as there is a Pokemon in the party that can learn the HM
-//#define FADE_NPCS_IN_FOG //Blends the NPC palettes in foggy weather to create the illusion that they're under the fog. Breaks FR Pokemon Tower healing zone
 #define FRIENDSHIP_HEART_ON_SUMMARY_SCREEN //Creates a heart sprite on the summary screen if the current Pokemon has max Friendship (position requires adjusting)
 //#define INSTANT_TEXT // Enable Instant Text. Some Hack Authors might want this disabled because of the effects instant text has on pacing
 #define AUTOSCROLL_TEXT_BY_HOLDING_R //Text will scroll automatically by holding R.
 #define DEXNAV_POKEMON_MOVE_IN_CAVES_WATER //DexNav phenomenon move around a couple times on water and in caves before the battle starts (like in ORAS)
 #define SYNCHRONIZE_GIFT_POKEMON //Gift Pokemon can have their natures manipulated with synchronize
+#define SCROLLING_MULTICHOICE //Enables scrolling multichoice menus by using special 0x158.
+#define REPLACE_SOME_VANILLA_SPECIALS //Replaces the sp07C, sp07D, sp09E, sp156, sp18B, & the Coins scripting commands with modified versions. Breaks vanilla FR compatability.
+#define REPLACE_ASH_WEATHER_WITH_WHITE_SANDSTORM //Replaces the falling ash weather effect with a white version of the sandstorm weather effect
+#define ONLY_CHECK_ITEM_FOR_HM_USAGE //Allows HMs to be used if the HM is the Bag, and as long as there is a Pokemon in the party that can learn the HM
+#define FADE_NPCS_IN_FOG //Blends the NPC palettes in foggy weather to create the illusion that they're under the fog. Breaks FR Pokemon Tower healing zone
 
 /*===== Misc Battle Effect Options =====*/
 //#define OLD_BURN_DAMAGE //Uncomment this line if you want burn damage to do 1/8 of max health instead of 1/16
@@ -328,6 +328,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define ENCOUNTER_MUSIC_BY_CLASS //Plays music when a trainer spots the player based on the trainer class rather than the value set in the trainer data.
 #define OKAY_WITH_AI_SUICIDE //The AI is allowed to use self-destructing moves
 //#define HEALTHBAR_TYPE_ICONS //Pokemon types will always be shown next to the healthbar
+<<<<<<< HEAD
 #define LAST_USED_BALL_TRIGGER //The player will be given an option to use their last used Poke Ball in wild battles by pressing L
 //#define PICK_UP_KNOCKED_OFF_ITEMS //Items knocked off wild Pokemon will be picked up at the end of battle
 //#define PICKUP_ITEMS_STRAIGHT_TO_BAG //Items obtained with Pickup or Honey Gather are placed right in the bag
@@ -336,5 +337,8 @@ enum //These vars need to be one after the other (hence the enum)
 //#define QUICK_CLAW_PROCING_ALWAYS_ALLOWS_FLEEING //Fleeing from wild battles will never fail the turn a Quick Claw activates
 //#define FROSTBITE //Replaces the Freeze status condition with the Frostbite status condition from PLA
 
+=======
+#define FLAG_HEALTHBAR_TYPE_ICONS 0x928
+>>>>>>> 2d7291c0 (More overworld sprites)
 /* DexNav Options */
 //See "include/new/dexnav_config.h"
