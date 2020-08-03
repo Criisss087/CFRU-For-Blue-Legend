@@ -271,6 +271,9 @@ gEventObjectGraphicsInfo_29 839FE24
 gEventObjectGraphicsInfo_34 839FE38
 gEventObjectGraphicsInfo_82 839FEF8
 gEventObjectGraphicsInfo_103 839FF4C
+gEventObjectGraphicsInfo_106 839FF58
+gEventObjectGraphicsInfo_107 839FF5C
+
 gEventObjectGraphicsInfo_133 839FFC4
 gEventObjectGraphicsInfo_134 839FFC8
 gEventObjectGraphicsInfo_135 839FFCC
@@ -278,6 +281,7 @@ gEventObjectGraphicsInfo_135 839FFCC
 ##gEventObjectPic_134Pal 8BCC9E8     no hace falta repuntear!
 gEventObjectPic_133Pal 8BCCA48
 gEventObjectPic_82Pal 8BCCA50
+gEventObjectPic_106Pal 8BCCA58
 
 ## Sprites
 ##6
