@@ -248,6 +248,19 @@ static const u16* sPlayerMarlonOutfitColours[] =
 };
 #endif
 
+extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_19;
+extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_21;
+extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_29;
+extern const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_34;
+
+static NPCPtr sOverworldTable2[] = 
+{
+	&gEventObjectGraphicsInfo_19,
+	&gEventObjectGraphicsInfo_21,
+	&gEventObjectGraphicsInfo_29,
+	&gEventObjectGraphicsInfo_34,
+};
+
 #ifdef EXISTING_OW_TABLE_ADDRESS
 	#define gOverworldTableSwitcher ((struct EventObjectGraphicsInfo***) EXISTING_OW_TABLE_ADDRESS)
 #elif defined UNBOUND //For Pokemon Unbound
@@ -263,6 +276,7 @@ static const u16* sPlayerMarlonOutfitColours[] =
 	const struct EventObjectGraphicsInfo** const gOverworldTableSwitcher[255] =
 	{
 		(NPCPtr*) 0x839FDB0,
+		sOverworldTable2,
 		(NPCPtr*) 0x0,
 		// etc...
 		// please note that this method makes compatability with OW Manager challenging
