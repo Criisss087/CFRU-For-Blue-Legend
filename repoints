@@ -307,13 +307,17 @@ gText_TextSpeedFast 083cc334
 gText_TextSpeedInstant 083cc338
 #endif
 
-##Minisprites nuevos
+## Minisprites nuevos
+gEventObjectGraphicsInfo_1 839FDB0 
 gEventObjectGraphicsInfo_19 839FDFC
 gEventObjectGraphicsInfo_21 839FE04
+gEventObjectGraphicsInfo_22 839FE08
 gEventObjectGraphicsInfo_29 839FE24
 gEventObjectGraphicsInfo_34 839FE38
 gEventObjectGraphicsInfo_82 839FEF8
 gEventObjectGraphicsInfo_103 839FF4C
+gEventObjectGraphicsInfo_104 839FF50
+gEventObjectGraphicsInfo_105 839FF54
 gEventObjectGraphicsInfo_106 839FF58
 gEventObjectGraphicsInfo_107 839FF5C
 
@@ -325,6 +329,8 @@ gEventObjectGraphicsInfo_135 839FFCC
 gEventObjectPic_133Pal 8BCCA48
 gEventObjectPic_82Pal 8BCCA50
 gEventObjectPic_106Pal 8BCCA58
+gEventObjectPic_104Pal 8BCCA60
+
 
 ## Sprites
 ##6
