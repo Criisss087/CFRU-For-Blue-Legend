@@ -1354,7 +1354,7 @@ void sp0D2_DestroyFollowerSprite(void)
 	if (gFollowerState.inProgress)
 	{
 		RemoveEventObject(&gEventObjects[gFollowerState.objId]);
-		FlagSet(gFollowerState.flag);
+		//FlagSet(gFollowerState.flag);
 		gFollowerState.inProgress = FALSE;
 	}
 }
