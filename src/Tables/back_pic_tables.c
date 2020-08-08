@@ -34,6 +34,9 @@ extern const u8 gTrainerBackPic_WallyPal[];
 extern const u8 gTrainerBackPic_LancePal[];
 #define gTrainerPalette_Lance gTrainerBackPic_LancePal
 
+extern const u8 gTrainerBackPic_LidiaPal[];
+#define gTrainerPalette_Lidia gTrainerBackPic_LidiaPal
+
 const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 {
 	[TRAINER_BACK_PIC_BRENDAN1] =	{gTrainerPalette_Brendan1, 	TRAINER_BACK_PIC_BRENDAN1},
@@ -44,6 +47,7 @@ const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 	[TRAINER_BACK_PIC_OLD_MAN] =	{gTrainerPalette_OldMan, 		TRAINER_BACK_PIC_OLD_MAN},
 	[TRAINER_BACK_PIC_WALLY] =		{gTrainerPalette_Wally, 		TRAINER_BACK_PIC_WALLY},
 	[TRAINER_BACK_PIC_LANCE] =		{gTrainerPalette_Lance, 		TRAINER_BACK_PIC_LANCE},
+	[TRAINER_BACK_PIC_LIDIA] =		{gTrainerPalette_Lidia, 		TRAINER_BACK_PIC_LIDIA},
 
 };
 
@@ -57,6 +61,7 @@ const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 #define gTrainerBackAnims_Brendan1 (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Wally (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Lance (const union AnimCmd* const*) 0x8239F54
+#define gTrainerBackAnims_Lidia (const union AnimCmd* const*) 0x8239F54
 
 const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
 {
@@ -68,6 +73,7 @@ const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
 	[TRAINER_BACK_PIC_OLD_MAN] = gTrainerBackAnims_OldMan,
 	[TRAINER_BACK_PIC_WALLY] = gTrainerBackAnims_Wally,
 	[TRAINER_BACK_PIC_LANCE] = gTrainerBackAnims_Lance,
+	[TRAINER_BACK_PIC_LIDIA] = gTrainerBackAnims_Lidia,
 
 };
 
@@ -81,6 +87,7 @@ const struct MonCoords gTrainerBackPicCoords[] =
 	[TRAINER_BACK_PIC_OLD_MAN] = 	{.coords = 8, .y_offset = 4},
 	[TRAINER_BACK_PIC_WALLY] = 		{.coords = 8, .y_offset = 7},
 	[TRAINER_BACK_PIC_LANCE] = 		{.coords = 8, .y_offset = 4},
+	[TRAINER_BACK_PIC_LIDIA] = 		{.coords = 8, .y_offset = 4},
 
 };
 
@@ -101,6 +108,7 @@ extern const u8 gTrainerBackPic_MayTiles[];
 extern const u8 gTrainerBackPic_Brendan1Tiles[];
 extern const u8 gTrainerBackPic_WallyTiles[];
 extern const u8 gTrainerBackPic_LanceTiles[];
+extern const u8 gTrainerBackPic_LidiaTiles[];
 
 
 static const struct SpriteFrameImage sTrainerBackPicTable_Brendan[] =
@@ -142,6 +150,14 @@ static const struct SpriteFrameImage sTrainerBackPicTable_Lance[] =
 	{gTrainerBackPic_LanceTiles + 0x0800, 0x800, 0},
 	{gTrainerBackPic_LanceTiles + 0x1000, 0x800, 0},
 	{gTrainerBackPic_LanceTiles + 0x1800, 0x800, 0},
+};
+
+static const struct SpriteFrameImage sTrainerBackPicTable_Lidia[] =
+{
+	{gTrainerBackPic_LidiaTiles, 			0x800, 0},
+	{gTrainerBackPic_LidiaTiles + 0x0800, 0x800, 0},
+	{gTrainerBackPic_LidiaTiles + 0x1000, 0x800, 0},
+	{gTrainerBackPic_LidiaTiles + 0x1800, 0x800, 0},
 };
 
 const struct SpriteTemplate gSpriteTemplateTable_TrainerBackSprites[] =
@@ -224,6 +240,16 @@ const struct SpriteTemplate gSpriteTemplateTable_TrainerBackSprites[] =
 		.oam = gOamData_TrainerBacksprite,
 		.anims = NULL,
 		.images = sTrainerBackPicTable_Lance,
+		.affineAnims = gAffineAnims_TrainerBacksprite,
+		.callback = gSpriteCB_TrainerBacksprite,
+	},
+	[TRAINER_BACK_PIC_LIDIA] =
+	{
+		.tileTag = 0xFFFF,
+		.paletteTag = 0,
+		.oam = gOamData_TrainerBacksprite,
+		.anims = NULL,
+		.images = sTrainerBackPicTable_Lidia,
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},

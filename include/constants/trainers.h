@@ -183,6 +183,8 @@
 #define TRAINER_BACK_PIC_OLD_MAN 			5
 #define TRAINER_BACK_PIC_WALLY  			6
 #define TRAINER_BACK_PIC_LANCE   			7
+#define TRAINER_BACK_PIC_LIDIA   			8
+
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
 #define TRAINER_ENCOUNTER_MUSIC_FEMALE       1 // standard female encounter music
