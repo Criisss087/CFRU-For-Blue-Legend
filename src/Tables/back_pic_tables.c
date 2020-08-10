@@ -37,10 +37,13 @@ extern const u8 gTrainerBackPic_LancePal[];
 extern const u8 gTrainerBackPic_LidiaPal[];
 #define gTrainerPalette_Lidia gTrainerBackPic_LidiaPal
 
+extern const u8 gTrainerBackPic_May1Pal[];
+#define gTrainerPalette_May1 gTrainerBackPic_May1Pal
+
 const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 {
-	[TRAINER_BACK_PIC_BRENDAN1] =	{gTrainerPalette_Brendan1, 	TRAINER_BACK_PIC_BRENDAN1},
-	[TRAINER_BACK_PIC_LEAF] =		{gTrainerBackPicPalette_Leaf, 	TRAINER_BACK_PIC_LEAF},
+	[TRAINER_BACK_PIC_BRENDAN1] =	{gTrainerPalette_Brendan1, 		TRAINER_BACK_PIC_BRENDAN1},
+	[TRAINER_BACK_PIC_MAY1] =		{gTrainerPalette_May1,		 	TRAINER_BACK_PIC_MAY1},
 	[TRAINER_BACK_PIC_BRENDAN] =	{gTrainerPalette_Brendan, 		TRAINER_BACK_PIC_BRENDAN},
 	[TRAINER_BACK_PIC_MAY] =		{gTrainerPalette_May, 			TRAINER_BACK_PIC_MAY},
 	[TRAINER_BACK_PIC_POKE_DUDE] =	{gTrainerPalette_PokeDude, 		TRAINER_BACK_PIC_POKE_DUDE},
@@ -62,11 +65,12 @@ const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 #define gTrainerBackAnims_Wally (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Lance (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Lidia (const union AnimCmd* const*) 0x8239F54
+#define gTrainerBackAnims_May1 (const union AnimCmd* const*) 0x8239F54
 
 const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
 {
 	[TRAINER_BACK_PIC_BRENDAN1] = gTrainerBackAnims_Brendan1,
-	[TRAINER_BACK_PIC_LEAF] = gTrainerBackAnims_Leaf,
+	[TRAINER_BACK_PIC_MAY1] = gTrainerBackAnims_May1,
 	[TRAINER_BACK_PIC_BRENDAN] = gTrainerBackAnims_Brendan,
 	[TRAINER_BACK_PIC_MAY] = gTrainerBackAnims_May,
 	[TRAINER_BACK_PIC_POKE_DUDE] = gTrainerBackAnims_PokeDude,
@@ -80,7 +84,7 @@ const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
 const struct MonCoords gTrainerBackPicCoords[] =
 {
 	[TRAINER_BACK_PIC_BRENDAN1] = 	{.coords = 8, .y_offset = 5},
-	[TRAINER_BACK_PIC_LEAF] = 		{.coords = 8, .y_offset = 5},
+	[TRAINER_BACK_PIC_MAY1] = 		{.coords = 8, .y_offset = 5},
 	[TRAINER_BACK_PIC_BRENDAN] = 	{.coords = 8, .y_offset = 4},
 	[TRAINER_BACK_PIC_MAY] = 		{.coords = 8, .y_offset = 4},
 	[TRAINER_BACK_PIC_POKE_DUDE] = 	{.coords = 8, .y_offset = 4},
@@ -96,7 +100,7 @@ const struct MonCoords gTrainerBackPicCoords[] =
 #define gSpriteCB_TrainerBacksprite (void*) (0x80120C4 | 1)
 
 //#define gTrainerBackPicTable_Red (void*) 0x8234718
-#define gTrainerBackPicTable_Leaf (void*) 0x8234740
+//#define gTrainerBackPicTable_Leaf (void*) 0x8234740
 //#define gTrainerBackPicTable_Brendan (void*) 0x82347A8
 //#define gTrainerBackPicTable_May (void*) 0x82347C8
 #define gTrainerBackPicTable_PokeDude (void*) 0x8234768
@@ -106,6 +110,7 @@ extern const u8 gTrainerBackPic_BrendanTiles[];
 extern const u8 gTrainerBackPic_MayTiles[];
 
 extern const u8 gTrainerBackPic_Brendan1Tiles[];
+extern const u8 gTrainerBackPic_May1Tiles[];
 extern const u8 gTrainerBackPic_WallyTiles[];
 extern const u8 gTrainerBackPic_LanceTiles[];
 extern const u8 gTrainerBackPic_LidiaTiles[];
@@ -135,7 +140,13 @@ static const struct SpriteFrameImage sTrainerBackPicTable_Brendan1[] =
 	{gTrainerBackPic_Brendan1Tiles + 0x1000, 0x800, 0},
 	{gTrainerBackPic_Brendan1Tiles + 0x1800, 0x800, 0},
 };
-
+static const struct SpriteFrameImage sTrainerBackPicTable_May1[] =
+{
+	{gTrainerBackPic_May1Tiles, 			0x800, 0},
+	{gTrainerBackPic_May1Tiles + 0x0800, 	0x800, 0},
+	{gTrainerBackPic_May1Tiles + 0x1000, 	0x800, 0},
+	{gTrainerBackPic_May1Tiles + 0x1800, 	0x800, 0},
+};
 static const struct SpriteFrameImage sTrainerBackPicTable_Wally[] =
 {
 	{gTrainerBackPic_WallyTiles, 			0x800, 0},
@@ -172,13 +183,13 @@ const struct SpriteTemplate gSpriteTemplateTable_TrainerBackSprites[] =
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},
-	[TRAINER_BACK_PIC_LEAF] =
+	[TRAINER_BACK_PIC_MAY1] =
 	{
 		.tileTag = 0xFFFF,
 		.paletteTag = 0,
 		.oam = gOamData_TrainerBacksprite,
 		.anims = NULL,
-		.images = gTrainerBackPicTable_Leaf,
+		.images = sTrainerBackPicTable_May1,
 		.affineAnims = gAffineAnims_TrainerBacksprite,
 		.callback = gSpriteCB_TrainerBacksprite,
 	},
