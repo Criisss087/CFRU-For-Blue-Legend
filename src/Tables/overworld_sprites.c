@@ -26,8 +26,9 @@ extern const u8 gEventObjectPic_22Tiles[];
 extern const u8 gEventObjectPic_29Tiles[];
 extern const u8 gEventObjectPic_34Tiles[];
 extern const u8 gEventObjectPic_82Tiles[];
-extern const u8 gEventObjectPic_103Tiles[];
 extern const u8 gEventObjectPic_135Tiles[];
+extern const u8 gEventObjectPic_102Tiles[];
+extern const u8 gEventObjectPic_103Tiles[];
 extern const u8 gEventObjectPic_104Tiles[];
 extern const u8 gEventObjectPic_105Tiles[];
 extern const u8 gEventObjectPic_106Tiles[];
@@ -281,7 +282,38 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_82 =
     .images = gEventObjectPicTable_82,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
+static const struct SpriteFrameImage gEventObjectPicTable_102[] =
+{
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 0),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 1),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 2),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 3),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 4),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 5),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 6),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 7),
+    overworld_frame(gEventObjectPic_102Tiles, 8, 8, 8),
+};
 
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_102 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1128,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (64 * 64) / 2,
+    .width = 64,
+    .height = 64,
+    .shadowSize = SHADOW_SIZE_M, 
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, 
+    .gender = MALE, 
+    .oam = gEventObjectBaseOam_64x64,
+    .subspriteTables = gEventObjectSpriteOamTables_64x64,
+    .anims = gEventObjectImageAnimTable_Standard,
+    .images = gEventObjectPicTable_102,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 static const struct SpriteFrameImage gEventObjectPicTable_103[] =
 {
     overworld_frame(gEventObjectPic_103Tiles, 2, 4, 0),
@@ -317,15 +349,15 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_103 =
 
 static const struct SpriteFrameImage gEventObjectPicTable_104[] =
 {
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 0),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 1),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 2),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 3),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 4),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 5),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 6),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 7),
-    overworld_frame(gEventObjectPic_104Tiles, 4, 4, 8),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 0),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 1),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 2),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 3),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 4),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 5),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 6),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 7),
+    overworld_frame(gEventObjectPic_104Tiles, 8, 8, 8),
 };
 
 const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_104 =
@@ -333,16 +365,16 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_104 =
     .tileTag = 0xFFFF,
     .paletteTag1 = 0x1128,
     .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
-    .size = (32 * 32) / 2,
-    .width = 32,
-    .height = 32,
-    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .size = (64 * 64) / 2,
+    .width = 64,
+    .height = 64,
+    .shadowSize = SHADOW_SIZE_M, 
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,
-    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
-    .gender = MALE, //Can also be FEMALE
-    .oam = gEventObjectBaseOam_32x32,
-    .subspriteTables = gEventObjectSpriteOamTables_32x32,
+    .tracks = TRACKS_FOOT, 
+    .gender = MALE, 
+    .oam = gEventObjectBaseOam_64x64,
+    .subspriteTables = gEventObjectSpriteOamTables_64x64,
     .anims = gEventObjectImageAnimTable_Standard,
     .images = gEventObjectPicTable_104,
     .affineAnims = gDummySpriteAffineAnimTable,
