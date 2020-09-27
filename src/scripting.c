@@ -267,6 +267,34 @@ void sp121_blendSprite(void){
 	SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(blendPar1, blendPar2));
 
 } 
+               
+
+extern bool8 (*gMovementActionFuncs[255][255])(struct EventObject *, struct Sprite *);
+extern void (*sMovementTypeCallbacks[255])(struct Sprite *);
+
+static u8 GetObjectEventIdByLocalId(u8 localId)
+{
+    u8 i;
+    for (i = 0; i < MAP_OBJECTS_COUNT; i++)
+    {
+        if (gEventObjects[i].active && gEventObjects[i].localId == localId)
+            return i;
+    } 
+
+    return MAP_OBJECTS_COUNT;
+}
+
+void sp123_SetObjectMovementType(void)
+{
+	struct EventObject *objectEvent = &gEventObjects[GetObjectEventIdByLocalId(Var8005)];
+	u8 movementType = Var8006;
+	
+	objectEvent->movementType = movementType;
+	objectEvent->directionSequenceIndex = 0;
+	objectEvent->playerCopyableMovement = 0;
+	gSprites[objectEvent->spriteId].callback = sMovementTypeCallbacks[movementType];;
+	gSprites[objectEvent->spriteId].data[1] = 0;
+}
 
 
 bool8 sp009_PokemonRibbonChecker(void) {

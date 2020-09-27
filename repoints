@@ -321,17 +321,25 @@ gEventObjectGraphicsInfo_104 839FF50
 gEventObjectGraphicsInfo_105 839FF54
 gEventObjectGraphicsInfo_106 839FF58
 gEventObjectGraphicsInfo_107 839FF5C
-
+gEventObjectGraphicsInfo_124 839FFA0
 gEventObjectGraphicsInfo_133 839FFC4
 gEventObjectGraphicsInfo_134 839FFC8
 gEventObjectGraphicsInfo_135 839FFCC
+gEventObjectGraphicsInfo_136 839FFD0
+gEventObjectGraphicsInfo_137 839FFD4
+gEventObjectGraphicsInfo_148 83A0000
+gEventObjectGraphicsInfo_149 83A0004
+gEventObjectGraphicsInfo_150 83A0008
 
 ##gEventObjectPic_134Pal 8BCC9E8     no hace falta repuntear!
 gEventObjectPic_133Pal 8BCCA48
 gEventObjectPic_82Pal 8BCCA50
 gEventObjectPic_106Pal 8BCCA58
 gEventObjectPic_104Pal 8BCCA60
+gEventObjectPic_136Pal 8BCCA68
 
+##Tabla de animaciones de overworlds
+gObjectEventImageAnimTable_Bird 83A3698
 
 ## Sprites
 ##6
