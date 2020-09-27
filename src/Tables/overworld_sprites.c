@@ -17,6 +17,233 @@
 #define gEventObjectImageAnimTable_Fishing ((const union AnimCmd* const*) 0x83A3668)
 #define gEventObjectImageAnimTable_VsSeekerBike ((const union AnimCmd* const*) 0x83A3640)
 
+const union AnimCmd gAnimCmd_Bird_FaceDown[] = {
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(4, 8),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_FaceUp[] = {
+    ANIMCMD_FRAME(1, 16),
+    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_FaceLeft[] = {
+    ANIMCMD_FRAME(2, 16),
+    ANIMCMD_FRAME(7, 8),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_FaceRight[] = {
+    ANIMCMD_FRAME(2, 16, .hFlip = TRUE),
+    ANIMCMD_FRAME(7, 8, .hFlip = TRUE),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepDown[] = {
+    ANIMCMD_FRAME(3, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_FRAME(4, 8),
+    ANIMCMD_FRAME(0, 8),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepUp[] = {
+    ANIMCMD_FRAME(5, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_FRAME(6, 8),
+    ANIMCMD_FRAME(1, 8),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepLeft[] = {
+    ANIMCMD_FRAME(7, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_FRAME(8, 8),
+    ANIMCMD_FRAME(2, 8),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepRight[] = {
+    ANIMCMD_FRAME(7, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 8, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 8, .hFlip = TRUE),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepDown_Fast[] = {
+    ANIMCMD_FRAME(3, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_FRAME(0, 4),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepUp_Fast[] = {
+    ANIMCMD_FRAME(5, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_FRAME(6, 4),
+    ANIMCMD_FRAME(1, 4),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepLeft_Fast[] = {
+    ANIMCMD_FRAME(7, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_FRAME(8, 4),
+    ANIMCMD_FRAME(2, 4),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepRight_Fast[] = {
+    ANIMCMD_FRAME(7, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 4, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 4, .hFlip = TRUE),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepDown_Fast2[] = {
+    ANIMCMD_FRAME(3, 2),
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_FRAME(4, 2),
+    ANIMCMD_FRAME(0, 2),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepUp_Fast2[] = {
+    ANIMCMD_FRAME(5, 2),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_FRAME(6, 2),
+    ANIMCMD_FRAME(1, 2),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepLeft_Fast2[] = {
+    ANIMCMD_FRAME(7, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_FRAME(8, 2),
+    ANIMCMD_FRAME(2, 2),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepRight_Fast2[] = {
+    ANIMCMD_FRAME(7, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 2, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 2, .hFlip = TRUE),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+const union AnimCmd gAnimCmd_Bird_StepDown_Fast3[] = {
+    ANIMCMD_FRAME(3, 1),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_FRAME(4, 1),
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepUp_Fast3[] = {
+    ANIMCMD_FRAME(5, 1),
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_FRAME(6, 1),
+    ANIMCMD_FRAME(1, 1),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepLeft_Fast3[] = {
+    ANIMCMD_FRAME(7, 1),
+    ANIMCMD_FRAME(2, 1),
+    ANIMCMD_FRAME(8, 1),
+    ANIMCMD_FRAME(2, 1),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_StepRight_Fast3[] = {
+    ANIMCMD_FRAME(7, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 1, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 1, .hFlip = TRUE),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_RunDown[] = {
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(3, 3),
+    ANIMCMD_FRAME(0, 5),
+    ANIMCMD_FRAME(4, 3),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_RunUp[] = {
+    ANIMCMD_FRAME(1, 5),
+    ANIMCMD_FRAME(5, 3),
+    ANIMCMD_FRAME(1, 5),
+    ANIMCMD_FRAME(6, 3),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_RunLeft[] = {
+    ANIMCMD_FRAME(2, 5),
+    ANIMCMD_FRAME(7, 3),
+    ANIMCMD_FRAME(2, 5),
+    ANIMCMD_FRAME(8, 3),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd gAnimCmd_Bird_RunRight[] = {
+    ANIMCMD_FRAME(2, 5, .hFlip = TRUE),
+    ANIMCMD_FRAME(7, 3, .hFlip = TRUE),
+    ANIMCMD_FRAME(2, 5, .hFlip = TRUE),
+    ANIMCMD_FRAME(8, 3, .hFlip = TRUE),
+    ANIMCMD_LOOP(1),
+    ANIMCMD_JUMP(0),
+};
+
+const union AnimCmd *const gObjectEventImageAnimTable_Bird[] = {
+    gAnimCmd_Bird_FaceDown,
+    gAnimCmd_Bird_FaceUp,
+    gAnimCmd_Bird_FaceLeft,
+    gAnimCmd_Bird_FaceRight,
+    gAnimCmd_Bird_StepDown,
+    gAnimCmd_Bird_StepUp,
+    gAnimCmd_Bird_StepLeft,
+    gAnimCmd_Bird_StepRight,
+    gAnimCmd_Bird_StepDown_Fast,
+    gAnimCmd_Bird_StepUp_Fast,
+    gAnimCmd_Bird_StepLeft_Fast,
+    gAnimCmd_Bird_StepRight_Fast,
+    gAnimCmd_Bird_StepDown_Fast2,
+    gAnimCmd_Bird_StepUp_Fast2,
+    gAnimCmd_Bird_StepLeft_Fast2,
+    gAnimCmd_Bird_StepRight_Fast2,
+    gAnimCmd_Bird_StepDown_Fast3,
+    gAnimCmd_Bird_StepUp_Fast3,
+    gAnimCmd_Bird_StepLeft_Fast3,
+    gAnimCmd_Bird_StepRight_Fast3,
+    gAnimCmd_Bird_RunDown,
+    gAnimCmd_Bird_RunUp,
+    gAnimCmd_Bird_RunLeft,
+    gAnimCmd_Bird_RunRight,
+};
+
 extern const u8 gEventObjectPic_1Tiles[];
 extern const u8 gEventObjectPic_133Tiles[];
 extern const u8 gEventObjectPic_134Tiles[];
@@ -33,6 +260,12 @@ extern const u8 gEventObjectPic_104Tiles[];
 extern const u8 gEventObjectPic_105Tiles[];
 extern const u8 gEventObjectPic_106Tiles[];
 extern const u8 gEventObjectPic_107Tiles[];
+extern const u8 gEventObjectPic_124Tiles[];
+extern const u8 gEventObjectPic_136Tiles[];
+extern const u8 gEventObjectPic_137Tiles[];
+extern const u8 gEventObjectPic_148Tiles[];
+extern const u8 gEventObjectPic_149Tiles[];
+extern const u8 gEventObjectPic_150Tiles[];
 
 static const struct SpriteFrameImage gEventObjectPicTable_1[] =
 {
@@ -479,7 +712,38 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_107 =
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+static const struct SpriteFrameImage gEventObjectPicTable_124[] =
+{
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 0),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 1),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 2),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 3),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 4),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 5),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 6),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 7),
+    overworld_frame(gEventObjectPic_124Tiles, 4, 4, 8),
+};
 
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_124 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x110B,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (32 * 32) / 2,
+    .width = 32,
+    .height = 32,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_32x32,
+    .subspriteTables = gEventObjectSpriteOamTables_32x32,
+    .anims = gEventObjectImageAnimTable_Standard,
+    .images = gEventObjectPicTable_124,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
 
 
 static const struct SpriteFrameImage gEventObjectPicTable_133[] =
@@ -577,5 +841,165 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_135 =
     .subspriteTables = gEventObjectSpriteOamTables_16x32,
     .anims = gEventObjectImageAnimTable_Standard,
     .images = gEventObjectPicTable_135,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+static const struct SpriteFrameImage gEventObjectPicTable_136[] =
+{
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 0),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 1),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 2),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 3),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 4),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 5),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 6),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 7),
+    overworld_frame(gEventObjectPic_136Tiles, 4, 4, 8),
+};
+
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_136 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1129,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (32 * 32) / 2,
+    .width = 32,
+    .height = 32,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_32x32,
+    .subspriteTables = gEventObjectSpriteOamTables_32x32,
+    .anims = gObjectEventImageAnimTable_Bird,
+    .images = gEventObjectPicTable_136,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+static const struct SpriteFrameImage gEventObjectPicTable_137[] =
+{
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 0),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 1),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 2),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 3),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 4),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 5),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 6),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 7),
+    overworld_frame(gEventObjectPic_137Tiles, 4, 4, 8),
+};
+
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_137 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1129,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (32 * 32) / 2,
+    .width = 32,
+    .height = 32,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_32x32,
+    .subspriteTables = gEventObjectSpriteOamTables_32x32,
+    .anims = gObjectEventImageAnimTable_Bird,
+    .images = gEventObjectPicTable_137,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+static const struct SpriteFrameImage gEventObjectPicTable_148[] =
+{
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 0),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 1),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 2),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 3),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 4),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 5),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 6),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 7),
+    overworld_frame(gEventObjectPic_148Tiles, 8, 8, 8),
+};
+
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_148 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1113,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (64 * 64) / 2,
+    .width = 64,
+    .height = 64,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_64x64,
+    .subspriteTables = gEventObjectSpriteOamTables_64x64,
+    .anims = gEventObjectImageAnimTable_Standard,
+    .images = gEventObjectPicTable_148,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+static const struct SpriteFrameImage gEventObjectPicTable_149[] =
+{
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 0),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 1),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 2),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 3),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 4),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 5),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 6),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 7),
+    overworld_frame(gEventObjectPic_149Tiles, 8, 8, 8),
+};
+
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_149 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1113,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (64 * 64) / 2,
+    .width = 64,
+    .height = 64,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_64x64,
+    .subspriteTables = gEventObjectSpriteOamTables_64x64,
+    .anims = gEventObjectImageAnimTable_Standard,
+    .images = gEventObjectPicTable_149,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+static const struct SpriteFrameImage gEventObjectPicTable_150[] =
+{
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 0),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 1),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 2),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 3),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 4),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 5),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 6),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 7),
+    overworld_frame(gEventObjectPic_150Tiles, 8, 8, 8),
+};
+
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_150 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1113,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (64 * 64) / 2,
+    .width = 64,
+    .height = 64,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_64x64,
+    .subspriteTables = gEventObjectSpriteOamTables_64x64,
+    .anims = gEventObjectImageAnimTable_Standard,
+    .images = gEventObjectPicTable_150,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
