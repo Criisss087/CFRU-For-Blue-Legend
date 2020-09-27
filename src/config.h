@@ -100,8 +100,9 @@ enum //These vars need to be one after the other (hence the enum)
 #define VAR_PLAYER_WALKRUN 0x511F			//Change walking, running player sprite. 0x4054 in JPAN engine.
 #define VAR_PLAYER_BIKING 0x5120			//Change biking player sprite. 0x4055 in JPAN engine.
 #define VAR_PLAYER_SURFING 0x5121			//Change player surfing sprite. 0x4056 in JPAN engine.
-#define VAR_PLAYER_VS_SEEKER 0x5122			//Change vs seeker usage sprite. 0x4057 in JPAN engine.
+#define VAR_PLAYER_HM_USE  0x5122			//Change field move usage sprite. 0x4057 in JPAN engine.
 #define VAR_PLAYER_FISHING 0x5123			//Change fishing sprite. 0x4058 in JPAN engine.
+#define VAR_PLAYER_VS_SEEKER 0x513D         //Change vs seeker usage sprite. NOT in JPAN's engine
 #define VAR_PLAYER_VS_SEEKER_ON_BIKE 0x5124	//Change vs seeker on bike sprite. 0x4059 in JPAN engine.
 #define VAR_PLAYER_UNDERWATER 0x5125		//Change underwater sprite.
 #define VAR_TRAINERCARD_MALE 0x5126			//Change trainer card image (male). 0x4060 in JPAN engine.
