@@ -43,6 +43,10 @@ static void FldEff_LavaBubbles(void);
 static void FldEff_MiningScanRing(void);
 static void SpriteCB_MiningScanRing(struct Sprite* sprite);
 
+#define gFieldEffectObjectPaletteBerryForest7 (void*) 0x8296F70
+static u16 sObjectPaletteBerryForest7[] = {0x03E5, 0x1AF1, 0x2228, 0x1966, 0x10E4, 0x10A4, 0x0C84, 0x21D1, 0x2752, 0x0, 0x0, 0x0, 0x1AEF, 0x0E42, 0x05C1, 0x1929};
+static const struct SpritePalette sFieldEffectObjectPaletteBerryForest7 = {sObjectPaletteBerryForest7, 0x1005};
+
 #ifdef UNBOUND //For Pokemon Unbound - Feel free to remove
 #define AUTUMN_GRASS_PALETTE_TAG 0x1215
 static u16 sAutumnGrassObjectPalette[] = {0x741F, 0x3E9B, 0x3E9B, 0x1993, 0x1570, 0x0167, 0x76AC, 0x62AC, 0x7B31, 0x7F92, 0x0, 0x0, 0x3A7A, 0x2E38, 0x2E38, 0x1DD6};
@@ -203,6 +207,10 @@ static void GetSpriteTemplateAndPaletteForGrassFieldEffect(const struct SpriteTe
 			*spritePalette = &sSwampGrassObjectPaletteInfo;
 			break;
 	#endif
+		case MAPSEC_BERRY_FOREST:
+			*spriteTemplate = gFieldEffectObjectTemplatePointers[fieldEffectTemplateArg];
+			*spritePalette = &sFieldEffectObjectPaletteBerryForest7;
+			break;
 		default:
 			*spriteTemplate = gFieldEffectObjectTemplatePointers[fieldEffectTemplateArg];
 			*spritePalette = gFieldEffectObjectPaletteInfo1;
