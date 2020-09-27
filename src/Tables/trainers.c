@@ -5,7 +5,7 @@
 #include "../../include/constants/battle_ai.h"
 
 //const union TrainerMonNoItemDefaultMoves *const gTrainerMons262[] = 
-struct TrainerMonNoItemDefaultMoves gTrainerMons262[] =
+/*struct TrainerMonNoItemDefaultMoves gTrainerMons262[] =
 {
     {
         .iv = 0,
@@ -38,3 +38,4 @@ const struct Trainer gTrainer262 =
     .partySize = NELEMS(gTrainerMons262),
     .party = {.NoItemDefaultMoves = gTrainerMons262}
 };
+*/
