@@ -32,6 +32,7 @@ src/tier_bans.c
 src/unbound_util.c
 strings/unbound.string
 Cover Art.png
+calculos minis.txt
 
 # generated temporary files
 .fuse*
