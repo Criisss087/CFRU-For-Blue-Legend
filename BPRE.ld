@@ -2074,3 +2074,7 @@ DMA0_SRC = 0x40000B0;
 DMA0_DST = 0x40000B4;
 DMA0_CNT_L = 0x40000B8;
 DMA0_CNT_H = 0x40000BA;
+
+UpdateObjectEventCurrentMovement = 0x8063DB8 | 1;
+gMovementActionFuncs = 0x83A65BC;
+sMovementTypeCallbacks = 0x839FBC8;
