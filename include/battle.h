@@ -279,15 +279,14 @@ struct Trainer
 {
     /*0x00*/ u8 partyFlags;
     /*0x01*/ u8 trainerClass;
-    /*0x02*/ u8 encounterMusic : 7; // last bit is gender
-			 u8 gender : 1;
+    /*0x02*/ u8 encounterMusic_gender; // last bit is gender
     /*0x03*/ u8 trainerPic;
     /*0x04*/ u8 trainerName[12];
     /*0x10*/ u16 items[4];
     /*0x18*/ bool8 doubleBattle;
     /*0x1C*/ u32 aiFlags;
     /*0x20*/ u8 partySize;
-    /*0x24*/ union TrainerMonPtr party;
+    /*0x24*/ const union TrainerMonPtr party;
 };
 
 #define PARTY_FLAG_CUSTOM_MOVES     0x1
