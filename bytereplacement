@@ -630,3 +630,6 @@
 087803A5 3
 
 #endif
+
+##Scrolling multichoices fix
+080CBB84 00 00 00 00

@@ -3098,68 +3098,87 @@ void ConvertCoinInt(u32 coinAmount)
 //waitstate
 
 //Text Declarations
-extern const u8 sExampleText_1[];
-extern const u8 sExampleText_2[];
-extern const u8 sExampleText_3[];
-extern const u8 sExampleText_4[];
-extern const u8 sExampleText_5[];
-extern const u8 sExampleText_6[];
-extern const u8 sExampleText_7[];
-extern const u8 sExampleText_8[];
-extern const u8 sExampleText_9[];
-extern const u8 sExampleText_10[];
-
-extern const u8 sText_1[];
-extern const u8 sText_2[];
-extern const u8 sText_3[];
-extern const u8 sText_4[];
-extern const u8 sText_5[];
-extern const u8 sText_6[];
-extern const u8 sText_7[];
-extern const u8 sText_8[];
-extern const u8 sText_9[];
-extern const u8 sText_10[];
-extern const u8 sText_11[];
-extern const u8 sText_12[];
-extern const u8 sText_13[];
-extern const u8 sText_14[];
-extern const u8 sText_15[];
+extern const u8 sCiudadVerde[];
+extern const u8 sCiudadPlateada[];
+extern const u8 sCiudadCeleste[];
+extern const u8 sPuebloLavanda[];
+extern const u8 sCiudadFucsia[];
+extern const u8 sCiudadCarmin[];
+extern const u8 sCiudadAzafran[];
+extern const u8 sRuta4[];
+extern const u8 sRuta10[];
+extern const u8 sCiudadAzulona[];
+extern const u8 sIslaCanela[];
+extern const u8 sMesetaAnil[];
 
 //Scrolling Lists
-static const u8* sMultichoiceSet1[] =
+static const u8* sMultichoiceSetSubte1[] =
 {
-	sExampleText_1,
-	sExampleText_2,
-	sExampleText_3,
-	sExampleText_4,
-	sExampleText_5,
-	sExampleText_6,
-	sExampleText_7,
-	sExampleText_8,
-	sExampleText_9,
-	sExampleText_10,
+	sCiudadVerde,
+	sCiudadPlateada,
+	sCiudadCeleste,
+	sPuebloLavanda,
+	sCiudadFucsia,
+	sCiudadCarmin,
+	sCiudadAzafran,
+	sRuta4,
+	sRuta10,
 };
 
-static const u8* sMultichoiceSet2[] =
+static const u8* sMultichoiceSetSubte2[] =
 {
-	sExampleText_1,
-	sExampleText_2,
-	sExampleText_3,
-	sExampleText_4,
-	sExampleText_5,
-	sExampleText_6,
-	sExampleText_7,
-	sExampleText_8,
-	sExampleText_9,
-	sExampleText_10,
+	sCiudadVerde,
+	sCiudadPlateada,
+	sCiudadCeleste,
+	sPuebloLavanda,
+	sCiudadFucsia,
+	sCiudadCarmin,
+	sCiudadAzafran,
+	sRuta4,
+	sRuta10,
+	sCiudadAzulona,
+};
+
+static const u8* sMultichoiceSetSubte3[] =
+{
+	sCiudadVerde,
+	sCiudadPlateada,
+	sCiudadCeleste,
+	sPuebloLavanda,
+	sCiudadFucsia,
+	sCiudadCarmin,
+	sCiudadAzafran,
+	sRuta4,
+	sRuta10,
+	sCiudadAzulona,
+	sIslaCanela,
+};
+
+static const u8* sMultichoiceSetSubte4[] =
+{
+	sCiudadVerde,
+	sCiudadPlateada,
+	sCiudadCeleste,
+	sPuebloLavanda,
+	sCiudadFucsia,
+	sCiudadCarmin,
+	sCiudadAzafran,
+	sRuta4,
+	sRuta10,
+	sCiudadAzulona,
+	sIslaCanela,
+	sMesetaAnil,
 };
 
 // Multichoice Lists
 const struct ScrollingMulti gScrollingSets[] =
 {
-	{sMultichoiceSet1, ARRAY_COUNT(sMultichoiceSet1)},
-	{sMultichoiceSet2, ARRAY_COUNT(sMultichoiceSet2)},
+	{sMultichoiceSetSubte1, ARRAY_COUNT(sMultichoiceSetSubte1)},
+	{sMultichoiceSetSubte2, ARRAY_COUNT(sMultichoiceSetSubte2)},
+	{sMultichoiceSetSubte3, ARRAY_COUNT(sMultichoiceSetSubte3)},
+	{sMultichoiceSetSubte4, ARRAY_COUNT(sMultichoiceSetSubte4)},
 };
+
 
 //Link number of opts shown at once to the box height
 struct ScrollingSizePerOpts

@@ -2,34 +2,40 @@
 
 #ifdef SCROLLING_MULTICHOICE
 
-#org @sExampleText_1
-Example 1
+#org @sCiudadVerde
+Ciudad Verde
 
-#org @sExampleText_2
-Example 2
+#org @sCiudadPlateada
+Ciudad Plateada
 
-#org @sExampleText_3
-Example 3
+#org @sCiudadCeleste
+Ciudad Celeste
 
-#org @sExampleText_4
-Example 4
+#org @sPuebloLavanda
+Pueblo Lavanda
 
-#org @sExampleText_5
-Example 5
+#org @sCiudadFucsia
+Ciudad Fucsia
 
-#org @sExampleText_6
-Example 6
+#org @sCiudadCarmin
+Ciudad Carmín
 
-#org @sExampleText_7
-Example 7
+#org @sCiudadAzafran
+Ciudad Azafrán
 
-#org @sExampleText_8
-Example 8
+#org @sCiudadAzulona
+Ciudad Azulona
 
-#org @sExampleText_9
-Example 9
+#org @sIslaCanela
+Isla Canela
 
-#org @sExampleText_10
-Example 10
+#org @sMesetaAnil
+Meseta Añil
+
+#org @sRuta4
+Mt. Luna
+
+#org @sRuta10
+Tunel Roca
 
 #endif
