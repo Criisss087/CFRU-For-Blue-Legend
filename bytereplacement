@@ -693,3 +693,8 @@
 08740F45 16 C2 50 32 00 16 00 80 00 00 25 67 00 02
 ##Battle BG
 087803A5 3
+
+#endif
+
+##Scrolling multichoices fix
+080CBB84 00 00 00 00
