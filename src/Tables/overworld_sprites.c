@@ -260,6 +260,7 @@ extern const u8 gEventObjectPic_104Tiles[];
 extern const u8 gEventObjectPic_105Tiles[];
 extern const u8 gEventObjectPic_106Tiles[];
 extern const u8 gEventObjectPic_107Tiles[];
+extern const u8 gEventObjectPic_123Tiles[];
 extern const u8 gEventObjectPic_124Tiles[];
 extern const u8 gEventObjectPic_136Tiles[];
 extern const u8 gEventObjectPic_137Tiles[];
@@ -711,6 +712,41 @@ const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_107 =
     .images = gEventObjectPicTable_107,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
+
+
+static const struct SpriteFrameImage gEventObjectPicTable_123[] =
+{
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 0),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 1),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 2),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 3),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 4),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 5),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 6),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 7),
+    overworld_frame(gEventObjectPic_123Tiles, 4, 4, 8),
+};
+
+const struct EventObjectGraphicsInfo gEventObjectGraphicsInfo_123 =
+{
+    .tileTag = 0xFFFF,
+    .paletteTag1 = 0x1104,
+    .paletteTag2 = EVENT_OBJ_PAL_TAG_NONE,
+    .size = (32 * 32) / 2,
+    .width = 32,
+    .height = 32,
+    .shadowSize = SHADOW_SIZE_M, //Can also be SHADOW_SIZE_S, SHADOW_SIZE_L, or SHADOW_SIZE_XL
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT, //Can also be TRACKS_TIRE
+    .gender = MALE, //Can also be FEMALE
+    .oam = gEventObjectBaseOam_32x32,
+    .subspriteTables = gEventObjectSpriteOamTables_32x32,
+    .anims = gEventObjectImageAnimTable_Standard,
+    .images = gEventObjectPicTable_123,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
 
 static const struct SpriteFrameImage gEventObjectPicTable_124[] =
 {
