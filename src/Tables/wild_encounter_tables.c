@@ -65,10 +65,6 @@ static const struct WildPokemon sRoute1_LandMonsNight[] =
     {5, 5, SPECIES_HOOTHOOT},
 };
 static const struct WildPokemonInfo sRoute1_LandMonsInfoNight = {20, sRoute1_LandMonsNight};
-<<<<<<< HEAD
-
-=======
->>>>>>> integracion
 
 const struct WildPokemonHeader gWildMonMorningHeaders[] =
 {

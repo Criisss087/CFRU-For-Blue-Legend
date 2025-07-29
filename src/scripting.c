@@ -297,8 +297,9 @@ void sp123_SetObjectMovementType(void)
 }
 
 
-bool8 sp009_PokemonRibbonChecker(void) {
-	u16 mon = Var8004;
+bool8 sp009_PokemonRibbonChecker(void)
+{
+	u16 partyId = Var8004;
 	u16 ribbon = Var8005;
 
 	if (partyId >= PARTY_SIZE || ribbon > 0x1F)

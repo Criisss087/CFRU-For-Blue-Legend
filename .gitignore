@@ -36,6 +36,7 @@ calculos minis.txt
 
 # generated temporary files
 .fuse*
+~$RU Documentation.docx
 
 # pycache files
 *.pyc

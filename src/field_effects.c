@@ -80,10 +80,6 @@ static bool8 RockClimb_StopRockClimbInit(struct Task* task, struct EventObject* 
 static u16 sObjectPaletteBerryForest7[] = {0x03E5, 0x1AF1, 0x2228, 0x1966, 0x10E4, 0x10A4, 0x0C84, 0x21D1, 0x2752, 0x0, 0x0, 0x0, 0x1AEF, 0x0E42, 0x05C1, 0x1929};
 static const struct SpritePalette sFieldEffectObjectPaletteBerryForest7 = {sObjectPaletteBerryForest7, 0x1005};
 
-#define gFieldEffectObjectPaletteBerryForest7 (void*) 0x8296F70
-static u16 sObjectPaletteBerryForest7[] = {0x03E5, 0x1AF1, 0x2228, 0x1966, 0x10E4, 0x10A4, 0x0C84, 0x21D1, 0x2752, 0x0, 0x0, 0x0, 0x1AEF, 0x0E42, 0x05C1, 0x1929};
-static const struct SpritePalette sFieldEffectObjectPaletteBerryForest7 = {sObjectPaletteBerryForest7, 0x1005};
-
 #ifdef UNBOUND //For Pokemon Unbound - Feel free to remove
 extern const u16 gFieldEffectObjectPic_AutumnGrassPal[];
 extern const u16 gFieldEffectObjectPic_WinterGrassPal[];

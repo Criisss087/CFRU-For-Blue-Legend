@@ -6,18 +6,12 @@
  */
 
 /*===== Debugging Options =====*/
-<<<<<<< HEAD
-=======
 //#define DEBUG_QUICK_BATTLES //Battles will end after choosing the first attack
->>>>>>> integracion
 #define DEBUG_MEGA //Mega Evolution can always be used
 #define DEBUG_HMS //HMs can always be used from the party screen, Surf, Waterfall, and Rock Climb can always be used
 #define DEBUG_OBEDIENCE //Traded Pokemon never have obedience issues
 #define DEBUG_DYNAMAX //Dynamax can be used in Dynamax battles without a Dynamax Band
-<<<<<<< HEAD
-=======
 //#define DEBUG_AI_CHOICES //Removes the frame-based randomness of the AI's decisions
->>>>>>> integracion
 #define LANGU_ESP // Para poder traducir textos en los .string al español sin perder el fuente original en ingles
 	
 /*===== General Vars =====*/
@@ -30,11 +24,7 @@
 #define VAR_DEFAULT_WALKING_SCRIPT 0x510B  //Walking scripts from JPAN's engine. His engine used 0x407E.
 #define VAR_DEXNAV 0x510C //Set by the engine indicating which Pokemon has been registered to find in the OW
 #define VAR_STATUS_INDUCER 0x510D //Causes wild Pokemon to be spawned with the given status condition. Status + 0x100 clears var after battle.
-<<<<<<< HEAD
-
-=======
 #define VAR_RAID_PARTNER_RANDOM_NUM 0x510E //A random number set daily to help give more random partners in raids
->>>>>>> integracion
 #define VAR_SECOND_OPPONENT 0x5110 //Set this to the var used to store the Trainer Id of the second opponent in Multi Battles (can be any free var)
 #define VAR_PARTNER 0x5111 //Set this to the var used to store the Trainer Id of your partner in Multi Battles (can be any free var)
 #define VAR_PARTNER_BACKSPRITE 0x5112 //Set this to the var used to store the backsprite number of your partner in Multi Battles (can be any free var)
@@ -285,10 +275,7 @@ enum //These vars need to be one after the other (hence the enum)
 //#define OLD_MOVE_SPLIT //Uncomment this line to use the Physical/Special split based on move types. Status moves are still set with the split byte.
 //#define OLD_CONFUSION_HEAL_BERRIES //Uncomment this line for berries like Figy and Wiki Berry to restore only 1/8 max HP when HP is below 1/2
 #define GEN_7_CONFUSION_HEAL_BERRIES //Uncomment this line for berries like Figy and Wiki Berry to restore 1/2 max HP (Gen 8 is 1/3) when HP is below 1/4
-<<<<<<< HEAD
-=======
 //#define PLA_HELD_ORIGIN_ORBS //Dialga and Palkia change into their Origin forms when they hold their respective orbs
->>>>>>> integracion
 
 /*===== Ability Options =====*/
 //#define OLD_GALE_WINGS //Uncomment this line if you want Gale Wings to activate regardless of the user's HP
@@ -338,17 +325,11 @@ enum //These vars need to be one after the other (hence the enum)
 #define FOG_IN_BATTLE_3 //Uncommenting this line enables the Fog weather effect when the OW weather is set to WEATHER_FOG_3 (0xA)
 #define HIDE_HEALTHBOXES_DURING_ANIMS //Uncommenting this line hides the health boxes during move animations and some special animations.
 //#define DONT_HIDE_HEALTHBOXES_ATTACKER_STATUS_MOVES //Uncommenting this line doesn't hide the healthboxes when the attacker is using a status move that targets itself.
-<<<<<<< HEAD
-//#define ENCOUNTER_MUSIC_BY_CLASS //Plays music when a trainer spots the player based on the trainer class rather than the value set in the trainer data.
-#define OKAY_WITH_AI_SUICIDE //The AI is allowed to use self-destructing moves
-//#define HEALTHBAR_TYPE_ICONS //Pokemon types will always be shown next to the healthbar
 #define FLAG_HEALTHBAR_TYPE_ICONS 0x928
-=======
 #define FASTER_HEALTHBOX_CHANGE //The healthbar increases/decreases at a somewhat constant rate for all Pokemon
 //#define ENCOUNTER_MUSIC_BY_CLASS //Plays music when a trainer spots the player based on the trainer class rather than the value set in the trainer data.
 #define OKAY_WITH_AI_SUICIDE //The AI is allowed to use self-destructing moves
 //#define HEALTHBAR_TYPE_ICONS //Pokemon types will always be shown next to the healthbar
-<<<<<<< HEAD
 #define LAST_USED_BALL_TRIGGER //The player will be given an option to use their last used Poke Ball in wild battles by pressing L
 //#define PICK_UP_KNOCKED_OFF_ITEMS //Items knocked off wild Pokemon will be picked up at the end of battle
 //#define PICKUP_ITEMS_STRAIGHT_TO_BAG //Items obtained with Pickup or Honey Gather are placed right in the bag
@@ -357,9 +338,5 @@ enum //These vars need to be one after the other (hence the enum)
 //#define QUICK_CLAW_PROCING_ALWAYS_ALLOWS_FLEEING //Fleeing from wild battles will never fail the turn a Quick Claw activates
 //#define FROSTBITE //Replaces the Freeze status condition with the Frostbite status condition from PLA
 
-=======
-#define FLAG_HEALTHBAR_TYPE_ICONS 0x928
->>>>>>> 2d7291c0 (More overworld sprites)
->>>>>>> integracion
 /* DexNav Options */
 //See "include/new/dexnav_config.h"
