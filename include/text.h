@@ -5,6 +5,7 @@
 
 #define CHAR_SPACE          0x00
 #define CHAR_PLUS           0x2E
+#define CHAR_LV             0x34
 #define CHAR_ARROW_UP       0x79
 #define CHAR_ARROW_DOWN     0x7A
 #define CHAR_ARROW_LEFT     0x7B
@@ -206,11 +207,7 @@ struct TextPrinter
 
     void (*callback)(struct TextPrinterTemplate *, u16); // 0x10
 
-    union
-#if !MODERN
-    __attribute__((packed))
-#endif
-    {
+    union __attribute__((packed)) {
         struct TextPrinterSubStruct sub;
         u8 fields[7];
     } subUnion;
@@ -282,8 +279,15 @@ extern u8 gUnknown_03002F84;
 extern struct Struct_03002F90 gUnknown_03002F90;
 
 u16 __attribute__((long_call)) AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+bool16 __attribute__((long_call)) AddTextPrinter(struct TextPrinterTemplate *textSubPrinter, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
+void __attribute__((long_call)) RunTextPrinters(void);
+bool16 __attribute__((long_call)) IsTextPrinterActive(u8 id);
 s32 __attribute__((long_call)) GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing);
 u8 __attribute__((long_call)) GetFontAttribute(u8 fontId, u8 attributeId);
+u8 __attribute__((long_call)) GetMenuCursorDimensionByFont(u8 fontId, u8 whichDimension);
+void __attribute__((long_call)) TextPrinterDrawDownArrow(struct TextPrinter *textPrinter);
+bool8 __attribute__((long_call)) TextPrinterWaitAutoMode(struct TextPrinter *textPrinter);
+bool16 __attribute__((long_call)) TextPrinterWaitWithDownArrow(struct TextPrinter *textPrinter);
 void __attribute__((long_call)) RunTextPrinters(void);
 bool16 __attribute__((long_call)) IsTextPrinterActive(u8 id);
 
@@ -295,10 +299,11 @@ extern u8 gStringVar4[];
 
 void SetFontsPointer(const struct FontInfo *fonts);
 void DeactivateAllTextPrinters(void);
-bool16 AddTextPrinter(struct TextSubPrinter *textSubPrinter, u8 speed, void (*callback)(struct TextSubPrinter *, u16));
-void RunTextPrinters(void);
-bool16 IsTextPrinterActive(u8 id);
-u32 RenderFont(struct TextPrinter *textPrinter);
+*/
+
+u32 __attribute__((long_call)) RenderFont(struct TextPrinter *textPrinter);
+
+/*
 void GenerateFontHalfRowLookupTable(u8 fgColor, u8 bgColor, u8 shadowColor);
 void SaveTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
 void RestoreTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
@@ -317,10 +322,7 @@ u16 Font7Func(struct TextPrinter *textPrinter);
 u16 Font8Func(struct TextPrinter *textPrinter);
 
 void TextPrinterInitDownArrowCounters(struct TextPrinter *textPrinter);
-void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter);
 void TextPrinterClearDownArrow(struct TextPrinter *textPrinter);
-bool8 TextPrinterWaitAutoMode(struct TextPrinter *textPrinter);
-bool16 TextPrinterWaitWithDownArrow(struct TextPrinter *textPrinter);
 bool16 TextPrinterWait(struct TextPrinter *textPrinter);
 void DrawDownArrow(u8 windowId, u16 x, u16 y, u8 bgColor, bool8 drawArrow, u8 *counter, u8 *yCoordIndex);
 u16 RenderText(struct TextPrinter *textPrinter);

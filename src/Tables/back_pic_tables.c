@@ -2,6 +2,7 @@
 #include "../../include/data2.h"
 #include "../../include/sprite.h"
 #include "../../include/constants/trainers.h"
+
 /*
 back_pic_tables.c
 	Set up tables to switch the player's back sprite
@@ -13,13 +14,6 @@ tables to edit:
 	sTrainerBackPicTable_[backsprite]
 	gSpriteTemplateTable_TrainerBackSprites
 */
- 
-#define gTrainerBackPicPalette_Red (const u8*) 0x8E76EBC
-#define gTrainerBackPicPalette_Leaf (const u8*) 0x8E76EE4
-//#define gTrainerPalette_Brendan (const u8*) 0x8E550A4
-//#define gTrainerPalette_May (const u8*) 0x8E553CC
-#define gTrainerPalette_PokeDude (const u8*) 0x8E76F0C
-#define gTrainerPalette_OldMan (const u8*) 0x8E76F34
 
 extern const u8 gTrainerBackPic_BrendanPal[];
 #define gTrainerPalette_Brendan gTrainerBackPic_BrendanPal
@@ -60,12 +54,26 @@ const struct CompressedSpritePalette gTrainerBackPicPaletteTable[] =
 #define gTrainerBackAnims_May (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_PokeDude (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_OldMan (const union AnimCmd* const*) 0x8239F5C
-
 #define gTrainerBackAnims_Brendan1 (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Wally (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Lance (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_Lidia (const union AnimCmd* const*) 0x8239F54
 #define gTrainerBackAnims_May1 (const union AnimCmd* const*) 0x8239F54
+
+static const union AnimCmd sAnimCmd_Marlon[] =
+{
+    ANIMCMD_FRAME(1, 32),
+    ANIMCMD_FRAME(2, 6),
+    ANIMCMD_FRAME(3, 6),
+    ANIMCMD_FRAME(4, 4),
+    ANIMCMD_END
+};
+
+const union AnimCmd *const gTrainerBackAnims_Marlon[] =
+{
+	(void*) 0x82347E8, //sAnim_GeneralFrame0
+	sAnimCmd_Marlon,
+};
 
 const union AnimCmd* const* const gTrainerBackAnimsPtrTable[] =
 {
@@ -108,7 +116,6 @@ const struct MonCoords gTrainerBackPicCoords[] =
 
 extern const u8 gTrainerBackPic_BrendanTiles[];
 extern const u8 gTrainerBackPic_MayTiles[];
-
 extern const u8 gTrainerBackPic_Brendan1Tiles[];
 extern const u8 gTrainerBackPic_May1Tiles[];
 extern const u8 gTrainerBackPic_WallyTiles[];
@@ -116,21 +123,19 @@ extern const u8 gTrainerBackPic_LanceTiles[];
 extern const u8 gTrainerBackPic_LidiaTiles[];
 
 
-static const struct SpriteFrameImage sTrainerBackPicTable_Brendan[] =
-{
-	{gTrainerBackPic_BrendanTiles, 			0x800, 0},
-	{gTrainerBackPic_BrendanTiles + 0x0800, 0x800, 0},
-	{gTrainerBackPic_BrendanTiles + 0x1000, 0x800, 0},
-	{gTrainerBackPic_BrendanTiles + 0x1800, 0x800, 0},
-};
+#define FIVE_FRAME_TABLE(name)                                           \
+	extern const u8 gTrainerBackPic_##name##Tiles[];                     \
+	static const struct SpriteFrameImage sTrainerBackPicTable_##name[] = \
+	{                                                                    \
+		{gTrainerBackPic_##name##Tiles + 0x0000, 0x800, 0},              \
+		{gTrainerBackPic_##name##Tiles + 0x0800, 0x800, 0},              \
+		{gTrainerBackPic_##name##Tiles + 0x1000, 0x800, 0},              \
+		{gTrainerBackPic_##name##Tiles + 0x1800, 0x800, 0},              \
+		{gTrainerBackPic_##name##Tiles + 0x2000, 0x800, 0},              \
+	};
 
-static const struct SpriteFrameImage sTrainerBackPicTable_May[] =
-{
-	{gTrainerBackPic_MayTiles, 				0x800, 0},
-	{gTrainerBackPic_MayTiles + 0x0800, 	0x800, 0},
-	{gTrainerBackPic_MayTiles + 0x1000, 	0x800, 0},
-	{gTrainerBackPic_MayTiles + 0x1800, 	0x800, 0},
-};
+FOUR_FRAME_TABLE(Brendan)
+FOUR_FRAME_TABLE(May)
 
 
 static const struct SpriteFrameImage sTrainerBackPicTable_Brendan1[] =

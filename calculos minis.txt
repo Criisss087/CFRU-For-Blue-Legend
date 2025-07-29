@@ -1,0 +1,70 @@
+gastle	133	 133*4=0x214
+gengar 	134	 134*4=0x218
+Surge   82      82*4=0x148
+PC      103     103*4=0x19C
+
+19  19*4=0x4C   0x839FDFC
+21  21*4=0x54   0x839FE04
+29  29*4=0x74   0x839FE24
+34  34*4=0x88   0x839FE38
+82  82*4=0x148  0x839FEF8
+
+tabla default		0x839FDB0 
+
+27*4 = 108 	+	0x839FDB0 = 0x839FEB8
+(6C) + 			0x839FDB0 = 0x839FE1C
+
+GENGAR
+0x218	+	0x839FDB0 = 0x839FFC8
+
+Pal 0x110B	0x8BCC9E8	
+
+GASTLY
+0x214	+	0x839FDB0 = 0x839FFC4
+PC
+0x19C   +   0x839FDB0 = 0x839FF4C
+
+
+Calculos para sprites
+0x823957C
+
+106*8   0x350   0x82398CC
+
+Paletas de trainers
+0x8239A1C
+
+106*8   0x350   0x8239D6C
+
+##37
+StevenTiles         82396A4
+StevenPal           8239B44
+
+
+const u8 gText_PlayerScurriedToCenter[] = _("{PLAYER} scurried to a POKéMON CENTER,\nprotecting the exhausted and fainted\nPOKéMON from further harm‥\p");
+
+EventScript_AfterWhiteOutHeal
+
+PlayCry7(species, mode);
+
+
+Scrips de nivel de carmin
+03	$166906
+02	407E	0002	$1668F1
+02	501A	0002	$736E5D
+
+
+
+La estructura de los trainers pesa 0x28 bytes
+
+40 bytes
+
+##Entrenadores Tabla base 23EAC8 + 0x28 * NRO
+gTrainer262     82413B8
+
+La estructura de los trainers pesa 0x28 bytes
+
+40 bytes
+
+##Entrenadores Tabla base 23EAC8 + 0x28 * NRO
+gTrainer262     82413B8
+
