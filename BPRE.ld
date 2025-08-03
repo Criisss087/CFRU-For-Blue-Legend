@@ -2078,3 +2078,6 @@ DMA0_CNT_H = 0x40000BA;
 UpdateObjectEventCurrentMovement = 0x8063DB8 | 1;
 gMovementActionFuncs = 0x83A65BC;
 sMovementTypeCallbacks = 0x839FBC8;
+
+DrawHelpMessageWindowTilesById = 0x8112F18 | 1;
+DrawDialogFrameWithCustomTileAndPalette = 0x810EDC4 | 1;                

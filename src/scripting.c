@@ -2399,8 +2399,8 @@ void (*const sNamingScreenTitlePrintingFuncs[])(void) = //Must be the same lengt
 
 
 //Item Find Show Picture Special (Really Callasm)
-#define ITEM_ICON_X (10 + 16)
-#define ITEM_ICON_Y (8 + 16)
+#define ITEM_ICON_X (0 + 16)
+#define ITEM_ICON_Y (10 + 16)
 #define sHeaderBoxWindowId (*((u8*) 0x203B020)) //Steal help menu window Id
 #if (defined ITEM_PICTURE_ACQUIRE && defined ITEM_DESCRIPTION_ACQUIRE)
 static void ShowObtainedItemDescription(unusedArg u16 itemId)
@@ -2411,12 +2411,12 @@ static void ShowObtainedItemDescription(unusedArg u16 itemId)
 
 	if (pocket == POCKET_KEY_ITEMS || pocket == POCKET_TM_CASE) //Displayed in the middle of the screen
 	{
-		textX = 1;
+		textX = 6;
 		maxWidth = 222;
 	}
 	else
 	{
-		textX = ITEM_ICON_X + 2;
+		textX = ITEM_ICON_X + 10;
 		maxWidth = 195;
 	}
 
@@ -2425,24 +2425,25 @@ static void ShowObtainedItemDescription(unusedArg u16 itemId)
 
 	if (numLines == 1)
 	{
-		textY = 4;
+		textY = 6;
 		windowHeight = 3;
 	}
 	else if (numLines >= 3)
 	{
-		textY = 0;
+		textY = 2;
 		windowHeight = 5;
 	}
 	else
 	{
-		textY = 0;
+		textY = 2;
 		windowHeight = 4;
 	}
 
-	template = SetWindowTemplateFields(0, 1, 1, 28, windowHeight, 14, 0x20);
+	template = SetWindowTemplateFields(0, 0, 1, 30, windowHeight, 14, 0x20);
 	sHeaderBoxWindowId = AddWindow(&template);
-	FillWindowPixelBuffer(sHeaderBoxWindowId, PIXEL_FILL(1));
-	DrawStdFrameWithCustomTileAndPalette(sHeaderBoxWindowId, FALSE, 0x214, 14);
+	//FillWindowPixelBuffer(sHeaderBoxWindowId, PIXEL_FILL(1));
+	//DrawStdFrameWithCustomTileAndPalette(sHeaderBoxWindowId, FALSE, 0x214, 14);
+	DrawDialogFrameWithCustomTileAndPalette(sHeaderBoxWindowId, FALSE, 0x200, 15);
 	PutWindowTilemap(sHeaderBoxWindowId);
 	CopyWindowToVram(sHeaderBoxWindowId, 3);
 
