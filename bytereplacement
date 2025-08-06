@@ -698,3 +698,12 @@
 
 ##Scrolling multichoices fix
 080CBB84 00 00 00 00
+
+## Cambia el tipo de mapa de Berry forest a cueva para evitar el fade de transparencia
+0843EAF9 00
+
+## Cambio el grupo de mapa de la torre pokemon para que no salga el map preview en la central de energia ni torre Randomizer
+0834FBC8 5C
+0834FBE4 5C
+0834FC54 5C
+0834FC70 5C

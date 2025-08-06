@@ -2081,3 +2081,8 @@ sMovementTypeCallbacks = 0x839FBC8;
 
 DrawHelpMessageWindowTilesById = 0x8112F18 | 1;
 DrawDialogFrameWithCustomTileAndPalette = 0x810EDC4 | 1;                
+
+Weather_SetBlendCoeffs = 0x807ADB0 | 1;   
+Weather_SetTargetBlendCoeffs = 0x807ADF0 | 1;
+Weather_UpdateBlend = 0x807AE34 | 1;
+ForestMapPreviewScreenIsRunning = 0x80F83B0 | 1;                

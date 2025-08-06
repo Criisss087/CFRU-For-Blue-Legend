@@ -276,3 +276,9 @@ FieldUseFunc_VsSeeker 887A054
 CB2_PartyMenuFromField 801D7FC
 CB2_ItemMenuFromField 801D800
 #endif
+
+##Wheather replacement
+LightWeather_InitVars 83C2BD0
+LightWeather_Main 083C2BD4
+LightWeather_InitAll 083C2BD8
+LightWeather_Finish 083C2BDC

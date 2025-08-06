@@ -158,3 +158,17 @@ struct Weather
     s8 loadDroughtPalsIndex;
     u8 loadDroughtPalsOffset;
 };
+
+#define TAG_WEATHER_START 0x1200
+enum {
+    GFXTAG_CLOUD = TAG_WEATHER_START,
+    GFXTAG_LIGHT_W,
+    GFXTAG_ASH,
+    GFXTAG_FOG_D,
+    GFXTAG_SANDSTORM,
+    GFXTAG_BUBBLE,
+    GFXTAG_RAIN,
+};
+enum {
+    PALTAG_WEATHER = TAG_WEATHER_START,
+};
