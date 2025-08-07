@@ -69,3 +69,21 @@ Sat
 
 #org @gText_StartMenu_Error
 Err
+
+#Org @gText_MenuPokedex
+Pokédex
+
+#Org @gText_MenuPokemon
+Pokémon
+
+#Org @gText_MenuBag
+Mochila 
+
+#Org @gText_MenuSave
+Guardar
+
+#org @gText_MenuOption
+Opciones
+
+#org @gText_MenuExit
+Salir
