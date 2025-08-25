@@ -15,7 +15,6 @@ build/*
 *.ss1
 *.ss2
 *.ss3
-*.png
 *.gif
 *.jpg
 *.jpeg
@@ -38,8 +37,12 @@ calculos minis.txt
 .fuse*
 ~$RU Documentation.docx
 BPRE0.toml
+test.toml
 
 # pycache files
 *.pyc
 .vs/CFRU-For-Blue-Legend/v15/.suo
 *.sqlite
+
+# mGBA screenshots
+test*.png
