@@ -20,7 +20,7 @@
 #define OW_BG_PAL_7 TRUE
 #define OW_BG_PAL_8 TRUE
 #define OW_BG_PAL_9 TRUE
-#define OW_BG_PAL_10 FALSE
+#define OW_BG_PAL_10 TRUE
 #define OW_BG_PAL_11 TRUE
 #define OW_BG_PAL_12 TRUE
 #define OW_BG_PAL_13 FALSE
@@ -308,6 +308,7 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
+
 	// Tileset 2 - Ciudad verde
 	{ // PAL 7 Casas verde
 		.tilesetPointer = 0x82D4AC4, //Tileset 2
@@ -321,6 +322,19 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
+	{ // PAL 10 Farolas
+		.tilesetPointer = 0x82D4AC4, //Tileset 2
+		.paletteNumToFade = 10,
+		.paletteIndicesToFade =
+		{
+			{15, RGB(30, 30, 17)},
+			{8, RGB(28, 27, 14)},
+			{6, RGB(25, 24, 11)},
+			{7, RGB(23, 22, 9)},
+			TILESET_PAL_FADE_END
+		},
+	},
+
 	// Tileset 3 - Ciudad Plateada
 	{ // PAL 8 ventanas 
 		.tilesetPointer = 0x82D4ADC, //Tileset 3
@@ -359,6 +373,18 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
+	{ // PAL 10 Farolas
+		.tilesetPointer = 0x82D4AF4, //Tileset 4
+		.paletteNumToFade = 10,
+		.paletteIndicesToFade =
+		{
+			{5, RGB(30, 30, 17)},
+			{8, RGB(23, 22, 9)},
+			{6, RGB(28, 27, 14)},
+			TILESET_PAL_FADE_END
+		},
+	},
+
 
 	// Tileset 8  -Ciudad Fucsia
 	{ // PAL 9 - Ventanas
@@ -385,5 +411,56 @@ const struct SpecificTilesetFade gSpecificTilesetFades[] =
 			TILESET_PAL_FADE_END
 		},
 	},
+
+	// Tileset 6  -Ciudad Carmin
+	{ // PAL 12 - Farolas
+		.tilesetPointer = 0x82D4B24, 
+		.paletteNumToFade = 12,
+		.paletteIndicesToFade =
+		{
+			{5, RGB(30, 30, 17)},
+			{8, RGB(28, 27, 14)},
+			{6, RGB(25, 24, 11)},
+			TILESET_PAL_FADE_END
+		},
+	},	
+
+	// Tileset 11  -Ciudad Azafrán
+	{ // PAL 12 - Farolas
+		.tilesetPointer = 0x82D4B9C, 
+		.paletteNumToFade = 12,
+		.paletteIndicesToFade =
+		{
+			{5, RGB(30, 30, 17)},
+			{6, RGB(25, 24, 11)},
+			TILESET_PAL_FADE_END
+		},
+	},		
+
+	// Tileset 7  -Ciudad Azulona
+	{ // PAL 9 - Casino
+		.tilesetPointer = 0x82D4B3C, 
+		.paletteNumToFade = 9,
+		.paletteIndicesToFade =
+		{
+			{7, RGB(30, 30, 17)},
+			{8, RGB(28, 27, 14)},
+			{9, RGB(25, 24, 11)},
+			TILESET_PAL_FADE_END
+		},
+	},		
+	{ // PAL 10 Farolas
+		.tilesetPointer = 0x82D4B3C,
+		.paletteNumToFade = 10,
+		.paletteIndicesToFade =
+		{
+			{5, RGB(30, 30, 17)},
+			{8, RGB(23, 22, 9)},
+			{6, RGB(28, 27, 14)},
+			TILESET_PAL_FADE_END
+		},
+	},
+
+
 };
 
