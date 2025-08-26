@@ -710,3 +710,6 @@
 
 ##Gained EXP Buffer Fix
 083FB271 34
+
+## Expand max tracks to 16
+084A32A0 00 E0 03 02 10
