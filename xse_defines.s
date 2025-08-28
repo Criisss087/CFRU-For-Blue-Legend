@@ -11,9 +11,11 @@
 .equ CAMERA_END, 0x114
 .equ SetUpTrainerMovement, 0x13A
 
+.equ MOVE_CAMERA, 0x7F
 .equ CAMERA, 0x7F
 .equ FOLLOWER, 0xFE
 .equ PLAYER, 0xFF
+.equ MOVE_PLAYER, 0xFF
 .equ PLAYERFACING, 0x800C
 .equ LASTRESULT, 0x800D
 .equ CHOSEN_ITEM, 0x800E

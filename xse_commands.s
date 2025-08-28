@@ -1621,7 +1621,7 @@ map \map
 .endm
 
 @ Sets the door tile at (x, y) to be closed without an animation.
-.macro setdoorclosed x:req, y:req
+.macro setdoorclosed2 x:req, y:req
 .byte 0xb0
 .2byte \x
 .2byte \y
@@ -1967,4 +1967,23 @@ map \map
 .macro levelscript var:req val:req script:req
 .hword \var, \val
 .word \script
+.endm
+
+@ Opens the door metatile at (X, Y) with an animation.
+.macro setdooropened x:req, y:req
+.byte 0xac
+.2byte \x
+.2byte \y
+.endm
+
+@ Closes the door metatile at (X, Y) with an animation.
+.macro setdoorclosed x:req, y:req
+.byte 0xad
+.2byte \x
+.2byte \y
+.endm
+
+@ Waits for the door animation started with opendoor or closedoor to finish.
+.macro doorchange
+.byte 0xae
 .endm

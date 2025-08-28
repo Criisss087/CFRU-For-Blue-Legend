@@ -155,6 +155,31 @@ SpecialBuffers = {
     "EMOJI_NEUTRAL": ["F9", "FC"],
     "EMOJI_SHOCKED": ["F9", "FD"],
     "EMOJI_BIGANGER": ["F9", "FE"],
+
+
+    #XSE Buffers
+    "white_fr": ["FC", "01", "00"],
+    "white2_fr": ["FC", "01", "01"],
+    "black_fr": ["FC", "01", "02"],
+    "grey_fr": ["FC", "01", "03"],
+    "red_fr": ["FC", "01", "04"],
+    "orange_fr": ["FC", "01", "05"],
+    "green_fr": ["FC", "01", "06"],
+    "lightgreen_fr": ["FC", "01", "07"],
+    "blue_fr": ["FC", "01", "08"],
+    "lightblue_fr": ["FC", "01", "09"],
+    "white3_fr": ["FC", "01", "0A"],
+    "lightblue2_fr": ["FC", "01", "0B"],
+    "cyan_fr": ["FC", "01", "0C"],
+    "lightblue3_fr": ["FC", "01", "0D"],
+    "navyblue_fr": ["FC", "01", "0E"],
+    "darknavyblue_fr": ["FC", "01", "0F"],
+
+    "player": ["FD", "01"],
+    "buffer1": ["FD", "02"],
+    "buffer2": ["FD", "03"],
+    "buffer3": ["FD", "04"],
+    "rival": ["FD", "06"],
 }
 
 
