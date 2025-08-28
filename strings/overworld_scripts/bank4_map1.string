@@ -1,3 +1,7 @@
+#include "src/config.h"
+
+#ifdef LANGU_ESP
+
 #org @gText_map_0X722E62
 [blue_fr]- Una hora después -
 
@@ -33,3 +37,43 @@
 
 #org @gText_map_0X72387A
 [navyblue_fr]Steven: Creo que es hora de irme,\nte veré pronto [red_fr][player].\p[player]: Nos vemos [navyblue_fr]Steven.
+
+#else 
+
+#org @gText_map_0X722E62
+[blue_fr]- One hour later -
+
+#org @gText_map_0X722E7C
+[navyblue_fr]Steven: [red_fr][player], [navyblue_fr]you’re finally\nawake. You were out for about an\lhour.\p[red_fr][player]: Hey, [navyblue_fr]Steven[red_fr]! It’s been\na while.\p[navyblue_fr]Steven: Yeah. We always seem to\nmeet whenever we’re traveling,\lhuh? This time, it looks like\l[green_fr]Kanto [navyblue_fr]has a new adventure\lwaiting for us.\p[red_fr][player]: I wouldn’t go that far. I’m\njust dropping off this package to\lProfessor [green_fr]Oak [red_fr]in [green_fr]Pallet\lTown.\p[navyblue_fr]Steven: Trust me-you’ll like it\nso much you might even stay. I’ve\lalready been there.
+
+#org @gText_map_0X72306E
+[red_fr][player]: Do you think it’ll be much\nlonger? I’m getting bored.\p[navyblue_fr]Steven: Want to hear a story?\nIt’s about [green_fr]Kanto[navyblue_fr]. What do you\lsay?\p[red_fr][player]: Sounds great! That’ll make\nthe trip go faster.
+
+#org @gText_map_0X72313A
+[navyblue_fr]Steven: This is the legend of [orange_fr]Lugia[.]
+
+#org @gText_map_0X723167
+[navyblue_fr]Steven: [green_fr]Team Rocket [navyblue_fr]was a\nband of Pokémon thieves who\lcaused trouble all over\l[green_fr]Kanto[navyblue_fr]. They stole wild\lPokémon and Pokémon from Trainers\lto exploit them and try to take\lover the world.\p[red_fr][player]: Like [navyblue_fr]Team Aqua [red_fr]or\n[orange_fr]Team Magma?\p[navyblue_fr]Steven: Exactly. But Aqua and\nMagma kept each other in check by\lcompeting. Nothing stood against\l[green_fr]Team Rocket[navyblue_fr].
+
+#org @gText_map_0X72332C
+[navyblue_fr]Steven: One of their big plans\nwas to capture a Pokémon called\l[blue_fr]Lugia[navyblue_fr]. They believed it could\lcommand the seas and, with that\lpower, they could conquer\l[green_fr]Kanto[.]
+
+#org @gText_map_0X7233E7
+[navyblue_fr]Steven: But [blue_fr]Lugia [navyblue_fr]always escaped[.]
+
+#org @gText_map_0X723417
+[navyblue_fr]Steven: They never figured out\nhow to control its overwhelming\lpower, so they could never catch\lit. From what I’ve heard, [green_fr]Team\lRocket [navyblue_fr]disappeared. I don’t\lknow how, but they never reached\ltheir goal.\p[red_fr][player]: Great story. I wish I could\nrun into them[.]
+
+#org @gText_map_0X723559
+[red_fr][player]: What was that?\p[navyblue_fr]Steven: Sounds like it’s coming\nfrom your bag.\p[red_fr][player]: You’re right-oh! It’s a\nPoképhone! Mom must’ve put it\lhere before I left and didn’t\ltell me.\p[navyblue_fr]Steven: You should answer it.\nSomeone’s calling.
+
+#org @gText_map_0X723628
+[red_fr][player]: Hello?\p[darknavyblue_fr]Birch: [red_fr][player][darknavyblue_fr]? Good, it’s you.\nI thought your mom might give me\lthe wrong number[.]\p[red_fr][player]: Is something wrong,\nProfessor?\p[darknavyblue_fr]Birch: No, not at all. I just\nwanted to remind you to see\l[green_fr]Oak[darknavyblue_fr] and deliver that\lpackage-and don’t forget to say\lhello to the [green_fr]Captain [darknavyblue_fr]for me.\p[red_fr][player]: No problem, Professor. I’ll\npass it along.\p[darknavyblue_fr]Birch: I have to go, [red_fr][player][darknavyblue_fr].\nI’m sure we’ll see each other\lsoon.\p[red_fr][player]: Goodbye, Professor.
+
+#org @gText_map_0X7237D9
+[red_fr][player]: Who would’ve thought? I’ve\ngot a Poképhone now. [.]\p[green_fr]Captain: Attention, passengers!\nWe’ll be arriving at the port of\l[orange_fr]Vermilion City[green_fr] in just a few\lmoments! [.]
+
+#org @gText_map_0X72387A
+[navyblue_fr]Steven: Looks like it’s time\nfor me to head out. See you soon,\l[red_fr][player].\p[player]: See you, [navyblue_fr]Steven.
+
+#endif 

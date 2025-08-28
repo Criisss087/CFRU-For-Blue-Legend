@@ -83,52 +83,52 @@ EventScript_map_0X722BD6:
 	applymovement 0x1 0x8750000
 	waitmovement 0x1
 	pause 0x30
-	applymovement 0x1 0x87238D0
+	applymovement 0x1 EventScript_map_0X7238D0
 	waitmovement 0x1
 	spriteface 0xFF 0x2
 	special 0x113
-	applymovement CAMERA 0x87238D6
+	applymovement CAMERA EventScript_map_0X7238D6
 	waitmovement 0x7F
 	special 0x114
-	msgbox 0x8722E7C MSG_FACE @"[navyblue_fr]Steven: [red_fr][play..."
+	msgbox gText_map_0X722E7C MSG_FACE @"[navyblue_fr]Steven: [red_fr][play..."
 	waitmsg
 	spriteface 0xFF 0x3
 	pause 0x50
 	spriteface 0xFF 0x2
-	msgbox 0x872306E MSG_FACE @"[red_fr][player]: �Cr�es que falte..."
+	msgbox gText_map_0X72306E MSG_FACE @"[red_fr][player]: �Cr�es que falte..."
 	waitmsg
 	fadescreen 0x1
-	msgbox 0x872313A MSG_FACE @"[navyblue_fr]Steven: �sta es la le..."
+	msgbox gText_map_0X72313A MSG_FACE @"[navyblue_fr]Steven: �sta es la le..."
 	waitmsg
 	special 0x113
 	movesprite 0xFF 0x0 0x14
 	pause 0x2
 	hidesprite 0x1
-	applymovement CAMERA 0x87238DA
+	applymovement CAMERA EventScript_map_0X7238DA
 	waitmovement 0x7F
 	showsprite 0x1
 	movesprite 0x1 0x2 0x5
 	special 0x114
 	fadescreen 0x0
-	applymovement 0xC 0x87238F7
-	applymovement 0xB 0x87238F7
-	applymovement 0xD 0x87238F7
+	applymovement 0xC EventScript_map_0X7238F7
+	applymovement 0xB EventScript_map_0X7238F7
+	applymovement 0xD EventScript_map_0X7238F7
 	waitmovement 0xC
 	waitmovement 0xB
 	waitmovement 0xD
 	spriteface 0xB 0x1
 	spriteface 0xC 0x4
 	spriteface 0xD 0x3
-	msgbox 0x8723167 MSG_FACE @"[navyblue_fr]Steven: El [green_fr]..."
+	msgbox gText_map_0X723167 MSG_FACE @"[navyblue_fr]Steven: El [green_fr]..."
 	waitmsg
-	applymovement 0xC 0x8723906
-	applymovement 0xB 0x8723906
-	applymovement 0xD 0x8723906
+	applymovement 0xC EventScript_map_0X723906
+	applymovement 0xB EventScript_map_0X723906
+	applymovement 0xD EventScript_map_0X723906
 	waitmovement 0xD
 	fadescreen 0x1
 	special 0x113
 	setflag 0x569
-	applymovement CAMERA 0x872390F
+	applymovement CAMERA EventScript_map_0X72390F
 	waitmovement 0x7F
 	showsprite 0x3
 	showsprite 0x4
@@ -139,14 +139,14 @@ EventScript_map_0X722BD6:
 	showsprite 0xA
 	fadescreen 0x0
 	cry 0xF9 0x0
-	msgbox 0x872332C MSG_NORMAL @"[navyblue_fr]Steven: Uno de sus pr..."
+	msgbox gText_map_0X72332C MSG_NORMAL @"[navyblue_fr]Steven: Uno de sus pr..."
 	fadescreen 0x1
 	cry 0xF9 0x0
 	hidesprite 0xA
 	fadescreen 0x0
-	msgbox 0x87233E7 MSG_NORMAL @"[navyblue_fr]Steven: Pero [blue_fr..."
+	msgbox gText_map_0X7233E7 MSG_NORMAL @"[navyblue_fr]Steven: Pero [blue_fr..."
 	fadescreen 0x1
-	applymovement CAMERA 0x8723934
+	applymovement CAMERA EventScript_map_0X723934
 	waitmovement 0x7F
 	movesprite 0xFF 0x2 0x6
 	showsprite 0x1
@@ -154,21 +154,21 @@ EventScript_map_0X722BD6:
 	spriteface 0x1 0x1
 	special 0x114
 	fadescreen 0x0
-	msgbox 0x8723417 MSG_FACE @"[navyblue_fr]Steven: Nunca lograro..."
+	msgbox gText_map_0X723417 MSG_FACE @"[navyblue_fr]Steven: Nunca lograro..."
 	sound 0x4
 	pause 0x30
 	sound 0x15
-	applymovement PLAYER 0x8750DBF
+	applymovement PLAYER EventScript_map_0X750DBF
 	waitmovement 0xFF
 	spriteface 0xFF 0x3
-	msgbox 0x8723559 MSG_FACE @"[red_fr][player]: �Qu� fue eso?\p[..."
+	msgbox gText_map_0X723559 MSG_FACE @"[red_fr][player]: �Qu� fue eso?\p[..."
 	sound 0x4
-	msgbox 0x8723628 MSG_FACE @"[red_fr][player]: �Hola?\p[darknav..."
+	msgbox gText_map_0X723628 MSG_FACE @"[red_fr][player]: �Hola?\p[darknav..."
 	sound 0x3
 	additem 0x119 0x1
-	msgbox 0x87237D9 MSG_FACE @"[red_fr][player]: Qui�n lo dir�a, ..."
+	msgbox gText_map_0X7237D9 MSG_FACE @"[red_fr][player]: Qui�n lo dir�a, ..."
 	spriteface 0xFF 0x2
-	msgbox 0x872387A MSG_FACE @"[navyblue_fr]Steven: Creo que es h..."
+	msgbox gText_map_0X72387A MSG_FACE @"[navyblue_fr]Steven: Creo que es h..."
 	applymovement 0x1 0x872395A
 	waitmovement 0x1
 	opendoor 0x3 0x1
