@@ -1,0 +1,15 @@
+#org @gText_npc8_0X73600C
+[darknavyblue_fr]¿Quieres que [green_fr]Pidgeot[darknavyblue_fr] te\nlleve?
+
+#org @gText_tile2_3_0X770339
+[blue_fr]Hey, tú, ¿Tienes boleto?\p[red_fr][player]: Eh[.] pero, yo[.] el capitán[.]\p[blue_fr]Me temo que debo que cobrarte una\nmulta.\p[red_fr][player]: ¿Qué?
+
+#org @gText_tile2_3_0X7703B8
+[darknavyblue_fr]Oak: Así que tú debes ser [player],\nes un placer conocerte, mi nombre\les Oak, llámame profesor.\pNo se preocupe señor, viene\nconmigo.\p[red_fr][player]: Gracias profesor me ha\nsalvado[.]\p[darknavyblue_fr]Oak: Bueno, vamos a mi laboratorio,\nyo te llevaré.
+
+#org @gText_tile4_a_8_0X736069
+¿Te quieres bajar?
+
+#org @gText_tile9_a_11_0X73939B
+[navyblue_fr]Ash: ¡[player]!\pPor fin llegas.\pLa ceremonia ya ha terminado,\npero podemos pasar.\p[red_fr][player]: ¿De qué se trata esto?\p[navyblue_fr]Ash: ¿Acaso no lo ves?\p¡Se ha inaugurado la [green_fr]Torre de\nBatalla [navyblue_fr]de la región!\pMe estaba preparando para este\ndía desde hace mucho tiempo.\pVayamos a investigar de qué se\ntrata.
+

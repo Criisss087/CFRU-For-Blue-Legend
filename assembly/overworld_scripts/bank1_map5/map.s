@@ -5,7 +5,7 @@
 .include "../xse_defines.s"
 .include "../asm_defines.s"
 
-.global EventScript_map_4_2
+.global EventScript_map_1_5
 
 EventScript_map_1_5:
 .byte 0x2
