@@ -6,9 +6,9 @@
 .include "../asm_defines.s"
 
 
-.global EventScript_map_4_2
+.global EventScript_map_4_1
 
-EventScript_map_4_2:
+EventScript_map_4_1:
 .byte 0x3
 .4byte EventScript_map_0X168CAE
 .byte 0x2

@@ -27,4 +27,18 @@ tile 3 5 11 EventScript_tile9_a_11_0X7392EB
 map 3 5 EventScript_map_3_5
 
 ##Bank 4 Map 1
-map 4 1 EventScript_map_4_2
+map 4 1 EventScript_map_4_1
+
+##Bank 4 Map 3
+map 4 3 EventScript_map_4_3
+npc 4 3 0 EventScript_npc0_0X169DEE
+npc 4 3 1 EventScript_npc1_0X169E46
+npc 4 3 2 EventScript_npc2_0X169E1A
+npc 4 3 3 EventScript_npc3_0X72458B
+npc 4 3 7 EventScript_npc7_0X16955F
+tile 4 3 0 EventScript_tile0_0X1692C3
+tile 4 3 1 EventScript_tile0_0X1692C3
+tile 4 3 2 EventScript_tile0_0X1692C3
+tile 4 3 3 EventScript_tile3_0X71AA58 
+tile 4 3 4 EventScript_tile4_0X71A89D
+tile 4 3 5 EventScript_tile5_0X71AB48 

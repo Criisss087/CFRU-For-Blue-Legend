@@ -1,0 +1,126 @@
+#org @gText_map_0X77049E
+[darknavyblue_fr]Oak: [player], ya llegamos.\pÉste es mi laboratorio,\nahora cuéntame, que te trae por\laquí.\p[red_fr][player]: El profesor Birch me mandó\na que le entregara éste paquete.
+
+#org @gText_map_0X77053C
+[player] entregó el paquete.
+
+#org @gText_map_0X770556
+[darknavyblue_fr]Oak: Ahora sí, cuéntame algo de\ntu vida.\p[red_fr][player]: Vengo de Villa Raíz y\nentreno Pokémon, aunque no tengo\lun combate hace mucho tiempo.\p[darknavyblue_fr]Oak: Bueno aquí en Kanto hay un\ntorneo para gente como tú, talvez\lquieras participar.\p[red_fr][player]: ¡Sí! sería fantástico, pero\nno traje a ninguno de mis pokémon\lconmigo.\p[darknavyblue_fr]Oak: No te preocupes, puedo\ndarte uno de los míos.\p[red_fr][player]: Sería un placer profesor.
+
+#org @gText_map_0X7706FC
+[darknavyblue_fr]¡Oak: Pero si es Ash!
+
+#org @gText_map_0X7707E4
+[navyblue_fr]Ash: Hola Prof, ¿Qué tal?\p[darknavyblue_fr]Oak: Te estaba esperando, te presento\na [player], viene de la región Hoenn.
+
+#org @gText_map_0X770857
+[navyblue_fr]Ash: Hoenn eh, es un gusto\nconocerte, más siendo un\lentrenador como tú.
+
+#org @gText_map_0X7708B4
+[navyblue_fr]Ash: Prof, aquí traigo lo que me\npidió.\p[darknavyblue_fr]Oak: La GS ball, hace mucho que la\nesperaba.
+
+#org @gText_map_0X770913
+[red_fr][player]: Profesor, disculpe, pero ya\nno lo soporto\p¡QUIERO MI POKÉMON!\p[darknavyblue_fr]Oak: Bueno no te desesperes\nEn ésas balls hay tres Pokémon.\lEscoge el que quieras.
+
+#org @gText_npc0_0X18EBE6
+¡Soy ayudante del PROF. OAK!
+
+#org @gText_npc0_0X18ED15
+¡El profesor Oak tiene su\nprograma de radio!
+
+#org @gText_npc1_0X18ED81
+¡El PROF. OAK es un experto\nen POKéMON!\p¡Es admirado por muchos de los\nENTRENADORES POKéMON!
+
+#org @gText_npc2_0X18EBE6
+¡Soy ayudante del PROF. OAK!
+
+#org @gText_npc2_0X18EC0B
+Hola, [player]. Seguro que has\nhecho buenas migas con tus\lPOKéMON.\pA todo esto, ¿conoces a DALIA?\pSi le enseñas a DALIA tus POKéMON,\nsabrá decirte si les gustas o no.\pY puede que les dé un lavado de\ncara para que estén presentables.\lPero no vayas diciéndolo por ahí.
+
+
+#org @gText_npc3_0X18E116
+[darknavyblue_fr]Oak: Bueno [player].\pDentro de esas pokéballs te espera\ntu nuevo pokémon, elige sin miedo.
+
+#org @gText_npc3_0X72478C
+[darknavyblue_fr]Birch: [red_fr][player],\n[darknavyblue_fr]Samuel y yo te estábamos\lesperando.\p[red_fr][player]: ¿Qué es lo que me querían\npedir?\p[darknavyblue_fr]Oak: Aguarda un momento\n[red_fr][player] [darknavyblue_fr]todavía tenemos que esperar\la alguien más[.]\p[green_fr]Birch: Mira, allí viene.
+
+#org @gText_npc3_0X724864
+[navyblue_fr]Ash: ¡Profesor Birch! ¡Cuanto\ntiempo sin verlo!
+
+#org @gText_npc3_0X724899
+[navyblue_fr]Ash: ¡Hey, [red_fr][player]! [navyblue_fr]Perdón, no te\nhabía visto. ¿Cómo te va en la\lliga? ¿Ya has ganado alguna\lmedalla?\p[red_fr][player]: Claro, hace muy poco vencí\na Brock, en [green_fr]Ciudad Plateada.\p[navyblue_fr]Ash: Genial, ¿Brock no te dijo\nnada de mí?\p[red_fr][player]: No, solo me dijo que yo le\nrecordaba a uno de sus amigos,\lquizás se refería a ti.\p[navyblue_fr]Ash: Ahora debes ir a [green_fr]Ciudad\nCeleste [navyblue_fr]¿No?\p[red_fr][player]: Exacto, Brock me dijo que\nallí hay un gimnasio.
+
+#org @gText_npc3_0X724A42
+[darknavyblue_fr]Oak: ¡Chicos! ¡Esto es serio!\nPor favor, escúchennos, esto es\lbastante grave como para hablar\lde eso ahora.\p[green_fr]Birch: Es cierto, los hemos\nreunido a ustedes dos, porque\lsabemos de sus habilidades como\lentrenadores.\p[red_fr][player]: ¿Contra quién tenemos que\nluchar?\p[darknavyblue_fr]Oak: No seas impaciente [red_fr][player],\n[darknavyblue_fr]esto es bastante peligroso, ya\lque no sabemos qué quiere el\l[green_fr]Equipo Rocket.\p[green_fr]Birch: Así es, [red_fr][player][green_fr], seguro\nrecordarás el pequeño incidente\lque tuvimos en el Bosque Verde.\lBueno, eso no fue nada comparado\la lo que pasó en [red_fr]Isla Canela.\p[red_fr][player]: Un momento, yo tengo algo\nque contarles también.\pLuego de lo que pasó en el Bosque\nVerde, [green_fr]Ciudad Plateada [red_fr]estaba\lllena de ellos, según tengo\lentendido querían robar los\lfósiles del museo, pero logré\ldetenerlos.\p[darknavyblue_fr]Oak: Eso fue lo que tú creíste\n[red_fr][player], [darknavyblue_fr]justamente, en el mismo\lmomento que tú los vencías en\l[green_fr]Ciudad Plateada, [darknavyblue_fr]otro grupo\laún mayor, se robó maquinaria muy\limportante del centro de\linvestigación de Isla Canela.
+
+#org @gText_npc3_0X725182
+[navyblue_fr]Ash: Bueno, [red_fr][player][navyblue_fr], parece que\nnos tendremos que encargar de\lsalvar al mundo otra vez, parece\lque será divertido.\p[red_fr][player]: ¿Salvar al mundo? ¿No te\nparece algo exagerado?\p[navyblue_fr]Ash: Es cierto, a veces se me\nsuben los humos a la cabeza. 
+
+#org @gText_npc3_0X72E4DB
+[navyblue_fr]Ash: ¿Qué deberíamos hacer\nprofesor?\p[darknavyblue_fr]Oak: De momento, solo esperar.\nPrimero tenemos que saber cuál es\lsu objetivo, estamos trabajando\len eso ahora mismo.\p[red_fr][player]: ¿Y qué pasó con [green_fr]Gary[red_fr]?\nLo vi salir de aquí antes de\lllegar.\p[navyblue_fr]Ash: ¿[green_fr]Gary[navyblue_fr]?\p[darknavyblue_fr]Oak: Quería que esté en ésta\nreunión, pero prefirió tomar su\lcamino. Él puede cuidarse solo.\p[navyblue_fr]Ash: Bien, entonces haré lo\nmismo. Gracias por el aviso Prof,\lestaré alerta. ¡Adiós!
+
+#org @gText_npc3_0X7252C6
+[green_fr]Birch: Ahora ya sabes cómo está\nla situación. Por favor cuídate\lmucho [red_fr][player], [green_fr]qué diría tu madre\lsi algo te pasara.\p[red_fr][player]: No se preocupe profesor.\p[green_fr]Birch: Nos volveremos a ver en\ncuanto Samuel tenga novedades.\p[red_fr][player]: Entonces nos\nveremos pronto[.]
+
+#org @gText_npc3_0X7253FC
+[darknavyblue_fr]Oak: Un momento, todavía no te\nvayas. Tengo algo más para ti[.]
+
+#org @gText_npc3_0X72543F
+[black_fr]¡[player] recibió un RIOLU\ndel Profesor Oak!
+
+#org @gText_npc3_0X72546B
+[darknavyblue_fr]Oak: Te pido que cuides y\nentrenes muy bien a éste pequeño,\les un [red_fr]Riolu[darknavyblue_fr], un pokémon muy\lraro, me lo regaló el Profesor\lRowan de Sinnoh, me dijo que\lpuede llegar a ser muy poderoso,\lestaba guardándolo para Ash, pero\lél está bastante ocupado con sus\lpokémon. Además, tu dejaste los\ltuyos en casa.\p[red_fr][player]: ¡Gracias Profesor! Le\naseguro que lo cuidaré tanto como\la los demás.\p[darknavyblue_fr]Oak: Estupendo, ahora ya te\npuedes marchar, has crecido\lbastante en este tiempo, espero\lque lo sigas haciendo[.]
+
+#org @gText_npc3_0X18E3AD
+[darknavyblue_fr]Oak: [player], a medida de\nque luches, tus pokémon se haran\lmás fuertes.
+
+#org @gText_npc3_0X18E330
+[darknavyblue_fr]Oak: Cuando un pokémon salvaje\naparezca, debes luchar contra él\lcon tus pokémon, así ve de ciudad\len ciudad.
+
+#org @gText_npc7_0X18DC67
+[rival]: What, it's only [player]?\nGramps isn't around.
+
+#org @gText_npc7_0X18DD75
+[navyblue_fr]Ash: [player] tu pokémon se ve\nmuy fuerte.
+
+#org @gText_npc7_0X18DCE2
+[navyblue_fr]Ash: Vamos [player], elige uno\nde los pokémon, no tengas miedo.
+
+#org @gText_tile0_0X18E177
+Oak: ¡No te vayas todavía!
+
+#org @gText_tile3_0X7709B3
+[navyblue_fr]Ash: ¡Hey, [player]!\pYa que tienes a tu nuevo Pokémon,\n¿Qué tal si luchamos?
+
+#org @gText_tile3_0X18DDEA
+¿QUÉ?\n¡Imposible!
+
+#org @gText_tile3_0X18DE1A
+Ash: ¡Éso es!
+
+#org @gText_tile3_0X770A26
+[navyblue_fr]Ash: Excelente batalla [player],\nhace mucho que no luchaba así.\pBueno, me despido.\p¡Nos veremos pronto!
+
+#org @gText_tile3_0X770AD1
+[navyblue_fr]Ash: Me olvidaba, antes de que\nsalgas quiero recomendarte que no\lvayas al gimnasio de Ciudad\lVerde, Gary casi nunca está,\launque con visitarlo no pierdes\lnada.\pPuedes ir al de Ciudad\nPlateada, yo comencé por éste.
+
+#org @gText_tile3_0X770BB9
+[darknavyblue_fr]Oak: [player] ven aquí, quiero darte\nalgo.
+
+#org @gText_tile3_0X770BE2
+[darknavyblue_fr]Oak: Quiero darte ésta[.]
+
+#org @gText_tile3_0X770BFD
+[darknavyblue_fr][.]Pokédex. Te servirá mucho\na la hora de capturar pokémon.\lAquí se guardan todos los\ldatos de los pokémon que viste y\lcapturaste en tu viaje.\pÚsala bien.\p[red_fr][player]: Gracias profesor la\ncuidaré mucho.
+
+#org @gText_tile3_0X770CC5
+[player] recibió Pokédex del\nProfesor Oak.
+
+#org @gText_tile3_0X770CEA
+[darknavyblue_fr]Oak: Ésto también te servirá.
+
+#org @gText_tile3_0X775166
+[darknavyblue_fr]Oak: Además, recuerda, si\nnecesitas curar a tus pokémon,\lpuedes usar la máquina que tienes\la mi derecha.\p[player] tu viaje en Kanto recién\ncomienza, ¡Te deseo mucha suerte!
+
+
+
