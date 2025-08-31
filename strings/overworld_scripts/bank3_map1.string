@@ -1,0 +1,28 @@
+#org @gText_CV_May_Intro
+[blue_fr]May: Bien, creo que ya tengo\ntodo listo para partir.
+
+
+#org @gText_CV_May_Spot
+[blue_fr]May: ¡Pero mira a quién tenemos\naquí!
+
+#org @gText_CV_May_Dialogue
+[red_fr][player]: [green_fr]May[red_fr], me alegra verte.\n¿Qué haces en [green_fr]Kanto[red_fr]?\p[blue_fr]May: Vine a pasar un tiempo\ntranquila, conocer nuevos lugares\ly entrenadores. A veces es bueno\lcambiar de aires. ¿Y tú?\p[red_fr][player]: Vine por un encargo del\nprofesor [green_fr]Birch[red_fr], y ya que\lestoy aquí, quiero entrenar y\lconocer la región.\p[blue_fr]May: Entonces tenemos metas\ndistintas, pero el mismo\lobjetivo: mejorar como\lentrenadores. ¿Te apetece un\lcombate amistoso?\p[red_fr][player]: Claro, será una buena forma\nde empezar.\p[blue_fr]May: Bien, muéstrame lo que has\naprendido.
+
+#org @gText_CV_BattleFail
+Otra vez no[.]
+
+#org @gText_CV_May_After
+[blue_fr]May: Buen combate, me trajo\nbuenos recuerdos.\p[red_fr][player]: A mí también, fue un buen\ninicio.\p[blue_fr]May: Seguiré viajando por\n[green_fr]Pueblo Paleta[blue_fr] y luego quizá\lpor la [orange_fr]Isla Canela[blue_fr]. Nos\lveremos en el camino.\p[red_fr][player]: Hasta pronto, [blue_fr]May[red_fr].
+
+#org @gText_CV_Brendan_Intro
+[blue_fr]Brendan: Bien, creo que ya\ntengo todo lo que necesito para\lpartir.
+
+#org @gText_CV_Brendan_Spot
+[blue_fr]Brendan: ¡Pero mira a quién\ntenemos aquí!
+
+#org @gText_CV_Brendan_Dialogue
+[red_fr][player]: [green_fr]Brendan[red_fr], me alegra\nverte. ¿Qué haces en [green_fr]Kanto[red_fr]?\p[blue_fr]Brendan: Vine a pasar un tiempo\ntranquilo, conocer nuevos lugares\ly entrenadores. A veces es bueno\lcambiar de aires. ¿Y tú?\p[red_fr][player]: Vine por un encargo del\nprofesor [green_fr]Oak[red_fr], y ya que estoy\laquí, quiero entrenar y conocer\lla región.\p[blue_fr]Brendan: Entonces tenemos metas\ndistintas, pero el mismo\lobjetivo: mejorar como\lentrenadores. ¿Te apetece un\lcombate amistoso?\p[red_fr][player]: Claro, será una buena forma\nde empezar.\p[blue_fr]Brendan: Bien, muéstrame lo que\nhas aprendido.
+
+#org @gText_CV_Brendan_After
+[blue_fr]Brendan: Buen combate, me trajo\nbuenos recuerdos.\p[red_fr][player]: A mí también, fue un buen\ninicio.\p[blue_fr]Brendan: Seguiré viajando por\n[green_fr]Pueblo Paleta[blue_fr] y luego quizá\lpor la [orange_fr]Isla Canela[blue_fr]. Nos\lveremos en el camino.\p[red_fr][player]: Hasta pronto, [blue_fr]Brendan[red_fr].
+

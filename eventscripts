@@ -11,6 +11,9 @@ tile 1 5 4 EventScript_tile2_0X71A559
 tile 1 5 5 EventScript_tile2_0X71A559
 map 1 5 EventScript_map_1_5
 
+##Bank 3 Map 1
+map 3 1 EventScript_map_3_1
+
 ##Bank 3 Map 5
 npc 3 5 8 EventScript_npc8_0X735FAA
 tile 3 5 2 EventScript_tile2_3_0X71A65A
