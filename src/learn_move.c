@@ -22,6 +22,7 @@ learn_move.c
 extern const u8 gMoveNames[][MOVE_NAME_LENGTH + 1];
 extern const u8 PSSIconsTiles[];
 
+
 #ifdef EXPAND_MOVESETS
 	extern const struct LevelUpMove* const gLevelUpLearnsets[];
 #else

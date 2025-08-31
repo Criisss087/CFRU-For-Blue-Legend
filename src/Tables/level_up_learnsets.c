@@ -15,7 +15,6 @@ table to edit:
 	gLevelUpLearnsets
 */
 
-
 #define LEVEL_UP_MOVE(lvl, move) {move, lvl}
 #define LEVEL_UP_END {0x0, 0xFF}
 
