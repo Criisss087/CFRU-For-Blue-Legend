@@ -1,0 +1,68 @@
+#org @gText_birch_found_brendan
+[darknavyblue_fr]Birch: Parece que pudiste\nencontrarlo.\p[darknavyblue_fr]Birch: Ya solo debemos esperar\na [blue_fr]Brendan[darknavyblue_fr].
+
+
+#org @gText_wally_arrival
+[green_fr]Wally: Siento la demora,\nprofesor.\p[green_fr]Wally: Hubo un percance camino\na [orange_fr]Fucsia[green_fr], pero ya estoy listo\lpara continuar.
+
+
+#org @gText_birch_what_is_he_talking_brendan
+[darknavyblue_fr]Birch: ¿De qué está hablando?\p[red_fr][player]: Es una larga historia.\p[green_fr]Wally: ¿Dónde está [blue_fr]Brendan[green_fr]?
+
+
+#org @gText_brendan_arrival_block
+[blue_fr]Brendan: Bien bien, ya estamos\ntodos.\p[red_fr][player]: ¿Qué era eso tan importante\nque tenía para contarnos Profesor?\p[darknavyblue_fr]Birch: Me gusta tu actitud\n[red_fr][player][darknavyblue_fr]. Siempre quieres\lenfrentarte a lo nuevo sin peros.\p[darknavyblue_fr]Birch: Creo que Samuel y yo ya\nhemos hablado con cada uno de\lustedes por separado de la\lsituación actual de la región,\lpero esta vez quiero ser yo\lpersonalmente quien les de esto.\p[green_fr]Wally: ¡Genial, más regalos!\p[darknavyblue_fr]Birch: En realidad, no es un\nnuevo regalo.
+
+
+#org @gText_wally_brendan_birch_starter_block
+[green_fr]Wally: Qué bueno que Gallade y\nyo no nos hemos separado antes.\p[green_fr]Wally: Prometo entrenar con\nresponsabilidad.\p[blue_fr]Brendan: Gracias por traerlos,\nprofesor, no me lo esperaba para\lnada.\p[darknavyblue_fr]Birch: Eso no es todo; es muy\nimportante que vuelvan a usar\lesto.
+
+
+#org @gText_birch_megaevo_prep
+[darknavyblue_fr]Birch: Si vamos a combatir\ncontra el [green_fr]Equipo Rocket[darknavyblue_fr] será\lmejor que estemos preparados de\lla mejor manera. Además, esto les\lvendrá muy bien para completar\lsus metas en la región.\p[darknavyblue_fr]Birch: ¿Aún recuerdan cómo\nusarlas, verdad?
+
+
+#org @gText_megaevo_howto
+[black_fr]Para activar la megaevolución\nen combate, presiona [START_BUTTON]\lantes de seleccionar un ataque.
+
+
+#org @gText_brendan_wally_battlecue
+[blue_fr]Brendan: [red_fr][player][blue_fr], ¿por qué no\nprueban sus nuevas megapiedras?\p[green_fr]Wally: [red_fr][player][green_fr], probemos la\nmegapulsera con un combate.\lQuiero hacerlo bien.
+
+
+#org @gText_birch_let_player_equip
+[darknavyblue_fr]Birch: Pero, qué ansiosos.\p[darknavyblue_fr]Birch: Al menos dejen que\n[red_fr][player][darknavyblue_fr] pueda equipar a sus\lpokémon como es debido.
+
+#org @gText_birch_found_may
+[darknavyblue_fr]Birch: Parece que pudiste\nencontrarlo.\p[darknavyblue_fr]Birch: Ya solo debemos esperar\na [blue_fr]May[darknavyblue_fr].
+
+#org @gText_birch_what_is_he_talking_may
+[darknavyblue_fr]Birch: ¿De qué está hablando?\p[red_fr][player]: Es una larga historia.\p[green_fr]Wally: ¿Dónde está [blue_fr]May[green_fr]?
+
+#org @gText_may_arrival_block
+[blue_fr]May: Bien bien, ya estamos\ntodos.\p[red_fr][player]: ¿Qué era eso tan importante\nque tenía para contarnos Profesor?\p[darknavyblue_fr]Birch: Me gusta tu actitud\n[red_fr][player][darknavyblue_fr]. Siempre quieres\lenfrentarte a lo nuevo sin peros.\p[darknavyblue_fr]Birch: Creo que Samuel y yo ya\nhemos hablado con cada uno de\lustedes por separado de la\lsituación actual de la región,\lpero esta vez quiero ser yo\lpersonalmente quien les de esto.\p[green_fr]Wally: ¡Genial, más regalos!\p[darknavyblue_fr]Birch: En realidad, no es un\nnuevo regalo.
+
+#org @gText_wally_may_birch_starter_block
+[green_fr]Wally: Qué bueno que Gallade y\nyo no nos hemos separado antes.\p[green_fr]Wally: Prometo entrenar con\nresponsabilidad.\p[blue_fr]May: Gracias por traerlos,\nprofesor, no me lo esperaba para\lnada.\p[darknavyblue_fr]Birch: Eso no es todo; es muy\nimportante que vuelvan a usar\lesto.
+
+#org @gText_may_wally_battlecue
+[blue_fr]May: [red_fr][player][blue_fr], ¿por qué no\nprueban sus nuevas megapiedras?\p[green_fr]Wally: [red_fr][player][green_fr], probemos la\nmegapulsera con un combate.\lQuiero hacerlo bien.
+
+
+
+
+#org @gText_prepare_may_starter
+[black_fr]¡[player], May recibieron sus pokémon\niniciales originales!
+
+
+#org @gText_birch_no_space
+[darknavyblue_fr]Birch: ¡No tienes lugar!\p[darknavyblue_fr]Birch: Voy a conservarlo.
+
+#org @gText_prepare_brendan_starter
+[black_fr]¡[player], Brendan recibieron sus\npokémon iniciales originales!
+
+#org @gText_brendan_no_me_lo_creo
+[blue_fr]Brendan: ¡No me lo creo!\p[red_fr][player]: ¡[buffer1]!
+
+#org @gText_may_no_me_lo_creo
+[blue_fr]May: ¡No me lo creo!\p[red_fr][player]: ¡[buffer1]!

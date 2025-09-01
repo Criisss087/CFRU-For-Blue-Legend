@@ -26,8 +26,10 @@ tile 3 5 8 EventScript_tile4_a_8_0X736035
 tile 3 5 9 EventScript_tile9_a_11_0X7392EB
 tile 3 5 10 EventScript_tile9_a_11_0X7392EB
 tile 3 5 11 EventScript_tile9_a_11_0X7392EB
-
 map 3 5 EventScript_map_3_5
+
+##Bank 3 Map 32
+npc 3 32 3 Event_script_wallyFollower
 
 ##Bank 4 Map 1
 map 4 1 EventScript_map_4_1
@@ -45,3 +47,6 @@ tile 4 3 2 EventScript_tile0_0X1692C3
 tile 4 3 3 EventScript_tile3_0X71AA58 
 tile 4 3 4 EventScript_tile4_0X71A89D
 tile 4 3 5 EventScript_tile5_0X71AB48 
+
+##Bank 11 map 5
+map 11 5 EventScript_map_11_5
