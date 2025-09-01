@@ -1,5 +1,5 @@
 ##Debug Menu
-sign 3 0 4 SystemScript_DebugMenu
+sign 3 3 3 SystemScript_DebugMenu
 
 ##Bank 1 Map 5
 npc 1 5 0 EventScript_0X1608D5
@@ -13,6 +13,7 @@ map 1 5 EventScript_map_1_5
 
 ##Bank 3 Map 1
 map 3 1 EventScript_map_3_1
+tile 3 1 1 EventScript_tile1_Start
 
 ##Bank 3 Map 5
 npc 3 5 8 EventScript_npc8_0X735FAA
@@ -27,6 +28,9 @@ tile 3 5 9 EventScript_tile9_a_11_0X7392EB
 tile 3 5 10 EventScript_tile9_a_11_0X7392EB
 tile 3 5 11 EventScript_tile9_a_11_0X7392EB
 map 3 5 EventScript_map_3_5
+
+##Bank 3 Map 28
+tile 3 28 18 EventScript_tile18_Start
 
 ##Bank 3 Map 32
 npc 3 32 3 Event_script_wallyFollower

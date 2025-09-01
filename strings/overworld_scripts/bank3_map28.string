@@ -1,0 +1,24 @@
+#org @gText_tile18_String1
+[green_fr]Admin: Tranquilízate, aún no\nhemos hecho nada aquí por lo que\lpuedas acusarnos. Solo hemos\lvenido a hablar.\p[orange_fr]Gary: ¿Hablar? No tenemos nada\nde qué hablar.\p[green_fr]Admin: Entonces nos marchamos.\p[orange_fr]Gary: [.]
+
+#org @gText_tile18_String2
+[green_fr]Admin: Vámonos.
+
+#org @gText_tile18_String3
+[green_fr]Admin: ¿Otra vez tú? Esta vez\nno arruinarás nuestros planes.
+
+#org @gText_tile18_String4
+[orange_fr]Gary: ¿Te conozco?
+
+#org @gText_tile18_String5
+[red_fr][player]: Nos vimos en la puerta del\ngimnasio de Ciudad Verde, mi\lnombre es [player].\p[orange_fr]Gary: Tengo poca memoria con\nlos retadores. Pero dime, ¿por\lqué esos Rockets te reconocieron\ltan rápido?
+
+#org @gText_tile18_String6
+[orange_fr]Gary: Si ellos saben quién\neres, entonces estorbas en mi\lcamino.
+
+#org @gText_tile18_String7
+[red_fr][player]: Los derroté en el museo de\nCiudad Plateada y en la Cueva\lCeleste. No sé por qué dices eso.\p[orange_fr]Gary: Hmph. Entonces tendré que\nrecordar tu nombre. No puedo\lperderles la pista, se lo prometí\la mi abuelo. Ahora, apártate.
+
+#org @gText_tile18_String8
+[orange_fr]Gary: Seguro nos volveremos a\nver[.] y espero que no me estorbes\lde nuevo.
+

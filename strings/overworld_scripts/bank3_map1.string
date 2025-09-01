@@ -26,3 +26,8 @@ Otra vez no[.]
 #org @gText_CV_Brendan_After
 [blue_fr]Brendan: Buen combate, me trajo\nbuenos recuerdos.\p[red_fr][player]: A mí también, fue un buen\ninicio.\p[blue_fr]Brendan: Seguiré viajando por\n[green_fr]Pueblo Paleta[blue_fr] y luego quizá\lpor la [orange_fr]Isla Canela[blue_fr]. Nos\lveremos en el camino.\p[red_fr][player]: Hasta pronto, [blue_fr]Brendan[red_fr].
 
+#org @gText_tile1_String1
+[orange_fr]???: ¡EH!\p[orange_fr]???: ¿Quién demonios eres tú?\p[orange_fr]???: [.]\p[orange_fr]???: No tengo tiempo que perder\ncon desconocidos, el gimnasio\lestá cerrado.\p[red_fr][player]: ¿Podrías decirme si está el\nlíder de este gimnasio? Vengo a\lretarlo.\p[orange_fr]???: No me hagas reír. Yo soy\nel líder, mi nombre es Gary.\p[orange_fr]Gary: Y no voy a estar aquí por\nun buen tiempo. Así que lárgate,\lno tengo paciencia para retadores\linútiles.\p[red_fr][player]: Pero[.] Si eres el líder se\nsupone que debes aceptar los\lretos, ¿no?\p[orange_fr]Gary: No me hagas perder el\ntiempo. Ya tendrás tu batalla. Y\lcréeme, con un solo Pokémon\lpodría derrotarte ahora mismo. Me\lvoy.
+
+#org @gText_tile1_String2
+[red_fr][player]: Vaya modales para ser un\nlíder de gimnasio[.]

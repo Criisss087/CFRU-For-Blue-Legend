@@ -1144,6 +1144,7 @@ SystemScript_DebugMenu_GiveItem:
 	goto SystemScript_DebugMenu_GiveItem
 
 SystemScript_DebugMenu_Level100Team:
+	givepokemon 0x3 0x40 0x0 0x0 0x0 0x0
 	callasm DebugMenu_SetTeamToLevel100
 	goto SystemScript_DebugMenu
 
