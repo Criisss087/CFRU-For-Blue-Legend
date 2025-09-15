@@ -1,0 +1,29 @@
+#org @gText_tile1_b1m109_String1
+[green_fr]Lidia: ¿¡Y ahora qué hacemos!?\p[red_fr][player]: ¡Cuidado!
+
+#org @gText_tile1_b1m109_String2
+[green_fr]Lidia: ¿¡[player]!?
+
+#org @gText_tile1_b1m109_String3
+[green_fr]Lidia: Parece que estamos\nmetidos en medio de un lío.
+
+#org @gText_tile1_b1m109_String4
+[green_fr]Lidia: ¡Y aún no ha terminado!
+
+#org @gText_tile1_b1m109_String5
+[orange_fr]Gary: ¡Arcanine, usa rugido!
+
+#org @gText_tile1_b1m109_String6
+[green_fr]Lidia: ¡Ah! Se han calmado[.]\p[red_fr][player]: ¿Gary? ¿Qué haces aquí?\p[orange_fr]Gary: Mantén a tu acompañante a\nsalvo. Este bosque no es para\lcualquiera.\p[orange_fr]Gary: Estos insectos solo\nsiguen su instinto, pero si\lpierdes el control un segundo, te\lpasarán por encima.
+
+#org @gText_tile1_b1m109_String7
+[red_fr][player]: Oye[.] gracias por ayudar.\p[orange_fr]Gary: No te hagas ideas. Solo\nmantengo el orden.
+
+#org @gText_tile1_b1m109_String8
+[orange_fr]Gary: Nos volveremos a ver.
+
+#org @gText_tile1_b1m109_String9
+[red_fr][player]: Tch[.] siempre es igual.\nAyuda, pero se marcha como si\lnada.\p[green_fr]Lidia: Ese tipo es fuerte[.]\npero también parece cargar con\lmucho encima.
+
+#org @gText_tile1_b1m109_String10
+[green_fr]Lidia: Vamos, mejor sigamos. No\nquiero volver a cruzarme con más\lPinsir o Heracross.
